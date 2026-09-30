@@ -73,9 +73,21 @@
         for (var i = 0; i < acc.length; i++) {
             acc[i].addEventListener("click", function() {
                 var panel = this.nextElementSibling;
-                panel.style.display = (panel.style.display === "block") ? "none" : "block";
+                
+                // Box öffnen oder schließen
+                if (panel.style.display === "block") {
+                    panel.style.display = "none";
+                } else {
+                    panel.style.display = "block";
+                    
+                    // DIESER BEFEHL REPARIERT ES: Er zwingt MathJax, die Formel beim Öffnen zu zeichnen
+                    if (typeof MathJax !== 'undefined') {
+                        MathJax.Hub.Queue(["Typeset", MathJax.Hub, panel]);
+                    }
+                }
             });
         }
-    </script>
-</body>
+    </script>    
+
+    </body>
 </html>
