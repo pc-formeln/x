@@ -4,15 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>1. Thermodynamik - Formeln PC</title>
-    
-    <!-- Die modernste und stabilste Verbindung zu MathJax v3 -->
-    <script>
-        window.MathJax = {
-            tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] }
-        };
-    </script>
-    <script src="https://jsdelivr.net" id="MathJax-script" async></script>
-
     <style>
         body { font-family: 'Segoe UI', Arial, sans-serif; margin: 0; padding: 0; background-color: #f4f7f6; color: #333; display: flex; min-height: 100vh; }
         
@@ -28,13 +19,16 @@
         h1 { color: #2c3e50; margin-top: 0; }
         h2 { color: #2980b9; border-bottom: 2px solid #ecf0f1; padding-bottom: 6px; margin-top: 30px; }
         
-        /* Das neue, sichere Einklapp-System (Details) */
+        /* Boxen zum Aufklappen */
         details { background-color: white; border: 1px solid #dcdde1; border-left: 5px solid #3498db; border-radius: 4px; margin: 15px 0; padding: 15px; box-shadow: 0 2px 5px rgba(0,0,0,0.02); }
         summary { font-size: 18px; font-weight: bold; color: #2c3e50; cursor: pointer; user-select: none; outline: none; }
         summary:hover { color: #3498db; }
         
-        /* Formel-Anzeige */
-        .formel-display { font-size: 26px; text-align: center; margin: 20px 0; padding: 20px; background: #f8f9fa; border: 1px dashed #cbd5e0; border-radius: 4px; color: #2c3e50; }
+        /* Mathematische Darstellung */
+        .formel-style { font-family: 'Times New Roman', Times, serif; font-size: 26px; text-align: center; margin: 25px 0; padding: 15px; background: #f8f9fa; border: 1px dashed #cbd5e0; border-radius: 4px; color: #1a252f; }
+        .bruch { display: inline-block; vertical-align: middle; text-align: center; font-size: 22px; padding: 0 4px; }
+        .zaehler { display: block; border-bottom: 2px solid #333; padding: 0 2px; }
+        .nenner { display: block; padding: 0 2px; }
         
         footer { text-align: center; padding: 30px 0; font-size: 13px; color: #7f8c8d; border-top: 1px solid #ecf0f1; margin-top: 50px; }
         footer a { color: #2980b9; text-decoration: none; }
@@ -57,23 +51,34 @@
         
         <h2>1.1 Gasgesetze</h2>
         
-        <!-- Eine Box zum Aufklappen -->
         <details>
             <summary>Thermische Zustandsgleichung idealer Gase</summary>
-            <div class="formel-display">
-                $$p \cdot V = n \cdot R \cdot T$$
+            <!-- Absolut sichere Textformel ohne Dollarzeichen -->
+            <div class="formel-style">
+                <i>p</i> &middot; <i>V</i> = <i>n</i> &middot; <i>R</i> &middot; <i>T</i>
             </div>
-            <p><strong>Variablen:</strong> $p$ = Druck, $V$ = Volumen, $n$ = Stoffmenge, $R$ = Gaskonstante, $T$ = Temperatur</p>
+            <p><strong>Variablen:</strong> <i>p</i> = Druck, <i>V</i> = Volumen, <i>n</i> = Stoffmenge, <i>R</i> = Gaskonstante, <i>T</i> = Temperatur</p>
         </details>
 
         <h2>1.2 Chemische Thermodynamik</h2>
         
         <details>
             <summary>Gibbs-Helmholtz-Gleichung</summary>
-            <div class="formel-display">
-                $$\Delta G = \Delta H - T \cdot \Delta S$$
+            <div class="formel-style">
+                &Delta;<i>G</i> = &Delta;<i>H</i> - <i>T</i> &middot; &Delta;<i>S</i>
             </div>
-            <p><strong>Variablen:</strong> $\Delta G$ = Freie Enthalpie, $\Delta H$ = Enthalpie, $\Delta S$ = Entropie</p>
+            <p><strong>Variablen:</strong> &Delta;<i>G</i> = Freie Enthalpie, &Delta;<i>H</i> = Enthalpie, &Delta;<i>S</i> = Entropie</p>
+        </details>
+
+        <h2>1.3 Clausius-Clapeyron-Gleichung</h2>
+        
+        <details>
+            <summary>Clausius-Clapeyron-Gleichung (Dampfdruckkurve)</summary>
+            <!-- Beispiel für eine saubere Darstellung von Brüchen -->
+            <div class="formel-style">
+                ln(<div class="bruch"><span class="zaehler"><i>p</i><sub>2</sub></span><span class="nenner"><i>p</i><sub>1</sub></span></div>) = -<div class="bruch"><span class="zaehler">&Delta;<sub>vap</sub><i>H</i></span><span class="nenner"><i>R</i></span></div> &middot; (<div class="bruch"><span class="zaehler">1</span><span class="nenner"><i>T</i><sub>2</sub></span></div> - <div class="bruch"><span class="zaehler">1</span><span class="nenner"><i>T</i><sub>1</sub></span></div>)
+            </div>
+            <p><strong>Variablen:</strong> &Delta;<sub>vap</sub><i>H</i> = Molare Verdampfungsenthalpie, <i>p</i> = Druck, <i>T</i> = absolute Temperatur</p>
         </details>
 
         <footer>
