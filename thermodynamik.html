@@ -3,32 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>1. Thermodynamik - Formeln PC</title>
+    <title>1.1 Gasgesetze - Formeln PC</title>
     <style>
         body { font-family: 'Segoe UI', Arial, sans-serif; margin: 0; padding: 0; background-color: #f4f7f6; color: #333; display: flex; min-height: 100vh; }
         
-        /* Linke Navigation */
-        nav { width: 280px; background-color: #2c3e50; color: white; padding: 20px; position: fixed; height: 100vh; overflow-y: auto; box-sizing: border-box; }
-        nav h1 { font-size: 18px; color: #ecf0f1; border-bottom: 2px solid #34495e; padding-bottom: 10px; margin-bottom: 20px; }
-        nav a { display: block; color: #bdc3c7; text-decoration: none; padding: 10px; font-size: 15px; border-radius: 4px; margin-bottom: 5px; }
-        nav a:hover { background-color: #34495e; color: white; }
-        nav a.active { background-color: #3498db; color: white; }
+/* Linke Navigation */
+        nav { width: 280px; background-color: #2c3e50; color: white; padding: 20px; box-shadow: 2px 0 5px rgba(0,0,0,0.1); position: fixed; height: 100vh; overflow-y: auto; box-sizing: border-box; }
+        nav h1 { font-size: 19px; color: #ffffff; border-bottom: 2px solid #34495e; padding-bottom: 10px; margin-bottom: 20px; font-weight: 600; }
+        
+        /* KORRIGIERT: Deutlich hellere und perfekt lesbare Hauptpunkte 1, 2, 3 */
+        nav h3 { font-size: 14px; text-transform: uppercase; color: #a0aec0; margin-top: 25px; margin-bottom: 8px; letter-spacing: 1px; font-weight: bold; }
+        
+        nav a { display: block; color: #e2e8f0; text-decoration: none; padding: 7px 10px; border-radius: 4px; margin-bottom: 3px; font-size: 15px; transition: all 0.2s; }
+        nav a.sub { padding-left: 20px; color: #cbd5e0; }
+        nav a:hover { background-color: #34495e; color: #ffffff; }
+        nav a.active { background-color: #3182ce; color: #ffffff; font-weight: 600; }
         
         /* Hauptbereich */
         main { margin-left: 280px; padding: 40px; max-width: 850px; flex-grow: 1; box-sizing: border-box; }
         h1 { color: #2c3e50; margin-top: 0; }
-        h2 { color: #2980b9; border-bottom: 2px solid #ecf0f1; padding-bottom: 6px; margin-top: 30px; }
+        h2 { color: #2980b9; border-bottom: 2px solid #ecf0f1; padding-bottom: 6px; margin-top: 35px; }
         
-        /* Boxen zum Aufklappen */
-        details { background-color: white; border: 1px solid #dcdde1; border-left: 5px solid #3498db; border-radius: 4px; margin: 15px 0; padding: 15px; box-shadow: 0 2px 5px rgba(0,0,0,0.02); }
-        summary { font-size: 18px; font-weight: bold; color: #2c3e50; cursor: pointer; user-select: none; outline: none; }
-        summary:hover { color: #3498db; }
+        /* Offene Text-Blöcke */
+        .potential-box { background-color: white; border: 1px solid #dcdde1; border-left: 5px solid #3498db; border-radius: 4px; margin: 20px 0; padding: 20px; box-shadow: 0 2px 5px rgba(0,0,0,0.02); }
+        .potential-box h3 { margin-top: 0; color: #2c3e50; font-size: 20px; }
         
-        /* Mathematische Darstellung */
-        .formel-style { font-family: 'Times New Roman', Times, serif; font-size: 26px; text-align: center; margin: 25px 0; padding: 15px; background: #f8f9fa; border: 1px dashed #cbd5e0; border-radius: 4px; color: #1a252f; }
-        .bruch { display: inline-block; vertical-align: middle; text-align: center; font-size: 22px; padding: 0 4px; }
-        .zaehler { display: block; border-bottom: 2px solid #333; padding: 0 2px; }
-        .nenner { display: block; padding: 0 2px; }
+        /* Flache Formel-Styles ohne Hintergrund */
+        .formel-display { font-size: 26px; text-align: center; margin: 15px 0; padding: 10px 0; color: #1a252f; font-family: 'Times New Roman', Times, serif; display: flex; justify-content: center; align-items: center; gap: 4px; }
+        .var { font-style: italic; }
+        .op { font-family: Arial, sans-serif; padding: 0 4px; }
+        
+        /* CSS für Brüche */
+        .fraction { display: inline-flex; flex-direction: column; vertical-align: middle; align-items: center; padding: 0 4px; font-size: 20px; font-family: 'Times New Roman', Times, serif; }
+        .num { border-bottom: 1px solid #333; padding-bottom: 2px; line-height: 1; }
+        .den { padding-top: 2px; line-height: 1; }
         
         footer { text-align: center; padding: 30px 0; font-size: 13px; color: #7f8c8d; border-top: 1px solid #ecf0f1; margin-top: 50px; }
         footer a { color: #2980b9; text-decoration: none; }
@@ -41,45 +49,53 @@
     <nav>
         <h1>Physikalische Chemie</h1>
         <a href="index.html">🏠 Startseite</a>
-        <a href="thermodynamik.html" class="active">🔥 1. Thermodynamik</a>
-        <a href="#kinetik">⚡ 2. Kinetik (folgt)</a>
-        <a href="#elektro">🔋 3. Elektrochemie (folgt)</a>
+        
+        <h3>1. Thermodynamik</h3>
+        <a href="potentiale.html" class="sub">💎 Thermodynamische Potentiale</a>
+        <a href="thermodynamik.html" class="sub active">🔥 Gasgesetze</a>
+        
+        <h3>2. Kinetik</h3>
+        <a href="kinetik.html" class="sub">⚡ Reaktionskinetik</a>
+        
+        <h3>3. Elektrochemie</h3>
+        <a href="#elektro" class="sub">🔋 Elektrolyse & Potenziale (folgt)</a>
     </nav>
 
     <main>
-        <h1>1. Thermodynamik & Gasgesetze</h1>
+        <h1>1.1 Gasgesetze & Thermodynamik</h1>
+        <p style="color: #7f8c8d; font-style: italic;">Fundamentale mathematische Beziehungen der physikochemischen Gastheorie.</p>
         
-        <h2>1.1 Gasgesetze</h2>
-        
-        <details>
-            <summary>Thermische Zustandsgleichung idealer Gase</summary>
-            <!-- Absolut sichere Textformel ohne Dollarzeichen -->
-            <div class="formel-style">
-                <i>p</i> &middot; <i>V</i> = <i>n</i> &middot; <i>R</i> &middot; <i>T</i>
-            </div>
-            <p><strong>Variablen:</strong> <i>p</i> = Druck, <i>V</i> = Volumen, <i>n</i> = Stoffmenge, <i>R</i> = Gaskonstante, <i>T</i> = Temperatur</p>
-        </details>
+        <h2>Gasgesetze</h2>
 
-        <h2>1.2 Chemische Thermodynamik</h2>
-        
-        <details>
-            <summary>Gibbs-Helmholtz-Gleichung</summary>
-            <div class="formel-style">
-                &Delta;<i>G</i> = &Delta;<i>H</i> - <i>T</i> &middot; &Delta;<i>S</i>
+        <div class="potential-box">
+            <h3>Thermische Zustandsgleichung idealer Gase</h3>
+            <div class="formel-display">
+                <span class="var">p</span> <span class="op">·</span> <span class="var">V</span> <span class="op">=</span> <span class="var">n</span> <span class="op">·</span> <span class="var">R</span> <span class="op">·</span> <span class="var">T</span>
             </div>
-            <p><strong>Variablen:</strong> &Delta;<i>G</i> = Freie Enthalpie, &Delta;<i>H</i> = Enthalpie, &Delta;<i>S</i> = Entropie</p>
-        </details>
+            <p><strong>Variablen:</strong> <span class="var">p</span> = Druck, <span class="var">V</span> = Volumen, <span class="var">n</span> = Stoffmenge, <span class="var">R</span> = Gaskonstante, <span class="var">T</span> = absolute Temperatur</p>
+        </div>
 
-        <h2>1.3 Clausius-Clapeyron-Gleichung</h2>
-        
-        <details>
-            <summary>Clausius-Clapeyron-Gleichung (Dampfdruckkurve)</summary>
-            <!-- Beispiel für eine saubere Darstellung von Brüchen -->
-            <div class="formel-style">
-                ln(<div class="bruch"><span class="zaehler"><i>p</i><sub>2</sub></span><span class="nenner"><i>p</i><sub>1</sub></span></div>) = -<div class="bruch"><span class="zaehler">&Delta;<sub>vap</sub><i>H</i></span><span class="nenner"><i>R</i></span></div> &middot; (<div class="bruch"><span class="zaehler">1</span><span class="nenner"><i>T</i><sub>2</sub></span></div> - <div class="bruch"><span class="zaehler">1</span><span class="nenner"><i>T</i><sub>1</sub></span></div>)
+        <h2>Chemische Thermodynamik</h2>
+
+        <div class="potential-box">
+            <h3>Gibbs-Helmholtz-Gleichung</h3>
+            <div class="formel-display">
+                Δ<span class="var">G</span> <span class="op">=</span> Δ<span class="var">H</span> <span class="op">-</span> <span class="var">T</span> <span class="op">·</span> Δ<span class="var">S</span>
             </div>
-            <p><strong>Variablen:</strong> &Delta;<sub>vap</sub><i>H</i> = Molare Verdampfungsenthalpie, <i>p</i> = Druck, <i>T</i> = absolute Temperatur</p>
-        </details>
+            <p><strong>Variablen:</strong> Δ<span class="var">G</span> = Freie Enthalpie, Δ<span class="var">H</span> = Enthalpie, Δ<span class="var">S</span> = Entropie</p>
+        </div>
+
+        <div class="potential-box">
+            <h3>Clausius-Clapeyron-Gleichung (Dampfdruckkurve)</h3>
+            <div class="formel-display">
+                ln<span class="op">(</span><div class="fraction"><div class="num"><span class="var">p</span><sub>2</sub></div><div class="den"><span class="var">p</span><sub>1</sub></div></div><span class="op">)</span> 
+                <span class="op">=</span> <span class="op">-</span> 
+                <div class="fraction"><div class="num">Δ<sub>vap</sub><span class="var">H</span></div><div class="den"><span class="var">R</span></div></div> 
+                <span class="op">·</span> 
+                <span class="op">(</span><div class="fraction"><div class="num">1</div><div class="den"><span class="var">T</span><sub>2</sub></div></div> <span class="op">-</span> <div class="fraction"><div class="num">1</div><div class="den"><span class="var">T</span><sub>2</sub></div></div><span class="op">)</span>
+            </div>
+            <p><strong>Variablen:</strong> Δ<sub>vap</sub><span class="var">H</span> = Molare Verdampfungsenthalpie, <span class="var">p</span> = Druck, <span class="var">T</span> = absolute Temperatur, <span class="var">R</span> = Universelle Gaskonstante</p>
+        </div>
 
         <footer>
             <p>Formeln die Physikalische Chemie betreffend &copy; 2026 | <a href="impressum.html">Impressum & Datenschutz</a></p>

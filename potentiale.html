@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1.2 Thermodynamische Potentiale - Formeln PC</title>
+    <style>
+        body { font-family: 'Segoe UI', Arial, sans-serif; margin: 0; padding: 0; background-color: #f4f7f6; color: #333; display: flex; min-height: 100vh; }
+        
+/* Linke Navigation */
+        nav { width: 280px; background-color: #2c3e50; color: white; padding: 20px; box-shadow: 2px 0 5px rgba(0,0,0,0.1); position: fixed; height: 100vh; overflow-y: auto; box-sizing: border-box; }
+        nav h1 { font-size: 19px; color: #ffffff; border-bottom: 2px solid #34495e; padding-bottom: 10px; margin-bottom: 20px; font-weight: 600; }
+        
+        /* KORRIGIERT: Deutlich hellere und perfekt lesbare Hauptpunkte 1, 2, 3 */
+        nav h3 { font-size: 14px; text-transform: uppercase; color: #a0aec0; margin-top: 25px; margin-bottom: 8px; letter-spacing: 1px; font-weight: bold; }
+        
+        nav a { display: block; color: #e2e8f0; text-decoration: none; padding: 7px 10px; border-radius: 4px; margin-bottom: 3px; font-size: 15px; transition: all 0.2s; }
+        nav a.sub { padding-left: 20px; color: #cbd5e0; }
+        nav a:hover { background-color: #34495e; color: #ffffff; }
+        nav a.active { background-color: #3182ce; color: #ffffff; font-weight: 600; }
+        
+        /* Hauptbereich */
+        main { margin-left: 280px; padding: 40px; max-width: 850px; flex-grow: 1; box-sizing: border-box; }
+        h1 { color: #2c3e50; margin-top: 0; }
+        h2 { color: #2980b9; border-bottom: 2px solid #ecf0f1; padding-bottom: 6px; margin-top: 35px; }
+        
+        /* Offene Text-Blöcke */
+        .potential-box { background-color: white; border: 1px solid #dcdde1; border-left: 5px solid #3498db; border-radius: 4px; margin: 20px 0; padding: 20px; box-shadow: 0 2px 5px rgba(0,0,0,0.02); }
+        .potential-box h3 { margin-top: 0; color: #2c3e50; font-size: 20px; }
+        
+        /* Flache Formel-Styles ohne grauen Hintergrund und ohne Rahmen */
+        .formel-display { font-size: 26px; text-align: center; margin: 15px 0; padding: 10px 0; color: #1a252f; font-family: 'Times New Roman', Times, serif; }
+        
+        footer { text-align: center; padding: 30px 0; font-size: 13px; color: #7f8c8d; border-top: 1px solid #ecf0f1; margin-top: 50px; }
+        footer a { color: #2980b9; text-decoration: none; }
+        
+        @media (max-width: 768px) { body { flex-direction: column; } nav { width: 100%; height: auto; position: relative; } main { margin-left: 0; padding: 20px; } }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <h1>Physikalische Chemie</h1>
+        <a href="index.html">🏠 Startseite</a>
+        
+        <h3>1. Thermodynamik</h3>
+        <a href="potentiale.html" class="sub active">💎 Thermodynamische Potentiale</a>
+        <a href="thermodynamik.html" class="sub">🔥 Gasgesetze</a>
+        
+        <h3>2. Kinetik</h3>
+        <a href="kinetik.html" class="sub">⚡ Reaktionskinetik</a>
+        
+        <h3>3. Elektrochemie</h3>
+        <a href="#elektro" class="sub">🔋 Elektrolyse & Potenziale (folgt)</a>
+    </nav>    
+
+    <main>
+        <h1>Thermodynamische Potentiale</h1>
+        <p style="color: #7f8c8d; font-style: italic;">Übersicht und fundamentale Gleichungen der thermodynamischen Zustandsfunktionen.</p>
+        
+        <h2>Klassische Hauptpotentiale</h2>
+
+        <div class="potential-box">
+            <h3>Innere Energie (<i>U</i>)</h3>
+            <div class="formel-display" style="text-align: left; padding-left: 20px;">
+                &Delta;U = Q + W (+ &Sum; µ<sub>i</sub> dN<sub>i</sub>) &nbsp;→&nbsp dU = &delta;Q + &delta;W (+ &Sum; µ<sub>i</sub> dN<sub>i</sub>) <br>
+                U(T,V,N) = T · S + F <br>
+		U(T,p,N) = T · S - pV + G <br>
+		U(T,V,µ) = T · S + µN + &Omega; <br>
+
+            </div>
+            <p><strong>(+ &Sum; µ<sub>i</sub> dN<sub>i</sub>) bei Aggregat-/Stoffumwandlung</p>
+
+        </div>
+
+        <div class="potential-box">
+            <h3>Enthalpie (<i>H</i>)</h3>
+            <div class="formel-display"  style="text-align: left; padding-left: 20px;">
+                H = U + pV
+            </div>
+        </div>
+
+        <div class="potential-box">
+            <h3>Freie Energie / Helmholtz-Energie (<i>F</i>)</h3>
+            <div class="formel-display"  style="text-align: left; padding-left: 20px;">
+                F = U - T · S &nbsp;→&nbsp; dF = (dU - TdS)<sub>V,T</sub> &nbsp;→&nbsp; dF<sub>V,T</sub> = &delta;W<sub>rev</sub> <br>
+            </div>
+            <p><strong>	&nbsp;→&nbsp; reversible Nutzarbeit bei isotherm-isochor</p>
+        </div>
+
+        <div class="potential-box">
+            <h3>Freie Enthalpie / Gibbs-Energie (<i>G</i>)</h3>
+            <div class="formel-display" style="text-align: left; padding-left: 20px;">
+		G = H - T · S = F + pV <br>
+		dG = (dH - TdS)<sub>p,T</sub> &nbsp;→&nbsp; dG<sub>p,T</sub> = &delta;W<sub>rev</sub> <br>
+            </div>
+            <p><strong>	&nbsp;→&nbsp; reversible Nutzarbeit bei isotherm-isobar</p>
+        </div>
+
+        <h2>Erweiterte und teilchenfreie Potentiale</h2>
+
+        <div class="potential-box">
+            <h3>Großkanonisches Potential (<i>Ω</i>)</h3>
+            <div class="formel-display" style="text-align: left; padding-left: 20px;">
+                Ω = F - μN = U - T · S - µN <br>
+            </div>
+ 
+        </div>
+
+        <div class="potential-box">
+            <h3>Potential <i>R</i> (Teilchenfreies Energiepotential)</h3>
+            <div class="formel-display" style="text-align: left; padding-left: 20px;">
+                R = U - μN <br>
+            </div>
+       
+        </div>
+
+        <div class="potential-box">
+            <h3>Potential <i>J</i> (Teilchenfreies Enthalpiepotential)</h3>
+            <div class="formel-display" style="text-align: left; padding-left: 20px;">
+                J = R + pV <br>
+            </div>
+        
+        </div>
+
+        <div class="potential-box">
+            <h3>Potential <i>K</i> (Entropisches Hilfspotential)</h3>
+            <div class="formel-display" style="text-align: left; padding-left: 20px;">
+                K = G - μN <br>
+            </div>
+       
+        </div>
+
+
+       <h2>Fundamentale Differentialgleichungen in Abhängigkeit von den natürlichen Variablen</h2>
+
+        <div class="potential-box">            
+            <div class="formel-display" style="text-align: left; padding-left: 20px;">
+                dS(U,V,N) = 1/T dU + p/T dV - µ/T dN<br>
+		dU(S,V,N) = TdS - pdV (+ &Sigma; µ<sub>i</sub> dN<sub>i</sub>)<br>
+		dH(S,p,N) = TdS + Vdp (+ &Sigma; µ<sub>i</sub> dN<sub>i</sub>)<br>
+		dF(T,V,N) = -SdT - pdV (+ &Sigma; µ<sub>i</sub> dN<sub>i</sub>)<br>
+		dG(T,p,N) = -SdT + Vdp (+ &Sigma; µ<sub>i</sub> dN<sub>i</sub>)<br>
+		&nbsp;→&nbsp; bei p,T=konst. gilt dG = &Sigma; µ<sub>i</sub> dN<sub>i</sub> = &delta;W<br>
+		&nbsp;→&nbsp; Extraarbeit durch Veränderung der Zusammensetzung des Systems<br>
+		dΩ(T,V,µ) = -SdT - pdV (- &Sigma; N<sub>i</sub> dµ<sub>i</sub>)<br>
+		dR(S,V,µ) = TdS - pdV (- &Sigma; N<sub>i</sub> dµ<sub>i</sub>)<br>
+		dJ(S,p,µ) = TdS + Vdp (- &Sigma; N<sub>i</sub> dµ<sub>i</sub>)<br>
+		dK(T,p,µ) = -SdT + Vdp (- &Sigma; N<sub>i</sub> dµ<sub>i</sub>)<br>
+            </div>
+        
+        </div>
+
+
+        <h2>Einheitenreferenz</h2>
+        <div class="potential-box">
+            <p><strong>J (Joule):</strong> SI-Einheit für Energie, Arbeit und thermische Potentiale.</p>
+            <p><strong>K (Kelvin):</strong> SI-Einheit für die absolute thermodynamische Temperatur.</p>
+        </div>
+
+        <footer>
+            <p>Formeln die Physikalische Chemie betreffend &copy; 2026 | <a href="impressum.html">Impressum & Datenschutz</a></p>
+        </footer>
+    </main>
+
+</body>
+</html>
