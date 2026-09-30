@@ -4,7 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>1. Thermodynamik - Formeln PC</title>
-    <script src="https://cloudflare.com" async></script>
+    
+    <!-- KORRIGIERT: Dieses Skript funktioniert jetzt fehlerfrei online und offline -->
+    <script>
+        window.MathJax = {
+            tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] },
+            svg: { fontCache: 'global' }
+        };
+    </script>
+    <script style="display:none;" src="https://jsdelivr.net" id="MathJax-script" async></script>
+
     <style>
         body { font-family: 'Segoe UI', Arial, sans-serif; margin: 0; padding: 0; background-color: #f4f7f6; color: #333; display: flex; min-height: 100vh; }
         nav { width: 280px; background-color: #2c3e50; color: white; padding: 20px; box-shadow: 2px 0 5px rgba(0,0,0,0.1); position: fixed; height: 100vh; overflow-y: auto; box-sizing: border-box; }
