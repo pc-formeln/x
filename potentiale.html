@@ -35,6 +35,18 @@
         footer a { color: #2980b9; text-decoration: none; }
         
         @media (max-width: 768px) { body { flex-direction: column; } nav { width: 100%; height: auto; position: relative; } main { margin-left: 0; padding: 20px; } }
+
+
+	/* CSS für die thermodynamische Übersichtstabelle */
+        .table-container { width: 100%; overflow-x: auto; margin: 25px 0; border-radius: 4px; border: 1px solid #dcdde1; }
+        .pc-tabelle { width: 100%; border-collapse: collapse; background-color: white; font-family: 'Segoe UI', Arial, sans-serif; font-size: 15px; }
+        .pc-tabelle th { background-color: #2c3e50; color: white; font-weight: 600; text-align: center; padding: 12px; border: 1px solid #34495e; }
+        .pc-tabelle td { padding: 12px; border: 1px solid #dcdde1; text-align: center; font-family: 'Times New Roman', Times, serif; font-style: italic; font-size: 17px; }
+        .pc-tabelle tr:nth-child(even) { background-color: #f8f9fa; }
+        .pc-tabelle .row-title { font-family: 'Segoe UI', Arial, sans-serif; font-weight: bold; font-style: normal; font-size: 15px; text-align: left; background-color: #f1f2f6; color: #2c3e50; width: 15%; }
+        .pc-tabelle .cond { font-size: 12px; color: #7f8c8d; display: block; font-family: Arial, sans-serif; font-style: normal; margin-top: 2px; }
+
+
     </style>
 </head>
 <body>
@@ -63,7 +75,8 @@
         <div class="potential-box">
             <h3>Innere Energie (<i>U</i>)</h3>
             <div class="formel-display" style="text-align: left; padding-left: 20px;">
-                &Delta;U = Q + W (+ &Sum; µ<sub>i</sub> dN<sub>i</sub>) &nbsp;→&nbsp dU = &delta;Q + &delta;W (+ &Sum; µ<sub>i</sub> dN<sub>i</sub>) <br>
+                &Delta;U = Q + W (+ &Sum; µ<sub>i</sub> dN<sub>i</sub>) <br>
+		&nbsp;→&nbsp dU = &delta;Q + &delta;W (+ &Sum; µ<sub>i</sub> dN<sub>i</sub>) <br>
                 U(T,V,N) = T · S + F <br>
 		U(T,p,N) = T · S - pV + G <br>
 		U(T,V,µ) = T · S + µN + &Omega; <br>
@@ -83,7 +96,9 @@
         <div class="potential-box">
             <h3>Freie Energie / Helmholtz-Energie (<i>F</i>)</h3>
             <div class="formel-display"  style="text-align: left; padding-left: 20px;">
-                F = U - T · S &nbsp;→&nbsp; dF = (dU - TdS)<sub>V,T</sub> &nbsp;→&nbsp; dF<sub>V,T</sub> = &delta;W<sub>rev</sub> <br>
+                F = U - T · S <br>
+		&nbsp;→&nbsp; dF = (dU - TdS)<sub>V,T</sub><br> 
+		&nbsp;→&nbsp; dF<sub>V,T</sub> = &delta;W<sub>rev</sub> <br>
             </div>
             <p><strong>	&nbsp;→&nbsp; reversible Nutzarbeit bei isotherm-isochor</p>
         </div>
@@ -96,7 +111,7 @@
             </div>
             <p><strong>	&nbsp;→&nbsp; reversible Nutzarbeit bei isotherm-isobar</p>
         </div>
-
+	
         <h2>Erweiterte und teilchenfreie Potentiale</h2>
 
         <div class="potential-box">
@@ -142,7 +157,7 @@
 		dF(T,V,N) = -SdT - pdV (+ &Sigma; µ<sub>i</sub> dN<sub>i</sub>)<br>
 		dG(T,p,N) = -SdT + Vdp (+ &Sigma; µ<sub>i</sub> dN<sub>i</sub>)<br>
 		&nbsp;→&nbsp; bei p,T=konst. gilt dG = &Sigma; µ<sub>i</sub> dN<sub>i</sub> = &delta;W<br>
-		&nbsp;→&nbsp; Extraarbeit durch Veränderung der Zusammensetzung des Systems<br>
+		&nbsp;→&nbsp; Extraarbeit durch Veränderung der Zusammensetzung des Systems<br><br>
 		dΩ(T,V,µ) = -SdT - pdV (- &Sigma; N<sub>i</sub> dµ<sub>i</sub>)<br>
 		dR(S,V,µ) = TdS - pdV (- &Sigma; N<sub>i</sub> dµ<sub>i</sub>)<br>
 		dJ(S,p,µ) = TdS + Vdp (- &Sigma; N<sub>i</sub> dµ<sub>i</sub>)<br>
@@ -150,6 +165,155 @@
             </div>
         
         </div>
+
+        <h2>Thermodynamische Matrix der Hauptpotentiale (konstantes <i>N</i>)</h2>
+        <p style="color: #7f8c8d; font-style: italic;">Übersicht über die totalen Differentiale unter den vier klassischen Randbedingungen.</p>
+
+
+        <div class="table-container">
+            <table class="pc-tabelle">
+                <thead>
+                    <tr>
+                        <th>Potential / Bedingung</th>
+                        <th>Isotherm<span class="cond">(dT = 0)</span></th>
+                        <th>Isobar<span class="cond">(dp = 0)</span></th>
+                        <th>Isochor<span class="cond">(dV = 0)</span></th>
+                        <th>Isentrop<span class="cond">(dS = 0)</span></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="row-title">Innere Energie (<i>dU</i>)</td>
+                        <td><i>dU</i> = <i>TdS - pdV</i></td>
+                        <td><i>dU</i> = <i>TdS - pdV</i></td>
+                        <td><i>dU</i> = <i>TdS</i></td>
+                        <td><i>dU</i> = <i>-pdV</i></td>
+                    </tr>
+                    <tr>
+                        <td class="row-title">Enthalpie (<i>dH</i>)</td>
+                        <td><i>dH</i> = <i>TdS + Vdp</i></td>
+                        <td><i>dH</i> = <i>TdS</i></td>
+                        <td><i>dH</i> = <i>TdS + Vdp</i></td>
+                        <td><i>dH</i> = <i>Vdp</i></td>
+                    </tr>
+                    <tr>
+                        <td class="row-title">Helmholtz-Energie (<i>dF</i>)</td>
+                        <td><i>dF</i> = <i>-pdV</i></td>
+                        <td><i>dF</i> = <i>-SdT - pdV</i></td>
+                        <td><i>dF</i> = <i>-SdT</i></td>
+                        <td><i>dF</i> = <i>-SdT - pdV</i></td>
+                    </tr>
+                    <tr>
+                        <td class="row-title">Gibbs-Energie (<i>dG</i>)</td>
+                        <td><i>dG</i> = <i>Vdp</i></td>
+                        <td><i>dG</i> = <i>-SdT</i></td>
+                        <td><i>dG</i> = <i>-SdT + Vdp</i></td>
+                        <td><i>dG</i> = <i>-SdT + Vdp</i></td>
+                    </tr>
+                    <tr>
+                        <td class="row-title">Erweiterte Terme / Notizen</td>
+                        <td style="font-family: Arial, sans-serif; font-style: normal; font-size: 13px; color: #7f8c8d;"><i> ...</i></td>
+                        <td style="font-family: Arial, sans-serif; font-style: normal; font-size: 13px; color: #7f8c8d;"><i> ...</i></td>
+                        <td style="font-family: Arial, sans-serif; font-style: normal; font-size: 13px; color: #7f8c8d;"><i> ...</i></td>
+                        <td style="font-family: Arial, sans-serif; font-style: normal; font-size: 13px; color: #7f8c8d;"><i> ...</i></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+
+
+        <h2>Weitere Berechnungshilfen</h2>
+
+        <div class="potential-box">            
+            <div class="formel-display" style="text-align: left; padding-left: 20px;">
+		&Delta;S isotherm: &nbsp;&nbsp; dS = &delta;Q / T<br><br>
+		&Delta;S isobar: &nbsp;&nbsp; dS = &delta;Q / T = C<sub>p</sub>dT / T<br><br>
+		&Delta;S isochor: &nbsp;&nbsp; dS = &delta;Q / T = C<sub>v</sub>dT / T<br><br>
+		&Delta;U isotherm: &nbsp;&nbsp; dU = TdS - pdV<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		&nbsp;→&nbsp; wenn W = -Q dann dU = 0<br><br>
+		&Delta;U isobar: &nbsp;&nbsp; dU = TdS - pdV = C<sub>p</sub>dT - pdV<br><br>
+		&Delta;U isochor: &nbsp;&nbsp; dU = TdS = C<sub>v</sub>dT<br><br>
+		&Delta;H isotherm: &nbsp;&nbsp; dH = TdS + pdV = &delta;Q + Vdp<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		&nbsp;→&nbsp; wenn W = -Q dann dU = TdS - pdV = 0<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		&nbsp;→&nbsp; dann dH = pdV + Vdp = d(pV)<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		&nbsp;→&nbsp; wenn pV = konst. dann dH = 0<br><br>
+		&Delta;H isobar: &nbsp;&nbsp; dH = TdS = C<sub>p</sub>dT<br><br>
+		&Delta;H isochor: &nbsp;&nbsp; dH = TdS + Vdp = C<sub>v</sub>dT + Vdp<br><br>
+		&Delta;F isotherm: &nbsp;&nbsp; dF = -pdV<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		&nbsp;→&nbsp; wenn W = -Q dann dU = TdS - pdV = 0<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		&nbsp;→&nbsp; dann dF = -TdS = -&delta;Q<br><br>
+		S: &nbsp;&nbsp; dS = &delta;Q / T (+ W<sub>diss</sub> / T )<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		&nbsp;→&nbsp; Klammer wenn zusätzliche Reibungsarbeit<br><br>
+
+		<u>V=V(T,p)</u><br>
+		dV = (&part;V/&part;T)<sub>p</sub>dT + (&part;V/&part;p)<sub>T</sub>dp<br>
+		dV = V&gamma;dT - V&alpha;dp<br>
+		V(T,p) = V<sub>0</sub> (1 + &gamma; (T-T<sub>0</sub>) - &alpha; (p-p<sub>0</sub>))<br>
+		&alpha;: isothermer Kompressibilitätskoeffizient<br>
+		&gamma;: isobarer Volumenexpansionskoeffizient<br><br>
+
+		<u>S=S(V,T)</u><br>
+		dS = (&part;S/&part;V)<sub>T</sub>dV + (&part;S/&part;T)<sub>v</sub>dT<br>
+		(&part;S/&part;V)<sub>T</sub> = (&part;p/&part;T)<sub>v</sub> = R/V<br>
+		(&part;S/&part;T)<sub>v</sub> = C<sub>v</sub>/T<br>
+		S = S<sub>0</sub> + nR ln (V<sub>2</sub>/V<sub>1</sub>) + nC<sub>v</sub> ln (T<sub>2</sub>/T<sub>1</sub>)<br><br>
+
+		<u>S=S(p,T)</u><br>
+		dS = (&part;S/&part;p)<sub>T</sub>dp + (&part;S/&part;T)<sub>p</sub>dT<br>
+		(&part;S/&part;p)<sub>T</sub> = -R/p<br>
+		(&part;S/&part;T)<sub>p</sub> = C<sub>p</sub>/T<br>
+		S = S<sub>0</sub> - nR ln (p<sub>2</sub>/p<sub>1</sub>) + nC<sub>p</sub> ln (T<sub>2</sub>/T<sub>1</sub>)<br><br>
+
+		<u>S=S(p,V)</u><br>
+		dS = (&part;S/&part;p)<sub>v</sub>dp + (&part;S/&part;V)<sub>p</sub>dV<br>
+		S = S<sub>0</sub> - nC<sub>v</sub> ln (p<sub>2</sub>/p<sub>1</sub>) + nC<sub>p</sub> ln (V<sub>2</sub>/V<sub>1</sub>)<br>
+		&nbsp;→&nbsp; für polytrope Zustandsänderung<br><br>
+
+		<u>S=S(U,V)</u><br>
+		dS = dU/T + (p/T)dV<br>
+		&Delta;S = &int; (1/T)dU + R ln V<br>
+ 		&nbsp;→&nbsp; gilt für ideales Gas; U unabhängig von V!<br>
+		&Delta;S = C<sub>v</sub> ln U + R ln V<br><br>
+
+		<u>H=H(T,p)</u><br>
+		dH = (&part;H/&part;T)<sub>p</sub>dT + (&part;H/&part;p)<sub>T</sub>dp<br>
+		(&part;H/&part;T)<sub>p</sub> = C<sub>p</sub><br>
+		(&part;H/&part;p)<sub>T</sub> = V - T(&part;V/&part;T)<sub>p</sub> = V(1-T&alpha;)<br>
+		(&part;H/&part;p)<sub>T</sub> = 0; für ideales Gas<br>
+		(&part;H/&part;p)<sub>T</sub> = V<sup>0</sup>; für inkompressible Flüssigkeiten<br>
+		inkompressible Flüssigkeit:<br>
+		&nbsp;→&nbsp; C<sub>p</sub>=C<sub>v</sub>=C(T)<br>
+		&nbsp;→&nbsp; V<sup>0</sup> = konst. und unabhängig von p<br>
+		H = H<sup>0</sup> + &int; C(T)dT + &int; V<sup>0</sup>dp<br>
+                ... = H<sup>0</sup> + &int; C(T)dT + V<sup>0</sup>(p<sub>2</sub>-p<sub>1</sub>)<br><br>
+
+		<u>H=H(p)</u><br>
+		(&part;H/&part;p)<sub>T</sub>dp << (&part;H/&part;T)<sub>p</sub>dT; außer in Geo- oder Astrophysik<br>
+		... mit hohen Druckänderungen<br>
+		(&part;H/&part;p)<sub>T</sub> = V - T(&part;V/&part;T)<sub>p</sub><br>
+		(&part;H/&part;p)<sub>T</sub> &approx; V; für Flüssigkeit und Festkörper<br>
+		&nbsp;→&nbsp; dH &approx; C<sub>p</sub>dT + Vdp<br>
+		(&part;H/&part;p)<sub>T</sub> = 0; für ideales Gas<br><br>
+
+		<u>H=H(T)</u><br>
+		&Delta;<sub>R</sub>H = H<sup>Produkt</sup> - H<sup>Edukt</sup><br>
+		&Delta;<sub>R</sub>H(T<sub>2</sub>) = &Delta;<sub>R</sub>H(T<sub>1</sub>) + &int; (C<sub>p</sub><sup>Produkt</sup> - C<sub>p</sub><sup>Edukt</sup>) dT<br>
+
+
+
+
+            </div>
+        
+        </div>
+
 
 
         <h2>Einheitenreferenz</h2>
