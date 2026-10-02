@@ -46,6 +46,13 @@
         .pc-tabelle .row-title { font-family: 'Segoe UI', Arial, sans-serif; font-weight: bold; font-style: normal; font-size: 15px; text-align: left; background-color: #f1f2f6; color: #2c3e50; width: 15%; }
         .pc-tabelle .cond { font-size: 12px; color: #7f8c8d; display: block; font-family: Arial, sans-serif; font-style: normal; margin-top: 2px; }
 
+	/* CSS für das interne Untermenü */
+        .submenu-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 15px; margin: 25px 0; }
+        .submenu-card { background-color: white; border: 1px solid #dcdde1; border-radius: 4px; padding: 15px; text-decoration: none; color: #2c3e50; transition: all 0.2s ease; display: flex; flex-direction: column; }
+        .submenu-card:hover { border-color: #3498db; background-color: #f7f9fa; transform: translateY(-1px); }
+        .submenu-card .nr { font-size: 13px; color: #7f8c8d; font-weight: bold; margin-bottom: 5px; }
+        .submenu-card .title { font-size: 16px; font-weight: 600; color: #2980b9; }
+        .submenu-card .desc { font-size: 13px; color: #7f8c8d; margin-top: 5px; font-style: italic; }
 
     </style>
 </head>
@@ -87,7 +94,7 @@
 		U(T,V,µ) = T · S + µN + &Omega; <br>
 
             </div>
-            <p><strong>(+ &Sum; µ<sub>i</sub> dN<sub>i</sub>) bei Aggregat-/Stoffumwandlung</p>
+            <p><strong>(+ &Sum; µ<sub>i</sub> dN<sub>i</sub>) bei Aggregat-/Stoffumwandlung</strong></p>
 
         </div>
 
@@ -105,7 +112,7 @@
 		&nbsp;→&nbsp; dF = (dU - TdS)<sub>V,T</sub><br> 
 		&nbsp;→&nbsp; dF<sub>V,T</sub> = &delta;W<sub>rev</sub> <br>
             </div>
-            <p><strong>	&nbsp;→&nbsp; reversible Nutzarbeit bei isotherm-isochor</p>
+            <p><strong>	&nbsp;→&nbsp; reversible Nutzarbeit bei isotherm-isochor</strong></p>
         </div>
 
         <div class="potential-box">
@@ -114,7 +121,7 @@
 		G = H - T · S = F + pV <br>
 		dG = (dH - TdS)<sub>p,T</sub> &nbsp;→&nbsp; dG<sub>p,T</sub> = &delta;W<sub>rev</sub> <br>
             </div>
-            <p><strong>	&nbsp;→&nbsp; reversible Nutzarbeit bei isotherm-isobar</p>
+            <p><strong>	&nbsp;→&nbsp; reversible Nutzarbeit bei isotherm-isobar</strong></p>
         </div>
 	
         <h2>Erweiterte und teilchenfreie Potentiale</h2>
@@ -227,6 +234,42 @@
         </div>
 
 
+        <h2>Spezifische Thermodynamische Zustandsänderungen</h2>
+        <p style="color: #7f8c8d; font-style: italic;">Detaillierte mathematische Herleitungen und Arbeitsintegrale der fünf klassischen Prozesspfade:</p>
+
+        <div class="submenu-container">
+            <a href="isobar.html" class="submenu-card">
+                <span class="nr">Kapitel 1.1.1</span>
+                <span class="title">Isobare Zustandsänderung</span>
+                <span class="desc">Konstanter Druck (dp = 0). Enthalpieorientierte Prozesse.</span>
+            </a>
+            
+            <a href="isochor.html" class="submenu-card">
+                <span class="nr">Kapitel 1.1.2</span>
+                <span class="title">Isochore Zustandsänderung</span>
+                <span class="desc">Konstantes Volumen (dV = 0). Reine Wärmeübertragung.</span>
+            </a>
+            
+            <a href="isotherm.html" class="submenu-card">
+                <span class="nr">Kapitel 1.1.3</span>
+                <span class="title">Isotherme Zustandsänderung</span>
+                <span class="desc">Konstante Temperatur (dT = 0). Maximaler Arbeitsumsatz.</span>
+            </a>
+            
+            <a href="adiabatisch.html" class="submenu-card">
+                <span class="nr">Kapitel 1.1.4</span>
+                <span class="title">Adiabatische Zustandsänderung</span>
+                <span class="desc">Kein Wärmeaustausch (δQ = 0). Isentrope Expansionen.</span>
+            </a>
+            
+            <a href="polytrop.html" class="submenu-card">
+                <span class="nr">Kapitel 1.1.5</span>
+                <span class="title">Polytrope Zustandsänderung</span>
+                <span class="desc">Der reale Allgemeinfall mit variablem Polytropenexponenten.</span>
+            </a>
+        </div>
+
+
 
         <h2>Weitere Berechnungshilfen</h2>
 
@@ -311,6 +354,21 @@
 		<u>H=H(T)</u><br>
 		&Delta;<sub>R</sub>H = H<sup>Produkt</sup> - H<sup>Edukt</sup><br>
 		&Delta;<sub>R</sub>H(T<sub>2</sub>) = &Delta;<sub>R</sub>H(T<sub>1</sub>) + &int; (C<sub>p</sub><sup>Produkt</sup> - C<sub>p</sub><sup>Edukt</sup>) dT<br><br>
+
+		<u>U=U(T)</u><br>
+		&Delta;<sub>R</sub>U = U<sup>Produkt</sup> - U<sup>Edukt</sup><br>
+		&Delta;<sub>R</sub>U(T<sub>2</sub>) = &Delta;<sub>R</sub>U(T<sub>1</sub>) + &int; (C<sub>v</sub><sup>Produkt</sup> - C<sub>v</sub><sup>Edukt</sup>) dT<br><br>
+
+		<u>U=U(V,T)</u><br>
+		dU = (&part;U/&part;V)<sub>T</sub>dV + (&part;U/&part;T)<sub>V</sub>dT<br>
+		(&part;U/&part;V)<sub>T</sub> = 0; ideales Gas<br>
+		(&part;U/&part;V)<sub>T</sub> = &pi;<sub><i>T</i></sub>; reales Gas<br>
+		&nbsp;→&nbsp; &pi;<sub><i>T</i></sub> = T(&part;p/&part;T)<sub>v</sub> - p<br>
+		(&part;U/&part;V)<sub>T</sub> = &alpha;/V<sub>m</sub><sup>2</sup>; Van-der-Waals-Gas<br>
+		(&part;U/&part;T)<sub>V</sub> = C<sub>v</sub><br>
+		dU = &pi;<sub><i>T</i></sub> dV + C<sub>v</sub> dT; reales Gas<br>
+		dU = C<sub>v</sub> dT; ideales Gas (U nur von T abhängig)<br><br>
+
 
 
 
