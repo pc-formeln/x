@@ -42,6 +42,83 @@
     <main>
         <h1>1.4 Chemisches Gleichgewicht</h1>
         <p style="color: #7f8c8d; font-style: italic;">Hier entsteht deine Formelsammlung zu Gleichgewichtskonstanten, Stoffumwandlungen und Phasenregeln.</p>
+
+
+       
+        <h2>&Delta;G am Beispiel für Gase</h2>
+
+        <div class="potential-box">
+            <h3></h3>
+            <div class="formel-display" style="text-align: left; padding-left: 20px;">
+
+	dG = (&part;G/&part;p)<sub>T</sub> dp + (&part;G/&part;T)<sub>p</sub> dT<br>
+	dG = Vdp - SdT<br>
+	(&part;G/&part;p)<sub>T</sub> = V; V=nRT/p<br>
+	p<sub>gesamt</sub> ist zwar konstant, aber nicht die Partialdrücke!<br>
+	dG = nRT (1/p) dp = nRT dln p<br>
+	&Delta;G = nRT ln(p/p<sup>0</sup>); p/p<sup>0</sup> = a<br>
+	&Delta;G = nRT ln a<br>
+	p<sup>0</sup> &nbsp;→&nbsp; p; &Delta;<sub>(p0-->p)</sub>G !
+
+            </div>
+            <p><strong></strong></p>
+
+        </div>
+
+
+        <h2>K<sub>a</sub> - thermodynamische Gleichgewichtskonstante</h2>
+
+        <div class="potential-box">
+            <h3></h3>
+            <div class="formel-display" style="text-align: left; padding-left: 20px;">
+
+	&nu;<sub>A</sub> A &rarr; &nu;<sub>B</sub> B<br><br>
+	&Delta;<sub>R</sub>G<sub>m</sub> = &nu;<sub>A</sub> G<sub>m,A</sub> + &nu;<sub>B</sub> G<sub>m,B</sub><br>
+	&Delta;<sub>R</sub>G<sub>m</sub><sup>0</sup> = &nu;<sub>A</sub> G<sub>m,A</sub><sup>0</sup> + &nu;<sub>B</sub> G<sub>m,B</sub><sup>0</sup><br>
+	--------------------------------------<br>
+	&Delta;<sub>R</sub>G<sub>m</sub> - &Delta;<sub>R</sub>G<sub>m</sub><sup>0</sup> = &nu;<sub>A</sub> (G<sub>m,A</sub> - G<sub>m,A</sub><sup>0</sup>) + &nu;<sub>B</sub> (G<sub>m,B</sub> - G<sub>m,B</sub><sup>0</sup>)<br>
+	&Delta;<sub>R</sub>G<sub>m</sub> - &Delta;<sub>R</sub>G<sub>m</sub><sup>0</sup> = &nu;<sub>A</sub> RT ln a<sub>A</sub> + &nu;<sub>B</sub> RT ln a<sub>B</sub><br>
+	&Delta;<sub>R</sub>G<sub>m</sub> - &Delta;<sub>R</sub>G<sub>m</sub><sup>0</sup> = RT ln a<sub>A</sub><sup>&nu;A</sup> + RT ln a<sub>B</sub><sup>&nu;B</sup><br>
+	&Delta;<sub>R</sub>G<sub>m</sub> - &Delta;<sub>R</sub>G<sub>m</sub><sup>0</sup> = RT ln (a<sub>B</sub><sup>-&nu;B</sup> / a<sub>A</sub><sup>&nu;A</sup>)<br>
+	&Delta;<sub>R</sub>G<sub>m</sub> - &Delta;<sub>R</sub>G<sub>m</sub><sup>0</sup> = RT ln K<sub>A</sub><br>
+            </div>
+            <p><strong></strong></p>
+
+        </div>
+
+
+        <h2>Das Chemische Potential µ<sub>i</sub></h2>
+
+        <div class="potential-box">
+            <h3></h3>
+            <div class="formel-display" style="text-align: left; padding-left: 20px;">
+
+	µ<sub>i</sub> = (&part;G/&part;n)<sub>T,p</sub> bei den üblichen Bedingungen T,p = konst.<br><br>
+	(&part;G/&part;n): partiell molar aber G<sub>m</sub> = G / n ist molar<br><br>
+	Für ein System mit einer einzigen Substanz ist µ = G<sub>m</sub>.<br><br>
+	µ<sub>i</sub> = (&part;F/&part;n)<sub>V,T</sub> bei V,T = konst.<br>
+	µ<sub>i</sub> = (&part;H/&part;n)<sub>p,S</sub> bei p,S = konst.<br>
+	µ<sub>i</sub> = (&part;U/&part;n)<sub>V,S</sub> bei V,S = konst.<br><br>
+	dimensionslose Größe (Vereinfachung): ^µ<sub>i</sub> = µ<sub>i</sub>/(RT)<br><br>
+	(&part;µ<sub>i</sub>/&part;T)<sub>p,x</sub> = -S<sub>m,i</sub> (&part;µ<sub>i</sub>/&part;p)<sub>T,x</sub> = V<sub>m,i</sub><br>
+	((&part;µ<sub>i</sub>/T) / &part;T)<sub>p,x</sub> = -H<sub>m,i</sub> / T<sup>2</sup><br><br>
+	chemisches Potential einer Lösungskomponente:<br>
+	dµ = -SdT + Vdp<br>
+	&rarr; Integration wenn S,V konst.<br>
+	&rarr; dµ<sub>i</sub> = G<sub>i</sub><sup>0</sup> + S<sub>i</sub> (T<sup>0</sup>-T) + RT ln a<sub>i</sub> + V<sub>m,i</sub> (p-p<sup>0</sup>)<br>
+
+
+
+            </div>
+            <p><strong></strong></p>
+
+        </div>
+
+
+
+
+
+
         <footer>
             <p>Formeln die Physikalische Chemie betreffend &copy; 2026 | <a href="impressum.html">Impressum & Datenschutz</a></p>
         </footer>
