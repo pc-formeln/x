@@ -375,14 +375,39 @@
 		dU = &pi;<sub><i>T</i></sub> dV + C<sub>v</sub> dT; reales Gas<br>
 		dU = C<sub>v</sub> dT; ideales Gas (U nur von T abhängig)<br><br>
 
-		<u>U=U(p,T)</u><br>
-    dU = (&part;U/&part;p)<sub>T</sub>dp + (&part;U/&part;T)<sub>p</sub>dT<br>
-    (&part;U/&part;p)<sub>T</sub> = 0; ideales Gas<br>
-    (&part;U/&part;T)<sub>p</sub> = C<sub>v</sub>; ideales Gas<br>
-    (&part;U/&part;T)<sub>p</sub> = &alpha; &pi;<sub>T</sub>V + C<sub>v</sub>; reales Gas<br>
-    dU = T(&part;S/&part;T)<sub>p</sub>dT - p(&part;V/&part;T)<sub>p</sub>dT + T(&part;S/&part;p)<sub>T</sub>dp - p(&part;V/&part;S)<sub>T</sub>dp<br>
-    dU = C<sub>p</sub>dT - nRdT = C<sub>v</sub>dT; ideales gas pV=nRT<br><br>
+	<u>U=U(p,T)</u><br>
+    	dU = (&part;U/&part;p)<sub>T</sub>dp + (&part;U/&part;T)<sub>p</sub>dT<br>
+    	(&part;U/&part;p)<sub>T</sub> = 0; ideales Gas<br>
+    	(&part;U/&part;T)<sub>p</sub> = C<sub>v</sub>; ideales Gas<br>
+    	(&part;U/&part;T)<sub>p</sub> = &alpha; &pi;<sub>T</sub>V + C<sub>v</sub>; reales Gas<br>
+    	dU = T(&part;S/&part;T)<sub>p</sub>dT - p(&part;V/&part;T)<sub>p</sub>dT + T(&part;S/&part;p)<sub>T</sub>dp - p(&part;V/&part;S)<sub>T</sub>dp<br>
+    	dU = C<sub>p</sub>dT - nRdT = C<sub>v</sub>dT; ideales Gas pV=nRT<br><br>
 
+
+	<u>U=U(S,V)</u><br>
+    	dU = (&part;U/&part;S)<sub>V</sub>dS + (&part;U/&part;V)<sub>S</sub>dV<br>
+    	(&part;U/&part;S)<sub>V</sub> = T<br>
+    	(&part;U/&part;V)<sub>S</sub> = -p<br>
+	dU = TdS - pdV<br>
+	dU = C<sub>v</sub>dT + [ T(&part;p/&part;T)<sub>v</sub> - p ] dV<br>
+	[ T(&part;p/&part;T)<sub>v</sub> - p ] = 0 für ideales Gas<br><br>
+
+	
+	<u>G=G(p)</u><br>
+	(&part;G/&part;p)<sub>T</sub> = V<br>
+	G(p<sub>2</sub>) = G(p<sub>1</sub>) + &int; Vdp<br>
+	G(p<sub>2</sub>) = G(p<sub>1</sub>) + nRT ln(p<sub>2</sub>/p<sub>1</sub>); für ideale Gase<br>	
+	G<sub>m</sub>(p<sub>2</sub>) = G<sub>m</sub>(p<sub>1</sub>) + (p<sub>2</sub>-p<sub>1</sub>) V<sub>m</sub>; V<sub>m</sub> annähernd konstant für Flüssigkeiten und Festkörper<br> 
+	G<sub>m</sub>(p<sub>2</sub>) &approx; G<sub>m</sub>(p<sub>1</sub>); (p<sub>2</sub>-p<sub>1</sub>) V<sub>m</sub> unter normalen Bedingungen für Flüssigkeiten und Festkörper sehr klein<br><br>
+
+
+	<u>G=G(T)</u><br>
+	(&part;G/&part;T)<sub>p</sub> = -S = -C<sub>p</sub> / T (Erwärmung eines Stoffes)<br>
+	(&part;(G/T)/&part;T)<sub>p</sub> = -H / T<sup>2</sup>; Umformung mittels G=H-TS<br>
+	(&part;(&Delta;G/T)/&part;T)<sub>p</sub> = -&Delta;H / T<sup>2</sup>; &Delta;: Endzustand - Anfangszustand<br><br>
+
+	für die freie Reaktionsenthalpie gilt:<br>
+	(&part;&Delta;<sub>R</sub>G/&part;T)<sub>p</sub> = -&Delta;<sub>R</sub>S<br><br>
 
 
             </div>
