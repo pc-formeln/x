@@ -95,7 +95,9 @@
 
 	µ<sub>i</sub> = (&part;G/&part;n)<sub>T,p</sub> bei den üblichen Bedingungen T,p = konst.<br><br>
 	(&part;G/&part;n): partiell molar aber G<sub>m</sub> = G / n ist molar<br><br>
-	Für ein System mit einer einzigen Substanz ist µ = G<sub>m</sub>.<br><br>
+	Für ein System mit einer einzigen Substanz ist µ = G<sub>m</sub>.<br>
+	Sonst µ<sub>A</sub> = G<sub>m,A</sub> + RT ln x<sub>A</sub><br>
+	... = µ<sub>A</sub><sup>0</sup> + RT ln x<sub>A</sub><br><br>
 	µ<sub>i</sub> = (&part;F/&part;n)<sub>V,T</sub> bei V,T = konst.<br>
 	µ<sub>i</sub> = (&part;H/&part;n)<sub>p,S</sub> bei p,S = konst.<br>
 	µ<sub>i</sub> = (&part;U/&part;n)<sub>V,S</sub> bei V,S = konst.<br><br>
@@ -107,7 +109,23 @@
 	&rarr; Integration wenn S,V konst.<br>
 	&rarr; dµ<sub>i</sub> = G<sub>i</sub><sup>0</sup> + S<sub>i</sub> (T<sup>0</sup>-T) + RT ln a<sub>i</sub> + V<sub>m,i</sub> (p-p<sup>0</sup>)<br>
 
+            </div>
+            <p><strong></strong></p>
 
+        </div>
+
+
+        <h2>Aktivität a</h2>
+
+        <div class="potential-box">
+            <h3></h3>
+            <div class="formel-display" style="text-align: left; padding-left: 20px;">
+
+	a<sub>i</sub> = p<sub>i</sub> / p<sup>0</sup>; p<sup>0</sup> meist 1 bar oder 1 atm<br>
+	a<sub>i</sub> = c<sub>i</sub> / c<sup>0</sup>; c<sup>0</sup> meist 1 mol/l<br>
+	a<sub>i</sub> = x<sub>i</sub>; für Lösungsmittel<br><br>
+	a<sub>LM</sub> = p<sub>LM</sub> / p<sub>LM,rein</sub> ; &nbsp; Aktivität eines Lösungsmittels mittels Raoultschem Gesetz<br><br>
+	a<sub>i</sub> = f<sub>i</sub> c<sub>i</sub> ; für Elektrolytlösungen mittels Aktivitätskoeffizienten<br>
 
             </div>
             <p><strong></strong></p>
@@ -115,7 +133,110 @@
         </div>
 
 
+        <h2>Fugazität f</h2>
 
+        <div class="potential-box">
+            <h3></h3>
+            <div class="formel-display" style="text-align: left; padding-left: 20px;">
+
+	f = &phi; p<br>
+<p style="text-align: left; line-height: 2.5em;">
+  ln &phi; = 
+  <span style="display: inline-flex; flex-direction: column; vertical-align: middle; text-align: center; margin: 0 4px;">
+    <span style="border-bottom: 1px solid; padding: 0 2px;">1</span>
+    <span>R · T</span>
+  </span> 
+  <span style="font-size: 1.4em; vertical-align: middle; margin-left: 4px;">&int;</span><sub style="position: relative; left: -0.2em; bottom: -0.5em; font-size: 0.8em;">0</sub><sup style="position: relative; left: -0.5em; top: -0.7em; font-size: 0.8em;">p</sup> 
+  (V<sub>m</sub>-V<sub>m,ideal</sub>) dp
+</p>
+
+            </div>
+            <p><strong>&phi; : Fugazitätskoeffizient</strong></p>
+
+        </div>
+
+
+
+        <h2>Reaktionsgrößen Z<sub>(R)</sub> des Reaktionsgemisches</sub></h2>
+
+        <div class="potential-box">
+            <h3></h3>
+            <div class="formel-display" style="text-align: left; padding-left: 20px;">
+
+	A &rarr; 2 B<br><br>
+	V<sub>(R)</sub> = n<sub>A</sub> V<sub>m,A</sub> + n<sub>B</sub> V<sub>m,B</sub><br>
+	H<sub>(R)</sub> = n<sub>A</sub> &Delta;<sub>B</sub>H<sub>m,A</sub> + n<sub>B</sub> &Delta;<sub>B</sub>H<sub>m,B</sub><br>
+	C<sub>p(R)</sub> = n<sub>A</sub> C<sub>p,m,A</sub> + n<sub>B</sub> C<sub>p,m,B</sub><br>
+	S<sub>(R)</sub> = n<sub>A</sub> (S<sub>m,A</sub> - R ln x<sub>A</sub>) + n<sub>B</sub> (S<sub>m,B</sub> - R ln x<sub>B</sub>)<br>
+	G<sub>(R)</sub> = n<sub>A</sub> (&Delta;<sub>B</sub>G<sub>m,A</sub> + RT ln x<sub>A</sub>) + n<sub>B</sub> (&Delta;<sub>B</sub>G<sub>m,B</sub> + RT ln x<sub>B</sub>)<br><br>
+	dimensionslose Größen (reduziert) zwecks Vereinfachung:<br><br>
+	H&#770;<sub>(R)</sub> = H<sub>(R)</sub> / (RT)<br>
+	S&#770;<sub>(R)</sub> = S<sub>(R)</sub> / R<br>
+	G&#770;<sub>(R)</sub> = H<sub>(R)</sub> / (RT)<br>
+            </div>
+            <p><strong></strong></p>
+
+        </div>
+
+
+        <h2>Molare Reaktionsgrößen &Delta;<sub>R</sub>Z<sub>m</sub></h2>
+
+        <div class="potential-box">
+            <h3></h3>
+            <div class="formel-display" style="text-align: left; padding-left: 20px;">
+
+	A &rarr; 2 B<br><br>
+	&Delta;<sub>R</sub>V<sub>m</sub> = -1 V<sub>m,A</sub> + 2 V<sub>m,B</sub><br>
+	&Delta;<sub>R</sub>H<sub>m</sub> = -1 &Delta;<sub>B</sub>H<sub>m,A</sub> + 2 &Delta;<sub>B</sub>H<sub>m,B</sub><br>
+	&Delta;<sub>R</sub>C<sub>p,m</sub> = -1 C<sub>p,m,A</sub> + 2 C<sub>p,m,B</sub><br>
+	&Delta;<sub>R</sub>S<sub>m</sub>(&xi;) = -1 (S<sub>m,A</sub> - R ln x<sub>A</sub>) + 2 (S<sub>m,B</sub> - R ln x<sub>B</sub>)<br>
+	... =  -1 S<sub>m,A</sub> + 2 S<sub>m,B</sub> - R ln (x<sub>B</sub><sup>2</sup>/x<sub>A</sub>)<br>
+	&Delta;<sub>R</sub>G<sub>m</sub>(&xi;) = -1 (&Delta;<sub>B</sub>G<sub>m,A</sub> + RT ln x<sub>A</sub>) + 2 (&Delta;<sub>B</sub>G<sub>m,B</sub> + RT ln x<sub>B</sub>)<br>
+	... =  -1 &Delta;<sub>B</sub>G<sub>m,A</sub> + 2 &Delta;<sub>B</sub>G<sub>m,B</sub> + RT ln (x<sub>B</sub><sup>2</sup>/x<sub>A</sub>)<br>
+	&Delta;<sub>R</sub>G<sub>m</sub>(&xi;) = -1 µ<sub>A</sub>(&xi;) + 2 µ<sub>B</sub>(&xi;)<br>
+	im Gleichgewicht ist &Delta;<sub>R</sub>G<sub>m</sub> = 0 &rArr; 1 µ<sub>A</sub> = 2 µ<sub>B</sub><br><br>
+	dimensionslose Größen (reduziert) zwecks Vereinfachung:<br><br>
+	&Delta;<sub>R</sub>H&#770;<sub>m</sub> = &Delta;<sub>R</sub>H<sub>m</sub> / (RT)<br>
+	&Delta;<sub>R</sub>S&#770;<sub>m</sub> = &Delta;<sub>R</sub>S<sub>m</sub> / R<br>
+	&Delta;<sub>R</sub>G&#770;<sub>m</sub> = &Delta;<sub>R</sub>H<sub>m</sub> / (RT)<br><br>
+	außerdem:<br><br>
+	&Delta;<sub>R</sub>C<sub>p,m</sub> = &Sigma; &nu; C<sub>p,m</sub> (Produkte) - &Sigma; &nu; C<sub>p,m</sub> (Edukte)<br>
+	&Delta;<sub>R</sub>H<sub>m</sub> = &Delta;<sub>R</sub>H<sub>m</sub> (T<sub>1</sub>) + &int; &Delta;<sub>R</sub>C<sub>p,m</sub> dT<br>	
+            </div>
+            <p><strong>&xi; : Reaktionslaufzahl</strong></p>
+
+        </div>
+
+
+        <h2>Umrechnungen für ideales Gas</h2>
+
+        <div class="potential-box">
+            <h3></h3>
+            <div class="formel-display" style="text-align: left; padding-left: 20px;">
+	c<sub>i</sub> / x<sub>i</sub> = n<sub>gesamt</sub> / V<sub>gesamt</sub> = p<sub>gesamt</sub> / (RT)<br>
+	p<sub>i</sub> / x<sub>i</sub> = RT n<sub>gesamt</sub> / V<sub>gesamt</sub> = p<sub>gesamt</sub><br>
+	c<sub>i</sub> / p<sub>i</sub> = 1 / (RT)<br>
+            </div>
+            <p><strong></strong></p>
+
+        </div>
+
+
+        <h2>Gleichgewichtskonstanten</h2>
+
+        <div class="potential-box">
+            <h3></h3>
+            <div class="formel-display" style="text-align: left; padding-left: 20px;">
+	thermodynamisch und grundsätzlich dimensionslos:<br><br>
+	K<sub>x</sub> = &Pi; x<sub>i</sub><sup>&nu;<sub>i</sub></sup> = exp (-&Delta;<sub>R</sub>G<sub>m,x<sup>0</sup></sub> / (RT))<br>
+	K<sub>p</sub> = &Pi; (p<sub>i</sub>/p<sup>0</sup>)<sup>&nu;<sub>i</sub></sup> = exp (-&Delta;<sub>R</sub>G<sub>m,p<sup>0</sup></sub> / (RT))<br>
+
+
+
+            </div>
+            <p><strong></strong></p>
+
+        </div>
 
 
 
