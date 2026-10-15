@@ -42,7 +42,165 @@
     <main>
         <h1>3. Elektrochemie</h1>
         <p style="color: #7f8c8d; font-style: italic;">Hier entsteht deine Formelsammlung zu elektrochemischen Potenzialen, Ionenaktivitäten und Leitfähigkeiten.</p>
-        <footer>
+
+
+<h2>Thermodynamik galvanischer Zellen</h2>
+
+<div class="potential-box">
+    <h3></h3>
+    <div class="formel-display" style="text-align: left; padding-left: 20px; line-height: 2.2em;">
+
+	Fundamentalgleichung elektrochemische Thermodynamik :<br>
+	&Delta;<sub>R</sub>G = W<sub>el,max</sub> = -z F &Delta;E ; (stromloser Zustand)<br>
+	&Delta;<sub>R</sub>S = z F (&part;&Delta;E/&part;T)<sub>p</sub><br>
+	&Delta;<sub>R</sub>H = -z F [ &Delta;E - T (&part;&Delta;E/&part;T)<sub>p</sub> ]<br>
+	&Delta;G<sup>0</sup> = -z F &Delta;E<sup>0</sup> = -RT ln K<sub>eq</sub><br>
+
+
+
+    </div>
+    	<p><strong>
+	- &Delta;E (Zellspannung/EMK) muss für eine freiwillig ablaufende Reaktion in einer galvanischen Zelle positiv sein.<br>
+	- (&part;&Delta;E / &part;T)<sub>p</sub> nennt man auch den Temperaturkoeffizienten der Zellspannung. Er zeigt direkt, ob sich die Zelle beim Entladen erwärmt oder abkühlt.<br><br>
+	z: Ladungszahl<br>
+	F: Faraday-Konstante &approx; 96.485 C/mol bzw. As/mol<br>
+
+	</strong></p>
+</div>
+
+
+<h2>Elektrochemische Membrangleichgewichte</h2>
+
+
+<div class="potential-box">
+     <div class="formel-display" style="text-align: left; padding: 15px 20px; line-height: 1.8em;">
+
+        <p style="margin-bottom: 0.5em;"><strong>Definition des Membranpotentials:</strong></p>
+        <p style="margin-bottom: 1.5em;">
+            <math display="inline-block">
+                <msub><mi>U</mi><mi>m</mi></msub>
+                <mo>=</mo>
+                <msub><mi>&Phi;</mi><mtext>innen</mtext></msub>
+                <mo>&minus;</mo>
+                <msub><mi>&Phi;</mi><mtext>au&szlig;en</mtext></msub>
+            </math>
+        </p>
+
+        <p style="margin-bottom: 0.5em;"><strong>1. Nernst-Potential (für eine einzelne Ionensorte):</strong></p>
+        <p style="margin-bottom: 1.5em;">
+            <math display="inline-block">
+                <msub><mi>U</mi><mi>m</mi></msub>
+                <mo>=</mo>
+                <mo>&minus;</mo>
+                <mfrac>
+                    <mrow><mi>R</mi><mo>·</mo><mi>T</mi></mrow>
+                    <mrow><mi>z</mi><mo>·</mo><mi>F</mi></mrow>
+                </mfrac>
+                <mo>·</mo>
+                <mi>ln</mi>
+                <mo>(</mo>
+                <mfrac>
+                    <msub><mi>c</mi><mtext>innen</mtext></msub>
+                    <msub><mi>c</mi><mtext>au&szlig;en</mtext></msub>
+                </mfrac>
+                <mo>)</mo>
+            </math>
+        </p>
+
+        <p style="margin-bottom: 0.5em;"><strong>2. Goldman-Hodgkin-Katz-Gleichung (für mehrere Ionen):</strong></p>
+        <p style="margin-bottom: 1em;">
+            <math display="inline-block">
+                <msub><mi>U</mi><mi>m</mi></msub>
+                <mo>=</mo>
+                <mfrac>
+                    <mrow><mi>R</mi><mo>·</mo><mi>T</mi></mrow>
+                    <mi>F</mi>
+                </mfrac>
+                <mo>·</mo>
+                <mi>ln</mi>
+                <mo>(</mo>
+                <mfrac>
+                    <mrow>
+                        <msub><mi>P</mi><msup><mtext>K</mtext><mo>+</mo></msup></msub><mo>·</mo><msub><mrow><mo>[</mo><msup><mtext>K</mtext><mo>+</mo></msup><mo>]</mo></mrow><mtext>o</mtext></msub>
+                        <mo>+</mo>
+                        <msub><mi>P</mi><msup><mtext>Na</mtext><mo>+</mo></msup></msub><mo>·</mo><msub><mrow><mo>[</mo><msup><mtext>Na</mtext><mo>+</mo></msup><mo>]</mo></mrow><mtext>o</mtext></msub>
+                        <mo>+</mo>
+                        <msub><mi>P</mi><msup><mtext>Cl</mtext><mo>&minus;</mo></msup></msub><mo>·</mo><msub><mrow><mo>[</mo><msup><mtext>Cl</mtext><mo>&minus;</mo></msup><mo>]</mo></mrow><mtext>i</mtext></msub>
+                    </mrow>
+                    <mrow>
+                        <msub><mi>P</mi><msup><mtext>K</mtext><mo>+</mo></msup></msub><mo>·</mo><msub><mrow><mo>[</mo><msup><mtext>K</mtext><mo>+</mo></msup><mo>]</mo></mrow><mtext>i</mtext></msub>
+                        <mo>+</mo>
+                        <msub><mi>P</mi><msup><mtext>Na</mtext><mo>+</mo></msup></msub><mo>·</mo><msub><mrow><mo>[</mo><msup><mtext>Na</mtext><mo>+</mo></msup><mo>]</mo></mrow><mtext>i</mtext></msub>
+                        <mo>+</mo>
+                        <msub><mi>P</mi><msup><mtext>Cl</mtext><mo>&minus;</mo></msup></msub><mo>·</mo><msub><mrow><mo>[</mo><msup><mtext>Cl</mtext><mo>&minus;</mo></msup><mo>]</mo></mrow><mtext>o</mtext></msub>
+                    </mrow>
+                </mfrac>
+                <mo>)</mo>
+            </math>
+        </p>
+
+    </div>
+    <p style="margin-top: 15px; padding: 0 20px; font-size: 0.95em; line-height: 1.6em;">
+        <strong>Hinweis zur GHK-Gleichung:</strong> Diese Beziehung gewichtet die Außenkonzentrationen (<sub>o</sub> für <em>outside</em>) und Innenkonzentrationen (<sub>i</sub> für <em>inside</em>) der Ionen mit ihren jeweiligen Membran-Permeabilitäten (<strong>P</strong>). Da Chlorid-Ionen (Cl<sup>&minus;</sup>) im Gegensatz zu Kalium und Natrium eine negative Ladung besitzen (z = -1), gehen ihre Konzentrationen mathematisch genau invertiert &ndash; also die Innenkonzentration im Zähler und die Außenkonzentration im Nenner &ndash; in den Logarithmus ein.
+    </p>
+</div>
+      
+
+<h2>Leitfähigkeit von Elektrolytlösungen</h2>
+
+<div class="potential-box">
+    <h3></h3>
+    <div class="formel-display" style="text-align: left; padding-left: 20px; line-height: 2.2em;">
+
+	G = 1/R<br>
+	&kappa; = 1/&rho;<br>
+	&kappa; = l / (R A)<br>
+	&kappa; = e (N<sub>+</sub> |z<sub>+</sub>| u<sub>+</sub> + N<sub>&minus;</sub> |z<sub>&minus;</sub>| u<sub>&minus;</sub>)<br>
+	C = l / A<br>
+	&kappa; = C / R = C G<br>
+	R = &rho; l / A<br>
+	R = &rho; C<br>
+	&Lambda;<sub>m</sub> = &kappa; / c<br>
+	&Lambda;<sub>eq</sub> = &kappa; / (z c) = &Lambda;<sub>m</sub> / z<br>
+	Kohlrausches Quadratwurzelgesetz für starke Elektrolyten :<br>
+	&Lambda;<sub>m</sub> = &Lambda;<sub>m</sub><sup>0</sup> - k &radic;c<br>
+	&Lambda;<sup>0</sup> = &Lambda;<sup>0</sup><sub>+</sub> + &Lambda;<sup>0</sup><sub>&minus;</sub><br>
+	Eigenleitfähigkeit von Wasser berücks.:<br>
+	&kappa;(Salz) = &kappa;(Lösung) - &kappa;(Wasser)<br>
+	&kappa; = |z| c &Lambda;<sub>eq</sub> = |z| &Lambda;<sub>m</sub> (für starke Elektrolyte)<br>
+	&kappa; = c<sub>s</sub> (&nu;<sub>A</sub> &Lambda;<sup>0</sup><sub>A,m</sub> + &nu;<sub>B</sub> &Lambda;<sup>0</sup><sub>B,m</sub>) (schwerlösliche Salze)<br>
+	&kappa; = |z| &alpha; c &Lambda;<sup>0</sup><sub>eq</sub> (für schwache Elektrolyte)<br>
+	Ostwaldsches Verdünnungsgesetz :<br>
+	&alpha; = &Lambda;<sub>m</sub> / &Lambda;<sup>0</sup><sub>m</sub> = &Lambda;<sub>eq</sub> / &Lambda;<sup>0</sup><sub>eq</sub><br>
+
+
+    </div>
+    	<p><strong>
+	G : Leitwert [S] od. [&Omega;<sup>-1</sup>]<br>
+	&kappa; : Spezifische Leitfähigkeit [&Omega;<sup>-1</sup> cm<sup>-1</sup>] od. [S cm<sup>-1</sup>]<br>
+	&rho; : Spezifischer Widerstand [&Omega; cm]<br>
+	l : Länge<br>
+	A : Querschnitt<br>
+	N : Ionenanzahldichte (Ionen pro Volumen)<br>
+	e :  Elementarladung (ca. 1,602 ⋅ 10<sup>-19</sup> C)<br>
+	z : Ladungszahl<br>
+	u : elektrische Ionenbeweglichkeit [m<sup>2</sup>/Vs]<br>
+	C : Zellkonstante [cm<sup>-1</sup>]<br>
+	&Lambda;<sub>m</sub> : molare Leitfähigkeit [&Omega;<sup>-1</sup> cm<sup>2</sup> mol<sup>-1</sup>]<br>
+	&Lambda;<sub>eq</sub> : Äquivalentleitfähigkeit [&Omega;<sup>-1</sup> cm<sup>2</sup> eq<sup>-1</sup>]<br>
+	&Lambda;<sub>m</sub><sup>0</sup> : molare Grenzleitfähigkeit bei unendlicher Verdünnung [&Omega;<sup>-1</sup> cm<sup>2</sup> mol<sup>-1</sup>]<br>
+	c<sub>S</sub> : Sättigungskonzentraton<br>
+	&alpha; :  Dissoziationsgrad<br>
+
+
+	</strong></p>
+</div>
+
+
+
+
+
+  	<footer>
             <p>Formeln die Physikalische Chemie betreffend &copy; 2026 | <a href="impressum.html">Impressum & Datenschutz</a></p>
         </footer>
     </main>
