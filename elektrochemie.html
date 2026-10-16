@@ -163,18 +163,21 @@
 	&Lambda;<sub>m</sub> = &kappa; / c<br>
 	&Lambda;<sub>eq</sub> = &kappa; / (z c) = &Lambda;<sub>m</sub> / z<br>
 	Kohlrausches Quadratwurzelgesetz für starke Elektrolyten :<br>
-	&Lambda;<sub>m</sub> = &Lambda;<sub>m</sub><sup>0</sup> - k &radic;c<br>
+	&Lambda;<sub>m</sub> = &Lambda;<sub>m</sub><sup>0</sup> - k &radic;<span style="border-top: 1px solid; padding-top: 1px;">c</span><br>
 	&Lambda;<sup>0</sup> = &Lambda;<sup>0</sup><sub>+</sub> + &Lambda;<sup>0</sup><sub>&minus;</sub><br>
 	Eigenleitfähigkeit von Wasser berücks.:<br>
 	&kappa;(Salz) = &kappa;(Lösung) - &kappa;(Wasser)<br>
-	&kappa; = |z| c &Lambda;<sub>eq</sub> = |z| &Lambda;<sub>m</sub> (für starke Elektrolyte)<br>
+	&kappa; = |z| c &Lambda;<sub>eq</sub> = c &Lambda;<sub>m</sub> (für starke Elektrolyte)<br>
 	&kappa; = c<sub>s</sub> (&nu;<sub>A</sub> &Lambda;<sup>0</sup><sub>A,m</sub> + &nu;<sub>B</sub> &Lambda;<sup>0</sup><sub>B,m</sub>) (schwerlösliche Salze)<br>
 	&kappa; = |z| &alpha; c &Lambda;<sup>0</sup><sub>eq</sub> (für schwache Elektrolyte)<br>
 	Ostwaldsches Verdünnungsgesetz :<br>
 	&alpha; = &Lambda;<sub>m</sub> / &Lambda;<sup>0</sup><sub>m</sub> = &Lambda;<sub>eq</sub> / &Lambda;<sup>0</sup><sub>eq</sub><br>
-
+	Überführungszahlen t :<br>
+	t<sub>+</sub> = &nu;<sub>+</sub> &middot;&nbsp; &Lambda;<sub>+</sub><sup>0</sup> / &Lambda;<sup>0</sup>   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;     t<sub>&minus;</sub> = &nu;<sub>&minus;</sub> &middot;&nbsp; &Lambda;<sub>&minus;</sub><sup>0</sup> / &Lambda;<sup>0</sup><br>	
+	t<sub>+</sub> + t<sub>&minus;</sub> = 1<br>
 
     </div>
+
     	<p><strong>
 	G : Leitwert [S] od. [&Omega;<sup>-1</sup>]<br>
 	&kappa; : Spezifische Leitfähigkeit [&Omega;<sup>-1</sup> cm<sup>-1</sup>] od. [S cm<sup>-1</sup>]<br>
@@ -197,8 +200,89 @@
 </div>
 
 
+<h2>Verknüpfung von Halbzellenpotenzialen</h2>
+
+<div class="potential-box">
+    <h3>Berechnung von Potenzialen (Luther'sche Regel & Bruttoreaktionen)</h3>
+    <div class="formel-display" style="text-align: left; padding-left: 20px; line-height: 2.2em;">
+
+        <strong>Allgemeines Prinzip (Redox-Gleichgewicht):</strong><br>
+        OM + x e<sup>&minus;</sup> &nbsp;&#8652;&nbsp; RM<br><br>
+
+        <strong>Bsp. 1) Intermediäres Potential (Luther'sche Regel):</strong><br>
+        Cu<sup>2+</sup> + 2e<sup>&minus;</sup> &rarr; Cu ; &nbsp;&nbsp;&nbsp; 2 E<sub>1</sub>; &nbsp;&nbsp; Reduktion<br>
+        Cu<sup>+</sup> + e<sup>&minus;</sup> &larr; Cu ; &nbsp;&nbsp;&nbsp; E<sub>2</sub>; &nbsp;&nbsp;&nbsp; Oxidation (formale Rückreaktion)<br>
+        &minus;&minus;&minus;&minus;&minus;&minus;&minus;&minus;&minus;&minus;&minus;&minus;&minus;&minus;&minus;&minus;&minus;&minus;&minus;&minus;&minus;&minus;&minus;&minus;&minus;&minus;&minus;&minus;&minus;&minus;&minus;&minus;&minus;&minus;&minus;&minus;&minus;&minus;&minus;&minus;&minus;&minus;&minus;&minus;&minus;<br>
+        Cu<sup>2+</sup> + e<sup>&minus;</sup> &rarr; Cu<sup>+</sup>; &nbsp;&nbsp;&nbsp; 
+        <span style="display: inline-flex; flex-direction: column; vertical-align: middle; text-align: center; margin: 0 4px; line-height: 1.2em;">
+            <span style="border-bottom: 1px solid; padding: 0 2px;">2 &middot; E<sub>1</sub> &minus; E<sub>2</sub></span>
+            <span>1</span>
+        </span><br><br>
+
+        <strong>Bsp. 2) Gesamtzellpotenzial (Bruttoreaktion):</strong><br>
+        Cu<sup>2+</sup> + 2e<sup>&minus;</sup> &rarr; Cu ; &nbsp;&nbsp;&nbsp; 2 E<sub>1</sub>; &nbsp;&nbsp; Reduktion<br>
+        2 Na<sup>+</sup> + 2e<sup>&minus;</sup> &larr; 2 Na ; &nbsp;&nbsp; 2 E<sub>2</sub>; &nbsp;&nbsp; Oxidation (formale Rückreaktion)<br>
+        &minus;&minus;&minus;&minus;&minus;&minus;&minus;&minus;&minus;&minus;&minus;&minus;&minus;&minus;&minus;&minus;&minus;&minus;&minus;&minus;&minus;&minus;&minus;&minus;&minus;&minus;&minus;&minus;&minus;&minus;&minus;&minus;&minus;&minus;&minus;&minus;&minus;&minus;&minus;&minus;&minus;&minus;&minus;&minus;&minus;<br>
+        Cu<sup>2+</sup> + 2 Na &rarr; Cu + 2 Na<sup>+</sup>; &nbsp;&nbsp;&nbsp; 
+        <span style="display: inline-flex; flex-direction: column; vertical-align: middle; text-align: center; margin: 0 4px; line-height: 1.2em;">
+            <span style="border-bottom: 1px solid; padding: 0 2px;">2 &middot; E<sub>1</sub> &minus; 2 &middot; E<sub>2</sub></span>
+            <span>2</span>
+        </span> = E<sub>1</sub> &minus; E<sub>2</sub>
+
+    </div>
+
+    <p style="margin-top: 15px; padding-left: 20px; font-size: 0.95em; line-height: 1.6em;">
+        <strong>Legende:</strong><br>
+        &bull; <strong>OM</strong> = Oxidationsmittel &nbsp;|&nbsp; <strong>RM</strong> = Reduktionsmittel<br>
+        &bull; <strong>Hinweis:</strong> In Bsp. 1 entsteht eine neue Halbzelle mit geänderter Elektronenzahl (z<sub>3</sub> = 1). In Bsp. 2 entsteht eine klassische galvanische Gesamtreaktion ohne freie Elektronen. Da die Anzahl der ausgetauschten Elektronen hier für beide Teilschritte identisch ist (z = 2), entspricht das Gesamtzellpotential der direkten Differenz (E<sub>1</sub> &minus; E<sub>2</sub>).
+    </p>
+</div>
 
 
+<h2>Die Nernst-Gleichung</h2>
+
+<div class="potential-box">
+   
+    <div class="formel-display" style="text-align: left; padding-left: 20px; line-height: 2.2em;">
+
+        <strong>1. Allgemeine thermodynamische Form (für beliebige Temperaturen):</strong><br>
+        E = E<sup>0</sup> + 
+        <span style="display: inline-flex; flex-direction: column; vertical-align: middle; text-align: center; margin: 0 4px; line-height: 1.2em;">
+            <span style="border-bottom: 1px solid; padding: 0 2px;">R &middot; T</span>
+            <span>z &middot; F</span>
+        </span> &middot; ln Q<br><br>
+
+        <strong>2. Praktische Form bei Raumtemperatur (T = 298,15 K / 25 °C):</strong><br>
+        
+       
+        E = E<sup>0</sup> + 
+        <span style="display: inline-flex; flex-direction: column; vertical-align: middle; text-align: center; margin: 0 4px; line-height: 1.2em;">
+            <span style="border-bottom: 1px solid; padding: 0 2px;">0,0591 V</span>
+            <span>z</span>
+        </span> &middot; lg
+        <span style="font-size: 1.1em;">(</span>
+        <span style="display: inline-flex; flex-direction: column; vertical-align: middle; text-align: center; margin: 0 2px; line-height: 1.2em;">
+            <span style="border-bottom: 1px solid; padding: 0 2px;">a(Ox)</span>
+            <span>a(Red)</span>
+        </span>
+        <span style="font-size: 1.1em;">)</span>
+
+    </div>
+
+ <p style="margin-top: 15px; padding-left: 20px; font-size: 0.95em; line-height: 1.6em;">
+        <strong>Legende:</strong><br>
+        &bull; <strong>E</strong> = Reales Potenzial der Elektrode / Halbzelle [V]<br>
+        &bull; <strong>E<sup>0</sup></strong> = Standardpotenzial (Tabellenwert bei Standardaktivitäten) [V]<br>
+        &bull; <strong>R</strong> = Universelle Gaskonstante (8,314 J &middot; mol<sup>&minus;1</sup> &middot; K<sup>&minus;1</sup>)<br>
+        &bull; <strong>T</strong> = Absolute Temperatur [K]<br>
+        &bull; <strong>z</strong> = Ladungszahl (Anzahl ausgetauschter Elektronen)<br>
+        &bull; <strong>F</strong> = Faraday-Konstante (96.485 C &middot; mol<sup>&minus;1</sup>)<br>
+        &bull; <strong>Q</strong> = Reaktionsquotient (Verhältnis der Aktivitäten von Produkten zu Edukten)<br>
+        &bull; <strong>a(Ox) / a(Red)</strong> = Thermodynamische Aktivitäten der oxidierten und reduzierten Form<br>
+        &bull; <strong>ln / lg</strong> = natürlicher Logarithmus (Basis e) / dekadischer Logarithmus (Basis 10)<br>
+        &bull; <strong>Hinweis zum Vorzeichen:</strong> + lg(a(Ox)/a(Red)) ist exakt identisch mit &minus; lg(a(Red)/a(Ox)).
+    </p>
+</div>
 
   	<footer>
             <p>Formeln die Physikalische Chemie betreffend &copy; 2026 | <a href="impressum.html">Impressum & Datenschutz</a></p>
