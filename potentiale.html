@@ -372,6 +372,32 @@
 		<u>H=H(T,p)</u><br>
 		dH = (&part;H/&part;T)<sub>p</sub>dT + (&part;H/&part;p)<sub>T</sub>dp<br>
 		(&part;H/&part;T)<sub>p</sub> = C<sub>p</sub><br>
+		
+<!-- Einfügestelle in potentiale.html für das Cp-Diagramm -->
+<!-- Interaktiver Steuerungslink (Größe und Design exakt wie Diagramm 1) -->
+<p>
+    <a href="javascript:void(0);" onclick="toggleDiagram2()" id="diagramLink2" style="color: #000000; text-decoration: underline; cursor: pointer; font-weight: normal; font-family: sans-serif; font-size: 0.88em;">
+        C<sub>p</sub>(T) - Diagramm einblenden
+    </a>
+</p>
+<!-- Platzhalter-Box (wird erst bei Klick gerendert) -->
+<div id="diagramContainer2" style="display: none; border: 1px solid #ccc; padding: 15px; border-radius: 5px; background: #ffffff; max-width: 550px; margin: 15px 0;">
+    <h3 style="margin-top: 0; color: #333; font-family: sans-serif;">Isobare Wärmekapazität C<sub>p</sub> von 0 K bis 500 K (p = 1 bar)</h3>
+    
+    <div style="text-align: center; margin: 20px 0;">
+        <canvas id="cpCanvas" width="500" height="300" style="background: #fdfdfd; border: 1px solid #ddd; max-width: 100%; display: block; margin: 0 auto;"></canvas>
+    </div>
+    <div class="formel-display" style="text-align: left; padding: 10px; line-height: 2.2em; background: #f9f9f9; border-radius: 4px; font-family: sans-serif; font-size: 13px;">
+        <strong>Definition und Temperaturabhängigkeit der Enthalpie:</strong><br>
+        dH = C<sub>p</sub> &middot; dT &emsp;oder&emsp; C<sub>p</sub> = (&part;H / &part;T)<sub>p</sub><br>
+        <strong>Phasenübergang:</strong> An den Punkten T<sub>m</sub> und T<sub>b</sub> gilt C<sub>p</sub> &rarr; &infin; aufgrund der latenten Umwandlungsenthalpien (&Delta;H<sub>fus</sub>, &Delta;H<sub>vap</sub>).
+    </div>
+</div>
+<!-- Einbindung des zweiten externen Logik-Moduls -->
+<script src="diagramm2.js"></script>
+<!-- Ende der Einfügestelle -->	
+		
+		
 		(&part;H/&part;p)<sub>T</sub> = V - T(&part;V/&part;T)<sub>p</sub> = V(1-T&alpha;)<br>
 		(&part;H/&part;p)<sub>T</sub> = 0; für ideales Gas<br>
 		(&part;H/&part;p)<sub>T</sub> = V<sup>0</sup>; für inkompressible Flüssigkeiten<br>
