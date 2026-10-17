@@ -383,7 +383,6 @@
 <!-- Platzhalter-Box (wird erst bei Klick gerendert) -->
 <div id="diagramContainer2" style="display: none; border: 1px solid #ccc; padding: 15px; border-radius: 5px; background: #ffffff; max-width: 550px; margin: 15px 0;">
     <h3 style="margin-top: 0; color: #333; font-family: sans-serif;">Isobare Wärmekapazität C<sub>p</sub> von 0 K bis 500 K (p = 1 bar)</h3>
-    
     <div style="text-align: center; margin: 20px 0;">
         <canvas id="cpCanvas" width="500" height="300" style="background: #fdfdfd; border: 1px solid #ddd; max-width: 100%; display: block; margin: 0 auto;"></canvas>
     </div>
@@ -431,7 +430,37 @@
 		(&part;U/&part;V)<sub>T</sub> = &alpha;/V<sub>m</sub><sup>2</sup>; Van-der-Waals-Gas<br>
 		(&part;U/&part;T)<sub>V</sub> = C<sub>v</sub><br>
 		dU = &pi;<sub><i>T</i></sub> dV + C<sub>v</sub> dT; reales Gas<br>
-		dU = C<sub>v</sub> dT; ideales Gas (U nur von T abhängig)<br><br>
+		dU = C<sub>v</sub> dT; ideales Gas (U nur von T abhängig)<br>
+
+
+<!-- Einfügestelle in potentiale.html für das U-V-Diagramm -->
+<!-- Interaktiver Steuerungslink (Schriftdesign angepasst auf deine Wunschgröße) -->
+<p>
+    <a href="javascript:void(0);" onclick="toggleDiagram4()" id="diagramLink4" style="color: #000000; text-decoration: underline; cursor: pointer; font-weight: normal; font-family: sans-serif; font-size: 0.88em;">
+        &raquo; U-V - Diagramm einblenden
+    </a>
+</p>
+<!-- Platzhalter-Box (wird erst bei Klick gerendert) -->
+<div id="diagramContainer4" style="display: none; border: 1px solid #ccc; padding: 15px; border-radius: 5px; background: #ffffff; max-width: 550px; margin: 15px 0;">
+    <!-- Die Überschrift mit dem erzwungenen Style (Größe 14px exakt wie bei Diagramm 3) -->
+    <h3 style="margin-top: 0; color: #333; font-family: sans-serif; font-size: 14px !important;">
+        Volumenabhängigkeit der Inneren Energie U bei T = konst.
+    </h3>
+    <div style="text-align: center; margin: 20px 0;">
+        <canvas id="uvCanvas" width="500" height="300" style="background: #fdfdfd; border: 1px solid #ddd; max-width: 100%; display: block; margin: 0 auto;"></canvas>
+    </div>
+    <div class="formel-display" style="text-align: left; padding: 10px; line-height: 2.2em; background: #f9f9f9; border-radius: 4px; font-family: sans-serif; font-size: 13px;">
+        <strong>Der Binnendruck &pi;<sub>T</sub> = (&part;U/&part;V)<sub>T</sub>:</strong><br>
+        Beim <strong>idealen Gas</strong> existieren keinerlei intermolekulare Wechselwirkungen; eine Vergrößerung des Volumens hat keinen Einfluss auf die Innere Energie. Die Kurve verläuft perfekt horizontal.<br>
+        Beim <strong>realen Gas</strong> (Van-der-Waals-Modell) ziehen sich die Gasteilchen gegenseitig schwach an. Expandiert das Gas, müssen die Teilchen gegen diese Anziehungskräfte (gemessen durch die Kohäsionskonstante <em>a</em>) Arbeit leisten. Dadurch steigt die Innere Energie an und nähert sich bei extrem großen Volumina (V &rarr; &infin;) asymptotisch dem idealen Zustand an.
+    </div>
+</div>
+<!-- Einbindung des vierten externen Logik-Moduls -->
+<script src="diagramm4.js"></script>
+<!-- Ende der Einfügestelle -->
+
+
+
 
 	<u>U=U(p,T)</u><br>
     	dU = (&part;U/&part;p)<sub>T</sub>dp + (&part;U/&part;T)<sub>p</sub>dT<br>
