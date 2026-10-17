@@ -309,9 +309,9 @@
 
 		<u>V=V(T,p)</u><br>
 		dV = (&part;V/&part;T)<sub>p</sub>dT + (&part;V/&part;p)<sub>T</sub>dp<br>
-		dV = V&gamma;dT - V&alpha;dp<br>
-		V(T,p) = V<sub>0</sub> (1 + &gamma; (T-T<sub>0</sub>) - &alpha; (p-p<sub>0</sub>))<br>
-		&alpha;: isothermer Kompressibilitätskoeffizient<br>
+		dV = V&gamma;dT - V&kappa;<sub>T</sub>dp<br>
+		V(T,p) = V<sub>0</sub> (1 + &gamma; (T-T<sub>0</sub>) -  &kappa;<sub>T</sub>(p-p<sub>0</sub>))<br>
+		&kappa;<sub>T</sub>: isothermer Kompressibilitätskoeffizient<br>
 		&gamma;: isobarer Volumenexpansionskoeffizient<br><br>
 
 		<u>S=S(V,T)</u><br>
@@ -335,7 +335,7 @@
 		dS = dU/T + (p/T)dV<br>
 		&Delta;S = &int; (1/T)dU + R ln V<br>
  		&nbsp;→&nbsp; gilt für ideales Gas; U unabhängig von V!<br>
-		&Delta;S = C<sub>v</sub> ln U + R ln V<br><br>
+		&Delta;S = C<sub>v</sub> ln (U<sub>2</sub>/U<sub>1</sub>) + R ln (V<sub>2</sub>/V<sub>1</sub>)<br><br>
 
 		<u>H=H(T,p)</u><br>
 		dH = (&part;H/&part;T)<sub>p</sub>dT + (&part;H/&part;p)<sub>T</sub>dp<br>
