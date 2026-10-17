@@ -77,10 +77,35 @@
                 &Delta;U<sub>p</sub> = Q<sub>p</sub> + W<br>
                 ------------------<br>
                 &Delta;U<sub>v</sub> = &Delta;U<sub>p</sub><br>
-                
- 
-   
+       
+    
+<!-- Einfügestelle in potentiale.html für den Wärme-Temperatur-Vergleich -->
+<!-- Interaktiver Steuerungslink (Schriftdesign passend zu den anderen Diagrammen) -->
+<p>
+    <a href="javascript:void(0);" onclick="toggleDiagram3()" id="diagramLink3" style="color: #000000; text-decoration: underline; cursor: pointer; font-weight: normal; font-family: sans-serif; font-size: 0.88em;">
+        Q-T - Diagramm einblenden
+    </a>
+</p>
+<!-- Platzhalter-Box (wird erst bei Klick gerendert) -->
+<div id="diagramContainer3" style="display: none; border: 1px solid #ccc; padding: 15px; border-radius: 5px; background: #ffffff; max-width: 550px; margin: 15px 0;">
+    <h3 style="margin-top: 0; color: #333; font-family: sans-serif; font-size: 15px !important;">Temperaturänderung bei isobarer vs. isochorer Wärmeaufnahme</h3>
+    <div style="text-align: center; margin: 20px 0;">
+        <canvas id="qtCanvas" width="500" height="300" style="background: #fdfdfd; border: 1px solid #ddd; max-width: 100%; display: block; margin: 0 auto;"></canvas>
+    </div>
+    <div class="formel-display" style="text-align: left; padding: 10px; line-height: 2.2em; background: #f9f9f9; border-radius: 4px; font-family: sans-serif; font-size: 13px;">
+        <strong>Zusammenhang über die Wärmekapazitäten (Mayer-Beziehung):</strong><br>
+        Q<sub>p</sub> = &Delta;H = n &middot; C<sub>p</sub> &middot; &Delta;T &emsp;und&emsp; Q<sub>V</sub> = &Delta;U = n &middot; C<sub>V</sub> &middot; &Delta;T<br>
+        Da C<sub>p</sub> = C<sub>V</sub> + R gilt, ist C<sub>p</sub> &gt; C<sub>V</sub>. Daraus folgt: Bei Zufuhr der gleichen Wärmemenge Q ist der Temperaturanstieg &Delta;T im isochoren System stets größer, da keine Energie für Volumenarbeit (W = &minus;p&middot;&Delta;V) verbraucht wird.
+    </div>
+</div>
+<!-- Einbindung des dritten externen Logik-Moduls -->
+<script src="diagramm3.js"></script>
+<!-- Ende der Einfügestelle -->
+       
+       
     </div>                       
+        
+        
         
         
         
