@@ -111,6 +111,35 @@
                 F = U - T · S <br>
 		&nbsp;→&nbsp; dF = (dU - TdS)<sub>V,T</sub><br> 
 		&nbsp;→&nbsp; dF<sub>V,T</sub> = &delta;W<sub>rev</sub> <br>
+		
+<!-- Einfügestelle in potentiale.html für das F-V-Diagramm -->
+<!-- Interaktiver Steuerungslink (Schriftdesign passend zu deiner Formelsammlung) -->
+<p>
+    <a href="javascript:void(0);" onclick="toggleDiagram5()" id="diagramLink5" style="color: #000000; text-decoration: underline; cursor: pointer; font-weight: normal; font-family: sans-serif; font-size: 0.88em;">
+        F(V) - Diagramm einblenden
+    </a>
+</p>
+<!-- Platzhalter-Box (wird erst bei Klick gerendert) -->
+<div id="diagramContainer5" style="display: none; border: 1px solid #ccc; padding: 15px; border-radius: 5px; background: #ffffff; max-width: 550px; margin: 15px 0;">
+    <!-- Die Überschrift mit dem steuerbaren, erzwungenen Style -->
+    <h3 style="margin-top: 0; color: #333; font-family: sans-serif; font-size: 14px !important;">
+        Volumenabhängigkeit der Freien Energie F (Helmholtz-Energie)
+    </h3>
+    <div style="text-align: center; margin: 20px 0;">
+        <canvas id="fvCanvas" width="500" height="300" style="background: #fdfdfd; border: 1px solid #ddd; max-width: 100%; display: block; margin: 0 auto;"></canvas>
+    </div>
+    <div class="formel-display" style="text-align: left; padding: 10px; line-height: 2.2em; background: #f9f9f9; border-radius: 4px; font-family: sans-serif; font-size: 13px;">
+        <strong>Die thermodynamische Triebkraft &minus;p = (&part;F/&part;V)<sub>T</sub>:</strong><br>
+        Da der Druck <em>p</em> immer positiv ist, verläuft die Kurve der Freien Energie bei der Expansion (V &rarr; &infin;) streng monoton fallend nach unten. <br>
+        <strong>Der Einfluss der Temperatur:</strong> Bei einer höheren Temperatur (T<sub>2</sub>) ist der Abfall deutlich steiler. Da für ein ideales Gas &Delta;U = 0 gilt, treibt der Entropiezuwachs (&Delta;S &gt; 0) bei der Expansion das System an. Der Term <strong>&minus;T&middot;S</strong> zieht die Freie Energie nach unten. Die Steilheit der Kurve zu jedem Zeitpunkt entspricht exakt dem aktuellen Gasdruck im Zylinder.
+    </div>
+</div>
+<!-- Einbindung des fünften externen Logik-Moduls -->
+<script src="diagramm5.js"></script>
+<!-- Ende der Einfügestelle -->
+		
+		
+		
             </div>
             <p><strong>	&nbsp;→&nbsp; reversible Nutzarbeit bei isotherm-isochor</strong></p>
         </div>
