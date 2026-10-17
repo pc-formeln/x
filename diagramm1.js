@@ -10,9 +10,9 @@ function toggleDiagram() {
         // Zeichne den Graphen erst, wenn das Canvas sichtbar ist
         zeichneEntropie();    
     } else {
-    container.style.display = 'none';
-    link.innerHTML = 'S(T) - Diagramm einblenden';
-}
+        container.style.display = 'none';
+        link.innerHTML = 'S(T) - Diagramm einblenden';
+    }
 }
 
 function zeichneEntropie() {
@@ -39,9 +39,15 @@ function zeichneEntropie() {
     ctx.fillText('T / K', 440, 270);
     ctx.fillText('Sm', 25, 40);
     
-    // T-Markierungen
+    // HIER IST DIE NEUE BESCHRIFTUNG: Wasser-Kennzeichnung oben links im freien Raum
+    ctx.font = 'bold 12px sans-serif';
+    ctx.textAlign = 'left';
+    ctx.fillText('Medium: H₂O (Wasser)', 65, 55);
+    
+    // T-Markierungen (Zurücksetzen auf Standardausrichtung)
     ctx.font = '10px sans-serif';
     ctx.fillStyle = '#555555';
+    ctx.textAlign = 'center';
     ctx.fillText('273 K', 180, 265);
     ctx.fillText('373 K', 280, 265);
     
