@@ -274,8 +274,34 @@
 		&pi; = p / p<sub>krit</sub><br>
 		&phi; = V / V<sub>krit</sub><br>
 		&tau; = T / T<sub>krit</sub><br><br>
-		( &pi; + 3/&phi;<sup>2</sup>) (3&phi;-1) = 8&tau;<br><br>
+		( &pi; + 3/&phi;<sup>2</sup>) (3&phi;-1) = 8&tau;<br>
 
+
+<!-- Einfügestelle in potentiale.html / gastheorie.html für das VdW-Isothermen-Diagramm -->
+<!-- Interaktiver Steuerungslink (Schriftdesign passend zur restlichen Struktur) -->
+<p>
+    <a href="javascript:void(0);" onclick="toggleDiagram8()" id="diagramLink8" style="color: #000000; text-decoration: underline; cursor: pointer; font-weight: normal; font-family: sans-serif; font-size: 0.88em;">
+        p-V-Isothermen (VdW) einblenden
+    </a>
+</p>
+<!-- Platzhalter-Box (wird erst bei Klick gerendert) -->
+<div id="diagramContainer8" style="display: none; border: 1px solid #ccc; padding: 15px; border-radius: 5px; background: #ffffff; max-width: 550px; margin: 15px 0;">
+    <h3 style="margin-top: 0; color: #333; font-family: sans-serif; font-size: 14px !important;">
+        Van-der-Waals-Isothermen und Maxwell-Konstruktion im p-V-Diagramm
+    </h3>
+    <div style="text-align: center; margin: 20px 0;">
+        <canvas id="vdwCanvas" width="500" height="300" style="background: #fdfdfd; border: 1px solid #ddd; max-width: 100%; display: block; margin: 0 auto;"></canvas>
+    </div>
+    <div class="formel-display" style="text-align: left; padding: 10px; line-height: 2.2em; background: #f9f9f9; border-radius: 4px; font-family: sans-serif; font-size: 13px;">
+        <strong>Das Phänomen der unphysikalischen Schlaufen:</strong><br>
+        Für Temperaturen unterhalb der kritischen Temperatur (T &lt; T<sub>krit</sub>) liefert die rein mathematische Lösung der kubischen Van-der-Waals-Gleichung einen S-förmigen Kurvenverlauf (Schlaufe). In einem Teilbereich besitzt diese Welle eine positive Steigung (&part;p/&part;V &gt; 0), was mechanisch instabil und physikalisch unmöglich ist.<br>
+        <strong>Die Maxwell-Konstruktion (Gleichflächenmethode):</strong><br>
+        Da im realen System bei der Kompression an diesem Punkt die Verflüssigung einsetzt, bricht die Isotherme horizontal ab. Der unphysikalische Schaufeleffekt wird durch eine waagerechte Verbindungslinie (<strong>Maxwell-Gerade</strong>) ersetzt, welche die Schlaufe so schneidet, dass die eingeschlossenen Flächen oberhalb und unterhalb der Geraden exakt gleich groß sind. Sie markiert den konstanten Kondensationsdruck im <strong>Nassdampfgebiet</strong>, in dem Flüssigkeit und Gas stabil koexistieren.
+    </div>
+</div>
+<!-- Einbindung des achten externen Logik-Moduls -->
+<script src="diagramm8.js"></script>
+<!-- Ende der Einfügestelle -->
 
 		
 		
