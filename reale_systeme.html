@@ -129,33 +129,24 @@
 		&Delta;U = W<sub>1</sub> + W<sub>2</sub><br>
 		U<sub>2</sub> - U<sub>1</sub> = p<sub>1</sub>V<sub>1</sub> - p<sub>2</sub>V<sub>2</sub>; bei realen Gasen &Delta;U<>0<br>
 		H<sub>2</sub> = H<sub>1</sub>; isenthalp<br><br>
-		T<sub>inv</sub> = 2a / (Rb)<br>
+		T<sub>inv</sub> = 2a / (Rb)<br><br>
 				
-<!-- Einfügestelle in potentiale.html für das H-p-Diagramm -->
-<!-- Interaktiver Steuerungslink -->
-<p>
-    <a href="javascript:void(0);" onclick="toggleDiagram6()" id="diagramLink6" style="color: #000000; text-decoration: underline; cursor: pointer; font-weight: normal; font-family: sans-serif; font-size: 0.88em;">
-        &raquo; H-p - Diagramm einblenden
-    </a>
-</p>
-<!-- Platzhalter-Box (wird erst bei Klick gerendert) -->
-<div id="diagramContainer6" style="display: none; border: 1px solid #ccc; padding: 15px; border-radius: 5px; background: #ffffff; max-width: 550px; margin: 15px 0;">
-    <!-- Die Überschrift mit dem erzwungenen Style (Größe 14px exakt wie bei den anderen) -->
-    <h3 style="margin-top: 0; color: #333; font-family: sans-serif; font-size: 14px !important;">
-        Isenthalpen und Inversionskurve des Joule-Thomson-Effekts
-    </h3>
-    <div style="text-align: center; margin: 20px 0;">
-        <canvas id="hpCanvas" width="500" height="300" style="background: #fdfdfd; border: 1px solid #ddd; max-width: 100%; display: block; margin: 0 auto;"></canvas>
-    </div>
-    <div class="formel-display" style="text-align: left; padding: 10px; line-height: 2.2em; background: #f9f9f9; border-radius: 4px; font-family: sans-serif; font-size: 13px;">
-        <strong>Der Joule-Thomson-Koeffizient &mu;<sub>JT</sub> = (&part;T / &part;p)<sub>H</sub>:</strong><br>
-        Das Diagramm zeigt den Temperaturverlauf eines realen Gases bei einer isenthalpischen Drosselung (p &rarr; 0). <br>
-        <strong>Die Inversionskurve</strong> verbindet alle Maxima der Isenthalpen, an denen &mu;<sub>JT</sub> = 0 gilt. Innerhalb der Kurve (<strong>blau</strong>) überwiegen die intermolekularen Anziehungskräfte, weshalb das Gas bei Expansion abkühlt. Außerhalb (<strong>rot</strong>) dominieren die Abstoßungskräfte (Eigenvolumen der Teilchen), wodurch sich das Gas bei Expansion erwärmt.
-    </div>
-</div>
-<!-- Einbindung des sechsten externen Logik-Moduls -->
-<script src="diagramm6.js"></script>
-<!-- Ende der Einfügestelle -->
+<details>
+  <summary>H-p-Diagramm &amp; Erklärung</summary>
+  
+  <!-- 1. Das Diagramm -->
+  <div style="text-align: center; margin-bottom: 15px;">
+    <img src="./diagramm6.jpeg"
+         alt="H-p-Diagramm"
+         style="max-width: 100%; height: auto; display: block; margin: 0 auto;">
+  </div>
+  
+  <!-- 2. Die Unterschrift direkt darunter -->
+  <iframe src="./diagramm6_u.html"
+          style="width: 90%; height: 500px; border: none; background: transparent;"></iframe>
+</details>
+
+<br>
 		
             </div>
 		 <strong>a: Binnendruck (Van-der-Waal-Gleichung)<br>b: Kovolumen (Van-der-Waal-Gleichung)<br>T<sub>inv</sub>: Inversionstemperatur<br></strong><br>
@@ -274,35 +265,25 @@
 		&pi; = p / p<sub>krit</sub><br>
 		&phi; = V / V<sub>krit</sub><br>
 		&tau; = T / T<sub>krit</sub><br><br>
-		( &pi; + 3/&phi;<sup>2</sup>) (3&phi;-1) = 8&tau;<br>
+		( &pi; + 3/&phi;<sup>2</sup>) (3&phi;-1) = 8&tau;<br><br>
 
 
-<!-- Einfügestelle in potentiale.html / gastheorie.html für das VdW-Isothermen-Diagramm -->
-<!-- Interaktiver Steuerungslink (Schriftdesign passend zur restlichen Struktur) -->
-<p>
-    <a href="javascript:void(0);" onclick="toggleDiagram8()" id="diagramLink8" style="color: #000000; text-decoration: underline; cursor: pointer; font-weight: normal; font-family: sans-serif; font-size: 0.88em;">
-        p-V-Isothermen (VdW) einblenden
-    </a>
-</p>
-<!-- Platzhalter-Box (wird erst bei Klick gerendert) -->
-<div id="diagramContainer8" style="display: none; border: 1px solid #ccc; padding: 15px; border-radius: 5px; background: #ffffff; max-width: 550px; margin: 15px 0;">
-    <h3 style="margin-top: 0; color: #333; font-family: sans-serif; font-size: 14px !important;">
-        Van-der-Waals-Isothermen und Maxwell-Konstruktion im p-V-Diagramm
-    </h3>
-    <div style="text-align: center; margin: 20px 0;">
-        <canvas id="vdwCanvas" width="500" height="300" style="background: #fdfdfd; border: 1px solid #ddd; max-width: 100%; display: block; margin: 0 auto;"></canvas>
-    </div>
-    <div class="formel-display" style="text-align: left; padding: 10px; line-height: 2.2em; background: #f9f9f9; border-radius: 4px; font-family: sans-serif; font-size: 13px;">
-        <strong>Das Phänomen der unphysikalischen Schlaufen:</strong><br>
-        Für Temperaturen unterhalb der kritischen Temperatur (T &lt; T<sub>krit</sub>) liefert die rein mathematische Lösung der kubischen Van-der-Waals-Gleichung einen S-förmigen Kurvenverlauf (Schlaufe). In einem Teilbereich besitzt diese Welle eine positive Steigung (&part;p/&part;V &gt; 0), was mechanisch instabil und physikalisch unmöglich ist.<br>
-        <strong>Die Maxwell-Konstruktion (Gleichflächenmethode):</strong><br>
-        Da im realen System bei der Kompression an diesem Punkt die Verflüssigung einsetzt, bricht die Isotherme horizontal ab. Der unphysikalische Schaufeleffekt wird durch eine waagerechte Verbindungslinie (<strong>Maxwell-Gerade</strong>) ersetzt, welche die Schlaufe so schneidet, dass die eingeschlossenen Flächen oberhalb und unterhalb der Geraden exakt gleich groß sind. Sie markiert den konstanten Kondensationsdruck im <strong>Nassdampfgebiet</strong>, in dem Flüssigkeit und Gas stabil koexistieren.
-    </div>
-</div>
-<!-- Einbindung des achten externen Logik-Moduls -->
-<script src="diagramm8.js"></script>
-<!-- Ende der Einfügestelle -->
+<details>
+  <summary>Van-der-Waals-Gleichung (reale Gase)</summary>
+  
+  <!-- 1. Das Diagramm -->
+  <div style="text-align: center; margin-bottom: 15px;">
+    <img src="./diagramm6.jpeg"
+         alt="H-p-Diagramm"
+         style="max-width: 100%; height: auto; display: block; margin: 0 auto;">
+  </div>
+  
+  <!-- 2. Die Unterschrift direkt darunter -->
+  <iframe src="./diagramm6_u.html"
+          style="width: 90%; height: 600px; border: none; background: transparent;"></iframe>
+</details>
 
+<br>
 		
 		
             </div>
