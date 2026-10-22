@@ -445,33 +445,22 @@
 		dU = &pi;<sub><i>T</i></sub> dV + C<sub>v</sub> dT; reales Gas<br>
 		dU = C<sub>v</sub> dT; ideales Gas (U nur von T abhängig)<br>
 
-
-<!-- Einfügestelle in potentiale.html für das U-V-Diagramm -->
-<!-- Interaktiver Steuerungslink (Schriftdesign angepasst auf deine Wunschgröße) -->
-<p>
-    <a href="javascript:void(0);" onclick="toggleDiagram4()" id="diagramLink4" style="color: #000000; text-decoration: underline; cursor: pointer; font-weight: normal; font-family: sans-serif; font-size: 0.88em;">
-        U-V - Diagramm einblenden
-    </a>
-</p>
-<!-- Platzhalter-Box (wird erst bei Klick gerendert) -->
-<div id="diagramContainer4" style="display: none; border: 1px solid #ccc; padding: 15px; border-radius: 5px; background: #ffffff; max-width: 550px; margin: 15px 0;">
-    <!-- Die Überschrift mit dem erzwungenen Style (Größe 14px exakt wie bei Diagramm 3) -->
-    <h3 style="margin-top: 0; color: #333; font-family: sans-serif; font-size: 14px !important;">
-        Volumenabhängigkeit der Inneren Energie U bei T = konst.
-    </h3>
-    <div style="text-align: center; margin: 20px 0;">
-        <canvas id="uvCanvas" width="500" height="300" style="background: #fdfdfd; border: 1px solid #ddd; max-width: 100%; display: block; margin: 0 auto;"></canvas>
-    </div>
-    <div class="formel-display" style="text-align: left; padding: 10px; line-height: 2.2em; background: #f9f9f9; border-radius: 4px; font-family: sans-serif; font-size: 13px;">
-        <strong>Der Binnendruck &pi;<sub>T</sub> = (&part;U/&part;V)<sub>T</sub>:</strong><br>
-        Beim <strong>idealen Gas</strong> existieren keinerlei intermolekulare Wechselwirkungen; eine Vergrößerung des Volumens hat keinen Einfluss auf die Innere Energie. Die Kurve verläuft perfekt horizontal.<br>
-        Beim <strong>realen Gas</strong> (Van-der-Waals-Modell) ziehen sich die Gasteilchen gegenseitig schwach an. Expandiert das Gas, müssen die Teilchen gegen diese Anziehungskräfte (gemessen durch die Kohäsionskonstante <em>a</em>) Arbeit leisten. Dadurch steigt die Innere Energie an und nähert sich bei extrem großen Volumina (V &rarr; &infin;) asymptotisch dem idealen Zustand an.
-    </div>
-</div>
-<!-- Einbindung des vierten externen Logik-Moduls -->
-<script src="diagramm4.js"></script>
-<!-- Ende der Einfügestelle -->
-
+<br>
+<details>
+  <summary>V-U- Diagramm</summary>
+  
+  <!-- 1. Das Diagramm -->
+  <div style="text-align: center; margin-bottom: 15px;">
+    <img src="./diagramm4.png"
+         alt="Diagramm"
+         style="max-width: 100%; height: auto; display: block; margin: 0 auto;">
+  </div>
+  
+  <!-- 2. Die Unterschrift direkt darunter -->
+  <iframe src="./diagramm4_u.html"
+          style="width: 90%; height: 250px; border: none; background: transparent;"></iframe>
+</details>
+<br>
 
 
 
@@ -509,30 +498,25 @@
 	für die freie Reaktionsenthalpie gilt:<br>
 	(&part;&Delta;<sub>R</sub>G/&part;T)<sub>p</sub> = -&Delta;<sub>R</sub>S<br>
 
-<!-- Einfügestelle in potentiale.html für das G-T-Diagramm -->
-<!-- Interaktiver Steuerungslink -->
-<p>
-    <a href="javascript:void(0);" onclick="toggleDiagram7()" id="diagramLink7" style="color: #000000; text-decoration: underline; cursor: pointer; font-weight: normal; font-family: sans-serif; font-size: 0.88em;">
-        G(T) - Diagramm einblenden
-    </a>
-</p>
-<!-- Platzhalter-Box (wird erst bei Klick gerendert) -->
-<div id="diagramContainer7" style="display: none; border: 1px solid #ccc; padding: 15px; border-radius: 5px; background: #ffffff; max-width: 550px; margin: 15px 0;">
-    <h3 style="margin-top: 0; color: #333; font-family: sans-serif; font-size: 14px !important;">
-        Temperaturabhängigkeit der Freien Enthalpie G und Phasenstabilität
-    </h3>
-    <div style="text-align: center; margin: 20px 0;">
-        <canvas id="gpCanvas" width="500" height="300" style="background: #fdfdfd; border: 1px solid #ddd; max-width: 100%; display: block; margin: 0 auto;"></canvas>
-    </div>
-    <div class="formel-display" style="text-align: left; padding: 10px; line-height: 2.2em; background: #f9f9f9; border-radius: 4px; font-family: sans-serif; font-size: 13px;">
-        <strong>Die fundamentale Beziehung &minus;S = (&part;G / &part;T)<sub>p</sub>:</strong><br>
-        Das Diagramm zeigt den Verlauf der Freien Enthalpie <em>G</em> für die verschiedenen Aggregatzustände über einer veränderlichen Temperatur bei konstantem Druck (p = konst.). Die Steigung der Kurven entspricht der negativen Entropie (&minus;S) der jeweiligen Phase.<br>
-        <strong>Kriterium für Phasenstabilität:</strong> Das System nimmt im Gleichgewicht stets den Zustand mit der <strong>niedrigsten Freien Enthalpie G</strong> ein. Da die Entropie immer positiv ist, fallen alle Kurven mit steigender Temperatur monoton nach unten ab. Weil Gase die größte Unordnung (höchste Entropie S) aufweisen, fällt die Gas-Kurve am steilsten ab und wird bei hohen Temperaturen stabil. Die Schnittpunkte definieren exakt den Schmelzpunkt T<sub>m</sub> und den Siedepunkt T<sub>b</sub>.
-    </div>
-</div>
-<!-- Einbindung des siebten externen Logik-Moduls -->
-<script src="diagramm7.js"></script>
-<!-- Ende der Einfügestelle -->
+
+<br>
+<details>
+  <summary>G(T)- Diagramm</summary>
+  
+  <!-- 1. Das Diagramm -->
+  <div style="text-align: center; margin-bottom: 15px;">
+    <img src="./diagramm7.png"
+         alt="Diagramm"
+         style="max-width: 100%; height: auto; display: block; margin: 0 auto;">
+  </div>
+  
+  <!-- 2. Die Unterschrift direkt darunter -->
+  <iframe src="./diagramm7_u.html"
+          style="width: 90%; height: 300px; border: none; background: transparent;"></iframe>
+</details>
+<br>
+
+
 
             </div>
         
