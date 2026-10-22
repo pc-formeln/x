@@ -2,87 +2,293 @@
 <html lang="de">
 <head>
     <meta charset="UTF-8">
-    <title>5. Mathematischer Anhang</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5. Mathematischer Anhang - Formeln PC</title>
     <style>
-        body { font-family: sans-serif; line-height: 1.8em; color: #333; padding: 20px; max-width: 800px; margin: 0 auto; }
-        h1 { color: #111; border-bottom: 2px solid #ccc; padding-bottom: 10px; }
-        h2 { color: #222; margin-top: 35px; border-bottom: 1px solid #eee; padding-bottom: 5px; }
-        
-        /* Funktionale Navigationsleiste / Rück-Schaltflächen */
-        .nav-bar { background: #333; padding: 10px; border-radius: 4px; margin-bottom: 30px; display: flex; gap: 15px; align-items: center; }
-        .nav-bar a { color: #fff; text-decoration: none; font-size: 13px; font-weight: bold; }
-        .nav-bar a:hover { text-decoration: underline; }
-        .nav-bar .back-btn { background: #cc0000; padding: 5px 10px; border-radius: 3px; }
-        .nav-bar .back-btn:hover { background: #aa0000; text-decoration: none; }
-        .nav-spacer { color: #666; }
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f7f6;
+            color: #333;
+            display: flex;
+            min-height: 100vh;
+        }
 
-        .question-box { background: #f5f5f5; border-left: 4px solid #0066cc; padding: 15px; margin: 20px 0; border-radius: 0 4px 4px 0; }
-        .math-display { background: #f9f9f9; border: 1px solid #ddd; padding: 15px; border-radius: 4px; font-family: monospace; font-size: 14px; overflow-x: auto; margin: 15px 0; }
-        
-        /* Tabellen-Styling für Stammfunktionen */
-        table { width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 14px; }
-        th, td { border: 1px solid #ddd; padding: 10px; text-align: left; }
-        th { background-color: #f2f2f2; font-weight: bold; }
-        tr:nth-child(even) { background-color: #f9f9f9; }
-        
-        ul { margin-top: 5px; }
-        strong { color: #000; }
+        /* Linke Navigation */
+        nav {
+            width: 280px;
+            background-color: #2c3e50;
+            color: white;
+            padding: 20px;
+            box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+            position: fixed;
+            height: 100vh;
+            overflow-y: auto;
+            box-sizing: border-box;
+        }
+
+        nav h1 {
+            font-size: 19px;
+            color: #ffffff;
+            border-bottom: 2px solid #34495e;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        nav h3 {
+            font-size: 14px;
+            text-transform: uppercase;
+            color: #a0aec0;
+            margin-top: 25px;
+            margin-bottom: 8px;
+            letter-spacing: 1px;
+            font-weight: bold;
+        }
+
+        nav a {
+            display: block;
+            color: #e2e8f0;
+            text-decoration: none;
+            padding: 7px 10px;
+            border-radius: 4px;
+            margin-bottom: 3px;
+            font-size: 15px;
+            transition: all 0.2s;
+        }
+
+        nav a.sub {
+            padding-left: 20px;
+            color: #cbd5e0;
+        }
+
+        nav a:hover {
+            background-color: #34495e;
+            color: #ffffff;
+        }
+
+        nav a.active {
+            background-color: #3182ce;
+            color: #ffffff;
+            font-weight: 600;
+        }
+
+        /* Hauptbereich */
+        main {
+            margin-left: 280px;
+            padding: 40px;
+            max-width: 850px;
+            flex-grow: 1;
+            box-sizing: border-box;
+        }
+
+        h1 {
+            color: #2c3e50;
+            margin-top: 0;
+            border-bottom: 2px solid #2c3e50;
+            padding-bottom: 10px;
+        }
+
+        h2 {
+            color: #2980b9;
+            border-bottom: 2px solid #ecf0f1;
+            padding-bottom: 6px;
+            margin-top: 40px;
+        }
+
+        .question-box {
+            background-color: white;
+            border: 1px solid #dcdde1;
+            border-left: 5px solid #3498db;
+            border-radius: 4px;
+            margin: 20px 0;
+            padding: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+        }
+
+        .question-box strong {
+            display: block;
+            font-size: 16px;
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+
+        .math-display {
+            font-size: 20px;
+            text-align: left;
+            padding: 12px 20px;
+            color: #1a252f;
+            font-family: 'Times New Roman', Times, serif;
+            background-color: #f8f9fa;
+            border-left: 3px solid #2ecc71;
+            margin: 15px 0;
+            border-radius: 0 4px 4px 0;
+        }
+
+        .trick-box {
+            background-color: #ffffff;
+            border: 1px solid #e1e8ed;
+            border-radius: 6px;
+            padding: 15px 20px;
+            margin: 15px 0;
+        }
+
+        .trick-title {
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 5px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: white;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.01);
+        }
+
+        th, td {
+            border: 1px solid #dcdde1;
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background: #ecf0f1;
+            font-weight: bold;
+            color: #2c3e50;
+        }
+
+        tr:nth-child(even) {
+            background-color: #fbfbfc;
+        }
+
+        .hint-box {
+            background-color: #fff9db;
+            border-left: 5px solid #f59f00;
+            padding: 15px;
+            border-radius: 4px;
+            margin: 20px 0;
+            font-size: 14px;
+        }
+
+        .footer-nav {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 40px;
+            padding-top: 15px;
+            border-top: 1px solid #ecf0f1;
+        }
+
+        .footer-nav a {
+            color: #2980b9;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .footer-nav a:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px 0;
+            font-size: 13px;
+            color: #7f8c8d;
+            border-top: 1px solid #ecf0f1;
+            margin-top: 30px;
+        }
+
+        footer a {
+            color: #2980b9;
+            text-decoration: none;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                flex-direction: column;
+            }
+
+            nav {
+                width: 100%;
+                height: auto;
+                position: relative;
+            }
+
+            main {
+                margin-left: 0;
+                padding: 20px;
+            }
+        }
     </style>
 </head>
 <body>
+    <nav>
+        <h1>Physikalische Chemie</h1>
+        <a href="index.html">🏠 Startseite</a>
 
-    <!-- Funktionale Navigationsleiste -->
-    <div class="nav-bar">
-        <a href="index.html" class="back-btn">🏠 Zurück zur Startseite</a>
-        <span class="nav-spacer">|</span>
-        <a href="#teil1">Teil 1: Differentiale</a>
-        <span class="nav-spacer">|</span>
-        <a href="#teil2">Teil 2: Stammfunktionen &amp; Integrale</a>
-    </div>
+        <h3>1. Thermodynamik</h3>
+        <a href="potentiale.html" class="sub">💎 1.1 Thermodynamische Potentiale</a>
+        <a href="reale_systeme.html" class="sub">🌬️ 1.2 Gastheorie, Reale Systeme, Festkörper</a>
+        <a href="mischungen.html" class="sub">🧪 1.3 Mischungsphasen & Grenzflächen</a>
+        <a href="gleichgewicht.html" class="sub">⚖️ 1.4 Chemisches Gleichgewicht</a>
 
-    <h1>5. Mathematischer Anhang &ndash; Grundlagen für die Physikalische Chemie</h1>
-    <p>Dieses Kapitel dient als kompaktes mathematisches Fundament für das Verständnis und das fehlerfreie Umstellen thermodynamischer Gleichungen.</p>
+        <h3>2. Kinetik</h3>
+        <a href="kinetik.html" class="sub">⚡ Reaktionskinetik</a>
 
-    <!-- ========================================== -->
-    <!-- TEIL 1 -->
-    <!-- ========================================== -->
-    <h2 id="teil1">Teil 1: Variablenbeziehungen und Totale Differentiale</h2>
+        <h3>3. Elektrochemie</h3>
+        <a href="elektrochemie.html" class="sub">🔋 Elektrolyse & Potenziale</a>
 
-    <!-- PUNKT 1 -->
-    <div class="question-box">
-        <strong>Frage 1: Warum leitet man in der Thermodynamik meistens nach genau 2 Variablen ab und nicht nach 3 oder mehr?</strong>
-    </div>
-    <p>
-        In der Thermodynamik betrachten wir typischerweise geschlossene Systeme mit einer konstanten Stoffmenge (<em>n</em> = konst.). Nach der <strong>Gibbsschen Phasenregel</strong> reichen für ein reines, einphasiges System exakt <strong>zwei unabhängige Zustandsvariablen</strong> aus, um den gesamten physikalischen Zustand vollständig festzulegen.<br><br>
-        Betrachten wir das ideale Gasgesetz: <em>p &middot; V = n &middot; R &middot; T</em>. Wenn <em>n</em> feststeht, sind die drei verbleibenden Größen (Druck <em>p</em>, Volumen <em>V</em>, Temperatur <em>T</em>) nicht unabhängig voneinander. Wählt man im Labor zwei Größen frei aus (z.&nbsp;B. <em>T</em> und <em>p</em>), stellt sich die dritte (<em>V</em>) über die Zustandsgleichung automatisch ein. Das System hat physikalisch nur zwei mathematische Freiheitsgrade. Jede thermodynamische Eigenschaft ist daher eine Funktion von genau zwei Variablen, weshalb man auch nur nach diesen beiden ableitet.
-    </p>
+        <h3>4. Irreversible Vorgänge</h3>
+        <a href="irreversibel.html" class="sub">⏳ Nichtgleichgewichts-Prozesse</a>
 
-    <!-- PUNKT 2 -->
-    <div class="question-box">
-        <strong>Frage 2: Warum heißt die Ableitung nach 2 Variablen ein "totales Differential"?</strong>
-    </div>
-    <p>
-        Das Wort „total“ bedeutet in diesem Kontext <strong>„vollständig“</strong>. Wenn eine physikalische Eigenschaft (wie das Volumen <em>V</em>) von zwei unabhängigen Variablen (wie <em>T</em> und <em>p</em>) abhängt, setzt sich die gesamte, tatsächliche Änderung des Volumens (<em>dV</em>) aus den beiden einzelnen Beiträgen der Variablen zusammen.<br><br>
-        Das totale Differential addiert diese beiden Effekte mathematisch auf:
-    </p>
-    <div class="math-display">
-        dV = (&part;V/&part;T)<sub>p</sub> &middot; dT + (&part;V/&part;p)<sub>T</sub> &middot; dp
-    </div>
-    <ul>
-        <li>Der erste Term <strong>(&part;V/&part;T)<sub>p</sub></strong> ist die <em>partielle Ableitung</em> nach <em>T</em>. Sie beschreibt, wie stark sich das Volumen <em>nur</em> durch die Temperatur <em>ändert</em>, während der Druck <em>p</em> streng konstant gehalten wird.</li>
-        <li>Der zweite Term <strong>(&part;V/&part;p)<sub>T</sub></strong> beschreibt die Änderung, wenn man <em>nur</em> den Druck variiert und die Temperatur <em>T</em> konstant hält.</li>
-    </ul>
-    <p>
-        Das totale Differential beschreibt somit die <strong>gesamte, kombinierte Auswirkung</strong>, wenn man im Labor an beiden Kontrollrädern gleichzeitig dreht.
-    </p>
+     </nav>
 
-    <!-- PUNKT 3 -->
-    <div class="question-box">
-        <strong>Frage 3: In fortgeschrittenen Formeln leitet man auch nach der Entropie (S) oder der Inneren Energie (U) ab. Stimmt die Phasenregel dann immer noch?</strong>
-    </div>
-    <p>
-        <strong>Ja, die Phasenregel gilt weiterhin uneingeschränkt.</strong> Der Phasenregel ist es mathematisch vollkommen gleichgültig, <em>welche</em> Variablen man zur Beschreibung auswählt. Sie besagt lediglich, dass man <strong>zwei</strong> braucht.<br><br>
-        Während wir im Labor bevorzugt experimentelle Variablen wie <em>T</em> und <em>p</em> messen, nutzt die Natur für Energiebilanzen am liebsten die Entropie <em>S</em> und das Volumen <em>V</em>. Für die Innere Energie <em>U</em> gilt die fundamentale thermodynamische Hauptgleichung:
+    <main>
+        <h1>5. Mathematische Grundlagen</h1>
+        <p style="color: #7f8c8d; font-style: italic;">
+            Kompaktes mathematisches Werkzeugset für das fehlerfreie Umstellen und Verstehen thermodynamischer Gleichungen.
+        </p>
+
+        <h2 id="teil1">Variablenbeziehungen und Totale Differentiale</h2>
+        
+        <div class="question-box">
+            <strong>Frage 1: Warum leitet man in der Thermodynamik meistens nach genau 2 Variablen ab und nicht nach 3 oder mehr?</strong>
+            <p>
+                In der Thermodynamik betrachten wir typischerweise geschlossene Systeme mit einer konstanten Stoffmenge (<em>n</em> = konst.). Nach der <strong>Gibbsschen Phasenregel</strong> reichen für ein reines, einphasiges System exakt <strong>zwei unabhängige Zustandsvariablen</strong> aus, um den gesamten physikalischen Zustand vollständig festzulegen.
+            </p>
+            <p>
+                Betrachten wir das ideale Gasgesetz: <em>p &middot; V = n &middot; R &middot; T</em>. Wenn <em>n</em> feststeht, sind die drei verbleibenden Größen (Druck <em>p</em>, Volumen <em>V</em>, Temperatur <em>T</em>) nicht unabhängig voneinander. Wählt man im Labor zwei Größen frei aus (z.&nbsp;B. <em>T</em> und <em>p</em>), stellt sich die dritte (<em>V</em>) über die Zustandsgleichung automatisch ein. Das System hat physikalisch nur zwei mathematische Freiheitsgrade. Jede thermodynamische Eigenschaft ist daher eine Funktion von genau zwei Variablen, weshalb man auch nur nach diesen beiden ableitet.
+            </p>
+        </div>
+
+        <div class="question-box">
+            <strong>Frage 2: Warum heißt die Ableitung nach 2 Variablen ein "totales Differential"?</strong>
+            <p>
+                Das Wort „total“ bedeutet in diesem Kontext <strong>„vollständig“</strong>. Wenn eine physikalische Eigenschaft (wie das Volumen <em>V</em>) von zwei unabhängigen Variablen (wie <em>T</em> und <em>p</em>) abhängt, setzt sich die gesamte, tatsächliche Änderung des Volumens (<em>dV</em>) aus den beiden einzelnen Beiträgen der Variablen zusammen.
+            </p>
+            <p>Das totale Differential addiert diese beiden Effekte mathematisch auf:</p>
+            <div class="math-display">
+                dV = (&part;V/&part;T)<sub>p</sub> &middot; dT + (&part;V/&part;p)<sub>T</sub> &middot; dp
+            </div>
+            <ul>
+                <li>Der erste Term <strong>(&part;V/&part;T)<sub>p</sub></strong> ist die <em>partielle Ableitung</em> nach <em>T</em>. Sie beschreibt, wie stark sich das Volumen <em>nur</em> durch die Temperatur <em>ändert</em>, während der Druck <em>p</em> streng konstant gehalten wird.</li>
+                <li>Der zweite Term <strong>(&part;V/&part;p)<sub>T</sub></strong> beschreibt die Änderung, wenn man <em>nur</em> den Druck variiert und die Temperatur <em>T</em> konstant hält.</li>
+            </ul>
+            <p>
+                Das totale Differential beschreibt somit die <strong>gesamte, kombinierte Auswirkung</strong>, wenn man im Labor an beiden Kontrollrädern gleichzeitig dreht.
+            </p>
+        </div>
+
+        <div class="question-box">
+            <strong>Frage 3: In fortgeschrittenen Formeln leitet man auch nach der Entropie (S) oder der Inneren Energie (U) ab. Stimmt das totale Differential noch?</strong>
+            <p>
+                <strong>Ja, die Phasenregel gilt weiterhin uneingeschränkt.</strong> Der Phasenregel ist es mathematisch vollkommen gleichgültig, <em>welche</em> Variablen man zur Beschreibung auswählt. Sie besagt lediglich, dass man <strong>zwei</strong> braucht.
+            </p>
+
+
+Während wir im Labor bevorzugt experimentelle Variablen wie <em>T</em> und <em>p</em> messen, nutzt die Natur für Energiebilanzen am liebsten die Entropie <em>S</em> und das Volumen <em>V</em>. Für die Innere Energie <em>U</em> gilt die fundamentale thermodynamische Hauptgleichung:
     </p>
     <div class="math-display">
         dU = T &middot; dS &minus; p &middot; dV
@@ -98,26 +304,27 @@
     </p>
 
 
-
-<!-- NEUER ABSCHNITT: UMFORMUNGEN MIT DEM "d" -->
-    <div class="question-box" style="border-left-color: #222; background: #fdfdfd; border: 1px solid #ddd; border-left: 4px solid #222;">
-        <h3 style="margin-top: 0; color: #111;">Wichtige mathematische Umformungen mit dem Differentialzeichen "d"</h3>
-        <p>In thermodynamischen Beweisen werden oft Differentiale elegant umgeformt, um Gleichungen integrierbar zu machen. Hier sind die drei wichtigsten "Tricks", die in der PC ständig auftauchen:</p>
+</div>
 
 
-	<strong>1. Die logarithmische Ableitung (Wie aus dx / x ein d (ln x) wird):</strong><br><br>
+        <h2 id="teil2">Wichtige mathematische Umformungen mit dem Differentialzeichen "d"</h2>
+
+
+        <div class="question-box">
+            <strong>1. Die logarithmische Ableitung (Wie aus dx / x ein d (ln x) wird):</strong>
+            
 
 	• Erklärung: Wenn man f(x) = ln x ableitet, erhält man df / dx = 1 / x. Multipliziert man das dx nach rechts, steht da: d ln x = (1 / x) dx = dx / x.<br><br>
 	• Nutzen in der PC: Man kann Brüche wie dp/p oder dT/T elegant zu einer einzigen Variablen zusammenfassen.<br><br>
+		
 
-
-	<strong>2. Die Produktregel rückwärts (Wie man zwei d-Terme verschmilzt):</strong><br><br>
+	<strong>2. Die Produktregel rückwärts (Wie man zwei d-Terme verschmilzt):</strong><br>
 
 	• Erklärung: Aus der Schule kennt man d(uv) = u dv + v du.<br><br>
-	• Nutzen in der PC: Wenn in einer Bilanz p dV + V dp steht, kann man das mathematisch sofort zu d(p V) zusammenfassen. Das ist die Brücke zwischen Innerer Energie U und Enthalpie (H = U + pV).<br><br>
+	• Nutzen in der PC: Wenn in einer Bilanz p dV + V dp steht, kann man das mathematisch sofort zu d(pV) zusammenfassen. Das ist die Brücke zwischen Innerer Energie U und Enthalpie (H = U + pV).<br><br>
 
 
-	<strong>3. Der Kehrwert-Trick (Wie aus dx / x<sup>2</sup>  ein d(-1 / x) wird):</strong><br><br>
+	<strong>3. Der Kehrwert-Trick (Wie aus dx / x<sup>2</sup>  ein d(-1 / x) wird):</strong><br>
 
 	• Erklärung: Die Ableitung von 1 / x ist -1 / x<sup>2</sup>. Daher gilt: d (-1/x) = (1/x<sup>2</sup>) dx = dx / x<sup>2</sup>.<br><br>
 	• Nutzen in der PC: Extrem wichtig für die Temperaturabhängigkeit von Gleichgewichtskonstanten, wo oft dT/T<sup>2</sup> zu d(-1/T) umgeformt wird.<br>
@@ -125,52 +332,41 @@
 
 	</div>
 
-<br>
 
-    <!-- ========================================== -->
-    <!-- TEIL 2 -->
-    <!-- ========================================== -->
-    <h2 id="teil2">Teil 2: Häufige Stammfunktionen und Integrationen</h2>
-    <p>
-        In der Physikalischen Chemie tauchen bei der Berechnung von Arbeiten, Enthalpien oder Entropien immer wieder dieselben mathematischen Kernelemente auf. Da die physikalischen Symbole variieren (mal integriert man über das Volumen V, mal über die Temperatur T oder den Druck p), sind diese Operationen hier mit einer allgemeinen Variable <strong>x</strong> und einer Konstanten <strong>a</strong> zusammengefasst.
-    </p>
 
-    <table>
-        <thead>
-            <tr>
-                <th>Funktion f(x)</th>
-                <th>Stammfunktion F(x) = &int; f(x)dx</th>
-     
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td><strong>a</strong> (Konstante)</td>
-                <td>a x + C</td>
-            </tr>
-            <tr>
-                <td><strong>x</strong> (Linear)</td>
-                <td>(1/2) x<sup>2</sup> + C</td>
-            </tr>
-            <tr>
-                <td><strong>1/x</strong> bzw. x<sup>-1</sup></td>
-                <td>ln |x| + C</td>
-            </tr>
-            <tr>
-                <td><strong>1/x<sup>2</sup></strong> bzw. x<sup>-2</sup></td>
-                <td>-1/x + C</td>
-            </tr>
-        </tbody>
-    </table>
+ 	<h2 id="teil3">Häufige Stammfunktionen und Integrationen</h2>
 
-    <div class="question-box" style="border-left-color: #cc0000; background: #fff5f5;">
-        <strong>Merkhilfe für bestimmte Integrale in der Praxis:</strong><br>
-        Beim Einsetzen der physikalischen Grenzen (vom Anfangszustand x<sub>1</sub> zum Endzustand x<sub>2</sub> gilt immer: <strong>Endzustand minus Anfangszustand</strong>.<br>
-    </div>
 
-    <!-- Zusätzliche Fuß-Rückschaltfläche für lange Seiten -->
-  <!-- Fußbereich mit Rück-Schaltfläche -->
-    <div style="margin-top: 5px; padding-top: 20px; border-top: 1px solid #eee; display: flex; justify-content: space-between; align-items: center;">
-        <a href="#teil1" style="color: #666; text-decoration: none; font-size: 13px;">&uarr; Nach oben springen</a>
-        <a href="index.html" style="background: #333; color: #fff; text-decoration: none; padding: 8px 15px; border-radius: 4px; font-size: 13px; font-weight: bold;">🏠 Zurück zur Startseite</a>
-    </div>
+        <div class="question-box">
+	
+        In der Physikalischen Chemie tauchen bei der Berechnung von Arbeiten, Enthalpien oder Entropien immer wieder dieselben mathematischen Kernelemente auf. Da die physikalischen Symbole variieren (mal integriert man über das Volumen V, mal über die Temperatur T oder den Druck p), sind diese Operationen hier mit einer allgemeinen Variable <b>x</b> und einer Konstanten <b>a</b> zusammengefasst.</p>
+
+    	
+            <div class="math-display">
+                Stammfunktion F(x) = &int; f(x) dx
+            </div>
+
+            <div class="math-display">
+                a &middot; x + C = &int; a dx
+            </div>
+
+            <div class="math-display">
+                (1/2) &middot; x<sup>2</sup> + C = &int; x dx
+            </div>
+
+            <div class="math-display">
+                ln |x| + C = &int; (1/x) dx
+            </div>
+
+            <div class="math-display">
+                &minus; (1/x) + C = &int; (1/x<sup>2</sup>) dx
+            </div>
+
+
+
+	</div>
+
+
+
+</main>
+</body>
