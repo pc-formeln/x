@@ -339,34 +339,22 @@
 		&nbsp;→&nbsp; Klammer wenn zusätzliche Reibungsarbeit<br><br>
 
 
-<!-- Einfügestelle in potentiale.html -->
 
-<!-- Interaktiver Steuerungslink (angepasst: harmonische Textgröße) -->
-<p>
-    <a href="javascript:void(0);" onclick="toggleDiagram()" id="diagramLink" style="color: #000000; text-decoration: underline; cursor: pointer; font-weight: normal; font-family: sans-serif; font-size: 0.88em;">
-        S(T) - Diagramm einblenden
-    </a>
-</p>
 
-<!-- Platzhalter-Box (wird erst bei Klick gerendert) -->
-<div id="diagramContainer" style="display: none; border: 1px solid #ccc; padding: 15px; border-radius: 5px; background: #ffffff; max-width: 550px; margin: 15px 0;">
-    <h3 style="margin-top: 0; color: #333; font-family: sans-serif;">Molare Entropie S<sub>m</sub> von 0 K bis 500 K (p = 1 bar)</h3>
-    
-    <div style="text-align: center; margin: 20px 0;">
-        <canvas id="entropieCanvas" width="500" height="300" style="background: #fdfdfd; border: 1px solid #ddd; max-width: 100%; display: block; margin: 0 auto;"></canvas>
-    </div>
-
-    <div class="formel-display" style="text-align: left; padding: 10px; line-height: 2.2em; background: #f9f9f9; border-radius: 4px; font-family: sans-serif; font-size: 13px;">
-        <strong>Berechnung der Absoluten Entropie (Dritter Hauptsatz):</strong><br>
-        S(T) = &int;<sub>0</sub><sup>T<sub>m</sub></sup> (C<sub>p,fest</sub> / T) dT + &Delta;H<sub>fus</sub>/T<sub>m</sub> + &int;<sub>T<sub>m</sub></sub><sup>T<sub>b</sub></sup> (C<sub>p,flüssig</sub> / T) dT + &Delta;H<sub>vap</sub>/T<sub>b</sub> + &int;<sub>T<sub>b</sub></sub><sup>T</sup> (C<sub>p,gas</sub> / T) dT
-    </div>
-</div>
-
-<!-- Einbindung des externen Logik-Moduls -->
-<script src="diagramm1.js"></script>
-
-<!-- Ende der Einfügestelle -->
-
+<details>
+  <summary> S(T) - </summary>
+  
+  <!-- 1. Das Diagramm -->
+  <div style="text-align: center; margin-bottom: 15px;">
+    <img src="./diagramm1.png"
+         alt="F-V-Diagramm"
+         style="max-width: 100%; height: auto; display: block; margin: 0 auto;">
+  </div>
+  
+  <!-- 2. Die Unterschrift direkt darunter -->
+  <iframe src="./diagramm1_u.html"
+          style="width: 90%; height: 400px; border: none; background: transparent;"></iframe>
+</details>
 
 
 
