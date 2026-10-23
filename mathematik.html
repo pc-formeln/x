@@ -303,8 +303,28 @@ Während wir im Labor bevorzugt experimentelle Variablen wie <em>T</em> und <em>
         Die Phasenregel wird durch solche Ableitungen also nicht verletzt, sondern sie liefert überhaupt erst das mathematische Fundament, dass zwei Variablen ausreichen, um diese exakten Steigungen zu berechnen.
     </p>
 
-
 </div>
+
+
+        <div class="question-box">
+ 	<b>Frage 4: Warum werden in der Thermodynamik überhaupt "Potentialfunktionen" (wie U, H, A, G) verwendet?</b><br><br>
+
+            Der Hauptgrund für das Einführen dieser Energie-Potentiale ist die **Bequemlichkeit im Labor**. Die Natur liefert uns über den 1. Hauptsatz zunächst nur die Innere Energie <em>U</em>, deren natürliches totales Differential von der Entropie <em>S</em> und dem Volumen <em>V</em> abhängt (<em>dU = T&middot;dS - p&middot;dV</em>). Im realen Experiment lassen sich die Entropie (eine Unordnungsgröße) oder ein fixes Gasvolumen bei Explosionen jedoch extrem schwer konstant halten oder messen.
+            <p>
+                Durch mathematische Transformationen (sogenannte Legendre-Transformationen) wurden daher neue thermodynamische Potentiale geschaffen, deren natürliche Variablen perfekt zu unseren Laborbedingungen passen:
+            </p>
+            <ul>
+                <li>Die **Enthalpie H(S,p)** wechselt das Volumen gegen den leicht messbaren Druck <em>p</em> aus &ndash; ideal für offene Reagenzgläser unter Atmosphärendruck (<em>dH = T&middot;dS + V&middot;dp</em>).</li>
+                <li>Die **Freie Energie A(T,V)** ersetzt die unpraktische Entropie durch die leicht kontrollierbare Temperatur <em>T</em> bei konstantem Volumen (<em>dA = -S&middot;dT - p&middot;dV</em>).</li>
+                <li>Die **Freie Enthalpie G(T,p)** vereint schließlich beide experimentellen Traum-Bedingungen: Konstante Temperatur und konstanter Druck (<em>dG = -S&middot;dT + V&middot;dp</em>).</li>
+            </ul>
+            <p>
+                Potentialfunktionen erlauben es uns somit, die Richtung und das Gleichgewicht einer chemischen Reaktion allein anhand von makroskopischen Größen (wie Druck und Temperatur) vorherzusagen, die wir am Kontrollrad im Labor direkt ablesen können.
+            </p>
+
+        </div>
+
+
 
 
         <h2 id="teil2">Wichtige mathematische Umformungen mit dem Differentialzeichen "d"</h2>
