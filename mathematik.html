@@ -321,8 +321,33 @@ Während wir im Labor bevorzugt experimentelle Variablen wie <em>T</em> und <em>
             <p>
                 Potentialfunktionen erlauben es uns somit, die Richtung und das Gleichgewicht einer chemischen Reaktion allein anhand von makroskopischen Größen (wie Druck und Temperatur) vorherzusagen, die wir am Kontrollrad im Labor direkt ablesen können.
             </p>
+        </div>
+
+
+
+        <div class="question-box">
+            <strong>Frage 5: Warum nutzt man in der Thermodynamik überhaupt Infinitesimalrechnung (d, ∂, ∫) für simple Änderungen von Druck oder Temperatur?</strong>
+
+		<p>
+		<strong>1. Das Problem der „beweglichen Ziele“ (Abhängigkeiten)</strong>
+		Einfache Multiplikation funktioniert nur, wenn die beteiligten Größen konstant bleiben. In der Realität hängt aber fast <b>alles von allem</b> ab.
+		</p>
+		<p>
+		<b>Die Lösung der Infinitesimalrechnung:</b> Wir zerlegen den Prozess in unendlich viele, unendlich kleine Schritte <b>dV</b>. In jedem dieser winzigen Schritte ist der Druck <b>p</b> für einen Bruchteil einer Sekunde quasi konstant. Das Integral  <b>&minus;&int; p dV</b> addiert all diese winzigen Schritte exakt auf.
+		</p>
+		<p>
+		<strong>2. Die Steigung von Kurven (Nicht-Linearität)</strong>
+		Die Natur verhält sich selten geradlinig. Ein einfaches Teilen <b>durch eine mittlere Temperatur</b> liefert nur eine ungenaue Schätzung. Die Infinitesimalrechnung nutzt hier die logarithmische Ableitung, um das exakte Ergebnis <b>C<sub>p</sub> &sdot; ln(T<sub>2</sub>/T<sub>1</sub>)</b> zu berechnen.
+		</p>
+
+		<strong>3. Exakte Definition von Zustandseigenschaften</strong>
+		Das totale Differential ist das einzige mathematische Werkzeug, das uns erlaubt, die isolierten Effekte zu trennen. Mit einfachen Grundrechenarten könnte man im Code oder in der Theorie niemals sauber ausdrücken: „Wie ändert sich das Volumen mit der Temperatur, WÄHREND der Druck krampfhaft festgehalten wird?“ Genau das leistet das Symbol der partiellen Ableitung <b>&part;</b>.
+		</p>
 
         </div>
+
+
+
 
 
 
