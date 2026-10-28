@@ -101,14 +101,32 @@
 	µ<sub>i</sub> = (&part;F/&part;n)<sub>V,T</sub> bei V,T = konst.<br>
 	µ<sub>i</sub> = (&part;H/&part;n)<sub>p,S</sub> bei p,S = konst.<br>
 	µ<sub>i</sub> = (&part;U/&part;n)<sub>V,S</sub> bei V,S = konst.<br><br>
-	dimensionslose Größe (Vereinfachung): ^µ<sub>i</sub> = µ<sub>i</sub>/(RT)<br><br>
+	<b>dimensionslose Größe (Vereinfachung):</b> ^µ<sub>i</sub> = µ<sub>i</sub>/(RT)<br><br>
 	(&part;µ<sub>i</sub>/&part;T)<sub>p,x</sub> = -S<sub>m,i</sub> (&part;µ<sub>i</sub>/&part;p)<sub>T,x</sub> = V<sub>m,i</sub><br>
 	((&part;µ<sub>i</sub>/T) / &part;T)<sub>p,x</sub> = -H<sub>m,i</sub> / T<sup>2</sup><br><br>
-	chemisches Potential einer Lösungskomponente:<br>
+	<b>chemisches Potential einer Lösungskomponente:</b><br>
 	dµ = -SdT + Vdp<br>
 	&rarr; Integration wenn S,V konst.<br>
 	&rarr; dµ<sub>i</sub> = G<sub>i</sub><sup>0</sup> + S<sub>i</sub> (T<sup>0</sup>-T) + RT ln a<sub>i</sub> + V<sub>m,i</sub> (p-p<sup>0</sup>)<br>
-
+	Da S niemals von T unabhängig ist, ergibt sich:<br>
+	&mu;<sub>i</sub>(T,p) = G<sub>i</sub><sup>0</sup>(T) + V<sub>m,i</sub>(p &minus; p<sup>0</sup>) + RT &sdot; ln a<sub>i</sub><br><br>
+	
+	(G<sub>i</sub><sup>0</sup>(T) oder auch &mu;<sub>i</sub><sup>0</sup>(T) ist der tabellierte Standardwert, der für jede Temperatur bereits den Entropie-Effekt fertig eingerechnet hat.
+	<ul>
+	<li>
+	Anwendung auf Gase:<br>
+	V<sub>m</sub> niemals als konstant annehmen!<br>
+	&mu;<sub>i</sub> = &mu;<sub>i</sub><sup>0</sup>(T) + RT ln(p/p<sup>0</sup>) + RT ln x<sub>i</sub> = &mu;<sub>i</sub><sup>0</sup>(T) + RT ln(p<sub>i</sub>/p<sup>0</sup>).<br>
+	</li>
+	<li>
+	Anwendung auf Flüssigkeiten:<br>
+	Flüssigkeiten sind kaum komprimierbar. Ihr Molvolumen V<sub>m</sub> ist sehr klein und nahezu konstant. Bei moderaten Drücken (z. B. 1 bis 5 bar) ist der Term V<sub>m</sub>(p-p<sup>0</sup>) so winzig, dass man ihn in der Chemie meistens komplett vernachlässigt. Erst bei extremen Drücken (Geowissenschaften, Tiefsee) spielt er eine Rolle.<br>
+	</li>
+	<li>
+	Anwendung auf Feststoffe:<br>
+	Genau wie bei Flüssigkeiten ist V<sub>m</sub> konstant und extrem klein. Der Druckeinfluss auf das chemische Potenzial von Feststoffen wird im Labor fast immer vernachlässigt. Wenn es sich um einen reinen Feststoff handelt (keine Mischung), ist seine Aktivität per Definition immer a<sub>i</sub> = 1. Damit fällt der Term RT ln(1) komplett weg = 0. Nur bei echten festen Lösungen (Legierungen, Mischkristallen) nutzt man den Molenbruch x<sub>i</sub>.<br>
+	</li>
+	</ul>
             </div>
             <p><strong></strong></p>
 
