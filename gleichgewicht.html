@@ -169,29 +169,61 @@
         </div>
 
 
-        <h2>Fugazität f</h2>
+
+
+ <h2>Fugazität f (Der wirksame Druck realer Gase)</h2>
 
         <div class="potential-box">
-            <h3></h3>
-            <div class="formel-display" style="text-align: left; padding-left: 20px;">
-
-	f = &phi; p<br>
-
-
-<p style="text-align: left; line-height: 2.5em;">
-  ln &phi; = 
-  <span style="display: inline-flex; flex-direction: column; vertical-align: middle; text-align: center; margin: 0 4px;">
-    <span style="border-bottom: 1px solid; padding: 0 2px;">1</span>
-    <span>R · T</span>
-  </span> 
-  <span style="font-size: 1.4em; vertical-align: middle; margin-left: 4px;">&int;</span><sub style="position: relative; left: -0.2em; bottom: -0.5em; font-size: 0.8em;">0</sub><sup style="position: relative; left: -0.5em; top: -0.7em; font-size: 0.8em;">p</sup> 
-  (V<sub>m</sub>-V<sub>m,ideal</sub>) dp
-</p>
-
+            <p>In realen Gasen weicht der messbare Druck <em>p</em> aufgrund von intermolekularen Wechselwirkungen (Anziehung und Abstoßung) vom thermodynamisch wirksamen Druck – der <strong>Fugazität f</strong> – ab.</p>
+            
+            <div class="formel-display" style="text-align: left; padding-left: 20px; background-color: #f8f9fa; padding: 15px; border-left: 4px solid #007bc2;">
+                <b>f = &phi; &sdot; p</b>
             </div>
-            <p><strong>&phi; : Fugazitätskoeffizient</strong></p>
 
+            <p style="text-align: left; line-height: 2.5em; margin-top: 15px;">
+              Der Fugazitätskoeffizient &phi; berechnet sich allgemein über das Integral der Volumendifferenz:
+              <br>
+              ln &phi; = 
+              <span style="display: inline-flex; flex-direction: column; vertical-align: middle; text-align: center; margin: 0 4px;">
+                <span style="border-bottom: 1px solid; padding: 0 2px;">1</span>
+                <span>R · T</span>
+              </span> 
+              <span style="font-size: 1.4em; vertical-align: middle; margin-left: 4px;">&int;</span><sub style="position: relative; left: -0.2em; bottom: -0.5em; font-size: 0.8em;">0</sub><sup style="position: relative; left: -0.5em; top: -0.7em; font-size: 0.8em;">p</sup> 
+              (V<sub>m</sub> - V<sub>m,ideal</sub>) dp
+            </p>
+
+            <h4 style="margin-top: 20px; color: #2c3e50;">Konkrete Berechnung via Virialgleichung:</h4>
+            <p>Nutzt man für moderate Drücke den Virialansatz <em>V<sub>m</sub> = (RT/p) + B(T)</em>, wobei <em>B(T)</em> den zweiten Virialkoeffizienten des Gases darstellt, vereinfacht sich das Integral zu:<br>
+	    V<sub>m</sub>-V<sub>m,ideal</sub> = B(T)<br>
+	    &int; B(T) dp = B(T) &sdot; p<br>
+		</p>
+            
+            <div class="formel-display" style="text-align: left; padding-left: 20px; font-family: monospace; background-color: #f1f2f6; padding: 10px;">
+                ln &phi; = [ (B(T) &sdot; p) / (R &sdot; T) ]
+                <br><br>
+                &rarr; &phi; = e<sup>[ (B(T) &sdot; p) / (R &sdot; T) ]</sup>
+                <br><br>
+                &rarr; f = p &sdot; e<sup>[ (B(T) &sdot; p) / (R &sdot; T) ]</sup>
+            </div>
+
+<br>
+<details>
+  <summary>Diagramm</summary>
+  <img src="./diagramm18.png"
+       alt="Diagramm der freien Enthalpie und ihrer Ableitung"
+       style="max-width: 100%; height: auto;">
+</details>
+
+
+            <p style="margin-top: 15px;"><strong>Physikalische Interpretation von &phi;:</strong></p>
+            <ul>
+                <li><strong>&phi; = 1:</strong> Ideales Gas (Keine Wechselwirkungen, <em>f = p</em>).</li>
+                <li><strong>&phi; &lt; 1:</strong> Reales Gas bei mittlerem Druck. Es dominieren die <em>Anziehungskräfte</em>. Das Gas lässt sich leichter komprimieren, der wirksame Druck ist kleiner als der gemessene.</li>
+                <li><strong>&phi; &gt; 1:</strong> Reales Gas bei extrem hohem Druck. Es dominieren die <em>Abstoßungskräfte</em> und das Eigenvolumen der Teilchen. Der wirksame Druck schießt explosionsartig nach oben.</li>
+            </ul>
         </div>
+
+
 
 
 
