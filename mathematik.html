@@ -348,6 +348,48 @@ Während wir im Labor bevorzugt experimentelle Variablen wie <em>T</em> und <em>
 
 
 
+        <div class="question-box">
+            <strong>Frage 6: Warum wimmelt es in der Thermodynamik nur so von künstlichen Nullwerten (Standardzuständen) und was passiert bei T = 0 K?</strong>
+
+
+		<p>
+		<strong>1. Druck und Konzentration: Der Unterschied zwischen "Abwesenheit" und "Laborstandard"</strong>
+		<ul>
+		<li>Der echte Nullpunkt: Beim Druck <b>p=0</b> und der Konzentration <b>c=0</b> gibt es einen echten, physikalischen Nullpunkt: Das absolute Vakuum (keine Teilchen da, 		die gegen die Wand stoßen) oder die Abwesenheit eines Stoffes.
+		</li><li>
+		Warum wir trotzdem einen Nullwert <b>p<sup>0</sup>, c<sup>0</sup></b> brauchen: In den Formeln (wie <b>(RT / ln(p/p<sup>0</sup>)</b>) taucht der Nullwert im Nenner auf. Wir können mathematisch 			nicht durch Null teilen, und der Logarithmus von Null ist nicht definiert. Deshalb setzen wir einen Standard-Nullwert (meist <b>1 bar oder 1 mol/L</b>). Dieser dient als normierte „Null-Linie“, ab der wir Abweichungen messen.
+		</li><li>
+		 In der Physik können wir nur Änderungen und Differenzen messen – und um eine Differenz überhaupt als Zahl ausdrücken zu können, müssen wir zwingend irgendwo auf einer Skala eine Null-Linie einzeichnen.
+		</li></ul></p>
+		<p>
+		<strong>2. Enthalpie H und Freie Enthalpie G: Das Problem der unendlichen Bindungsenergie</strong>
+		<ul>
+		<li>
+		Warum es keinen absoluten Nullpunkt gibt: Die Enthalpie ist die thermische Energie plus die chemische Bindungsenergie. Um den absoluten Nullpunkt der Energie eines Atoms zu berechnen, müsste man es theoretisch komplett in seine Quarks zerlegen und die Energie berechnen, die dabei frei wird. Das ist unmöglich und für Chemiker auch völlig irrelevant.
+		</li><li>
+		Unser <b>künstlicher Nullpunkt:</b> Die Physikalische Chemie hat sich daher auf eine Definition geeinigt: Alle <b>reinen Elemente in ihrer stabilsten Form</b> bei 25°C und 1 bar bekommen den Enthalpie-Nullwert zugewiesen &Delta;<sub>f</sub>H<sup>0</sup> = 0. Wenn sich Wasserstoff H<sub>2</sub> und Sauerstoff O<sub>2</sub> zu Wasser verbinden, messen wir einfach nur den Abstand zu diesem künstlichen Nullpunkt. Da G = H - TS gilt, erbt die <b>Freie Enthalpie</b> diesen künstlichen Nullpunkt automatisch.
+		</li></ul></p>
+		<p>
+		<strong>3. Die Entropie S: Der einzige echte energetische Nullpunkt der Natur</strong>
+		<ul>
+		<li>
+		Der 3. Hauptsatz (Nernst-Theorem): Die Entropie bildet die große Ausnahme! Sie besitzt über die statistische Mechanik einen absolut messbaren Nullpunkt. Atome schwingen im Kristallgitter. Kühlt man einen perfekt fehlerfreien, reinen Kristall auf den absoluten Temperaturnullpunkt <b>T=0K</b> ab, friert jede Bewegung ein.
+		</li><li>
+		Die Konsequenz: Es gibt nur noch exakt einen einzigen Mikrozustand, wie die Atome angeordnet sein können &Omega;=1. Nach Boltzmanns Formel gilt: S= k<sub>B</sub>  ln(1) = 0. Daher haben Entropie-Werte in Tabellenbüchern (im Gegensatz zu H und G) ein kleines „Schild“ mit der Aufschrift: „Ich bin ein absoluter Wert, kein künstliches Delta!“
+		</li></ul></p>
+		<strong>4. Die Wärmekapazität C<sub>p</sub> bei T=0K: Das Quanten-Einfrieren</strong>
+		</p>
+		<ul>
+		<li>
+		Warum C<sub>p</sub> am Nullpunkt gegen Null gehen MUSS: Die Wärmekapazität gibt an, wie viel Energie ein Stoff aufnehmen kann, um seine Temperatur um ein Kelvin zu erhöhen. Wenn man sich T=0K nähert, verbieten die Gesetze der Quantenmechanik den Atomen, beliebig kleine Energiemengen aufzunehmen. Die Schwingungszustände sind gequantelt. Die thermische Energie bei fast 0K reicht nicht aus, um die Atome in den nächsthöheren Quantenzustand zu hieven.
+		</li><li>
+		Das Ergebnis: Die Atome „ignorieren“ die zugeführte Wärme quasi, sie können sie nicht speichern. Deshalb bricht die Wärmekapazität mathematisch und physikalisch zusammen und wird <b>am absoluten Nullpunkt exakt Null</b>. Das sorgt dafür, dass das Integral für die Entropie &int;C<sub>p</sub>(1/T)dT an der Stelle T=0 nicht gegen Unendlich konvergiert, sondern berechenbar bleibt.
+		</li></ul></p>
+
+
+        </div>
+
+
 
 
 
@@ -410,6 +452,9 @@ Während wir im Labor bevorzugt experimentelle Variablen wie <em>T</em> und <em>
 
 
 	</div>
+
+
+
 
 
 
