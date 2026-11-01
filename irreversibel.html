@@ -58,8 +58,14 @@
 
 	&Delta;H<sub>273K</sub> &rarr; &Delta;H<sub>268K</sub><br>
 	d(&Delta;H)dT = &Delta;C<sub>p</sub> = C<sub>p</sub>(l) – C<sub>p</sub>(s)<br>
-	&Delta;H<sub>273K</sub> &minus; &Delta;H<sub>268K</sub> =  &Delta;C<sub>p</sub> &sdot; (T<sub>1</sub> - T<sub>2</sub>)<br><br>
+	&Delta;H<sub>273K</sub> &minus; &Delta;H<sub>268K</sub> =  &Delta;C<sub>p</sub> &sdot; (T<sub>1</sub> - T<sub>2</sub>)<br>
 
+<p style="margin-top: 10px; font-size: 0.95rem; color: #333333;">
+    <strong>Definition der Variablen für diese Differenzschreibweise:</strong><br>
+    • <strong>T<sub>1</sub> = 273 K</strong> (Standard-Phasenübergangstemperatur)<br>
+    • <strong>T<sub>2</sub> = 268 K</strong> (unterkühlte Zieltemperatur)<br>
+    <span style="color: #c0392b; font-weight: bold;">Achtung Vorzeichen-Falle:</span> Da in dieser spezifischen Umstellung links die Differenz <em>(Standard − Ziel)</em> steht, muss auf der rechten Seite in der Klammer ebenfalls exakt <strong>(T<sub>1</sub> − T<sub>2</sub>)</strong> gerechnet werden, damit sich die Minuszeichen formal aufheben!
+</p>
         &Delta;S<sub>Gesamt</sub> = &Delta;S<sub>System</sub> + &Delta;S<sub>Umgebung</sub><br>
 
 	&Delta;S<sub>Gesamt</sub> < 0  &rarr; Prozeß unfreiwillig (nicht spontan).<br><br>
@@ -90,6 +96,86 @@ Obwohl die Netto-Wärmeenergie im System ausgeglichen ist, hast du über den Tem
 
     </div>
 </div>
+
+
+	<h2 id="sec-erstarren-unterkuehlt">Erstarren von unterkühltem Wasser bei −5 °C</h2>
+<div class="potential-box">            
+    <div class="formel-display" style="text-align: left; padding-left: 20px;">
+    
+         ΔS<sub>Gesamt</sub> &gt; 0 &nbsp;→&nbsp; ΔG<sub>System</sub> &lt; 0 &nbsp;→&nbsp; Prozess ist exergonisch / freiwillig
+         <br><br>
+        <b>Ersatzprozess für die Berechnung:</b><br><br>
+        Erwärmen (Wasser) auf 0 °C &nbsp;→<br>
+        Phasenübergang (Erstarren) bei 0 °C &nbsp;→<br>
+        Abkühlung (Eis) auf −5 °C<br><br>
+        Hier sehen wir einen Prozess, der <strong>irreversibel, aber freiwillig</strong> (exergonisch) abläuft. Dies steht im direkten Gegensatz zum vorherigen Prozess (Schmelzen von Eis bei −5 °C), welcher ebenfalls irreversibel, aber <em>unfreiwillig</em> (endergonisch) ist und nur durch Zufuhr von äußerer Arbeit erzwungen werden kann.        
+    </div>
+</div>
+
+
+<h2 id="sec-sublimation-eis">Sublimation von Eis bei −18 °C</h2>
+
+<div class="potential-box">
+<div class="formel-display" style="text-align: left; padding-left: 20px;">
+    <b>Ersatzprozess für die Berechnung:</b><br><br>
+    Da man die Werte bei −18 °C meist nicht direkt tabelliert hat, führt der Weg über die bekannten Phasenübergänge bei Standarddruck:<br><br>
+        <b>Der 5-Schritte-Weg:</b><br><br>
+        1. Eis erwärmen (−18 °C → 0 °C)<br>
+        2. Phasenübergang fest → flüssig (Schmelzen bei 0 °C)<br>
+        3. Wasser erwärmen (0 °C → 100 °C)<br>
+        4. Phasenübergang flüssig → gasförmig (Verdampfen bei 100 °C)<br>
+        5. Wasserdampf abkühlen (100 °C → −18 °C)
+    <br><br>
+    <b>Kirchhoff'sches Gesetz über zwei Phasenübergänge:</b><br>
+    (für die Sublimationsenthalpie bei der Zieltemperatur T<sub>Ziel</sub> = 255 K (−18 °C))<br>
+    schrittweises Vorgehen<br><br>
+     &Delta;<sub>sub</sub>H<sub>255K</sub> = &Delta;<sub>schmelz</sub>H<sub>255K</sub> + &Delta;<sub>verdampf</sub>H<sub>255K</sub><br>
+    &Delta;<sub>schmelz</sub>H<sub>255K</sub> = &Delta;<sub>schmelz</sub>H<sub>273K</sub> + &Delta;C<sub>p,schmelz</sub> &sdot; (255K - 273K)<br>
+    mit &Delta;C<sub>p,schmelz</sub> = &Delta;C<sub>p</sub>(l) - &Delta;C<sub>p</sub>(s)<br>
+    &Delta;<sub>verdampf</sub>H<sub>255K</sub> = &Delta;<sub>verdampf</sub>H<sub>373K</sub> + &Delta;C<sub>p,verdampf</sub> &sdot; (255K - 373K)<br>
+    mit &Delta;C<sub>p,verdampf</sub> = &Delta;C<sub>p</sub>(g) - &Delta;C<sub>p</sub>(l)<br>
+
+<br>
+<p style="margin-top: 15px; border-left: 3px solid #0056b3; padding-left: 10px;">
+    <strong>Mathematischer Beweis (Zusammenführung der Kirchhoff-Gleichungen):</strong><br>
+    Löst man die Temperaturklammern der beiden Kirchhoff-Teilschritte mathematisch auf und sortiert die Terme nach den drei Phasen, schließt sich der Kreisprozess mathematisch perfekt:
+</p>
+
+<div class="formel-display" style="text-align: left; padding-left: 20px; font-family: monospace; font-size: 1.05rem; line-height: 1.8; background-color: #fcfcfc; border: 1px solid #ccd1d9; padding: 15px; border-radius: 6px;">
+    <strong>Ausmultiplizierte Therme:</strong><br>
+    • Feststoff: C<sub>p</sub>(s) · (255 − 273) = <strong>−18 · C<sub>p</sub>(s)</strong><br>
+    • Flüssigkeit: C<sub>p</sub>(l) · (273 − 255) + C<sub>p</sub>(l) · (373 − 255) = <strong>+100 · C<sub>p</sub>(l)</strong><br>
+    • Gasphase: C<sub>p</sub>(g) · (255 − 373) = <strong>−118 · C<sub>p</sub>(g)</strong>
+</div>
+
+<p style="margin-top: 10px;">
+    <strong>Das thermodynamische Fazit (Vorzeichenlogik):</strong><br>
+    Die Vorzeichen regeln die physikalische Bilanz vollautomatisch:
+</p>
+<ul style="font-size: 0.95rem; margin-top: 5px;">
+    <li><strong>+18 · C<sub>p</sub>(s)</strong> spiegelt das Erwärmen des Eises von −18 °C auf 0 °C wider.</li>
+    <li><strong>+100 · C<sub>p</sub>(l)</strong> entspricht exakt dem Erwärmen des flüssigen Wassers von 0 °C auf 100 °C.</li>
+    <li><strong>−118 · C<sub>p</sub>(g)</strong> bilanziert die Energieabgabe beim Abkühlen des heißen Dampfes von 100 °C zurück auf die Zieltemperatur von −18 °C.</li>
+</ul><br>
+     Das System selbst verändert sich irreversibel (daher der komplizierte 5-Wege-Pfad). Die Umgebung ist jedoch ein riesiges Wärmebad bei konstant -18°C. Aus Sicht der Umgebung wird die Wärme immer quasi-reversibel ausgetauscht. 
+  
+
+    <p style="margin-top: 20px;">
+        <strong>Klausur-Tipp zur Spontaneität:</strong><br>
+        Ob der Prozess freiwillig abläuft, hängt nun ganz vom Druck (Partialdruck des Wasserdampfs) und der Temperatur ab:<br>
+        <ul>
+        <li>In trockener Luft (sehr niedriger Partialdruck): Das Gas hat extrem viel Raum zur Entfaltung. Der Entropiegewinn &Delta;S ist so massiv, dass der negative Term -T\&Delta;S den positiven Enthalpieterm &Delta;H komplett überstimmt. Das Ergebnis: &Delta;G < 0 – das Eis sublimiert spontan (exergonisch).</li>
+        <li>Bei hoher Luftfeuchtigkeit: Wenn die Luft schon mit Wasserdampf gesättigt ist, bringt zusätzliche Sublimation kaum noch Entropiegewinn. Der -T\&Delta;S -Term schrumpft, &Delta;H dominiert, und &Delta;G > 0 – der Prozess stoppt oder kehrt sich um (Resublimation).</li>
+
+        
+    </p>
+</div>
+</div>
+
+
+
+
+
 
 
 
