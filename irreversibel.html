@@ -161,7 +161,7 @@ Obwohl die Netto-Wärmeenergie im System ausgeglichen ist, hast du über den Tem
   
 
     <p style="margin-top: 20px;">
-        <strong>Klausur-Tipp zur Spontaneität:</strong><br>
+        <strong>Klausur-Tipp zur Spontanität:</strong><br>
         Ob der Prozess freiwillig abläuft, hängt nun ganz vom Druck (Partialdruck des Wasserdampfs) und der Temperatur ab:<br>
         <ul>
         <li>In trockener Luft (sehr niedriger Partialdruck): Das Gas hat extrem viel Raum zur Entfaltung. Der Entropiegewinn &Delta;S ist so massiv, dass der negative Term -T\&Delta;S den positiven Enthalpieterm &Delta;H komplett überstimmt. Das Ergebnis: &Delta;G < 0 – das Eis sublimiert spontan (exergonisch).</li>
@@ -173,8 +173,86 @@ Obwohl die Netto-Wärmeenergie im System ausgeglichen ist, hast du über den Tem
 </div>
 
 
+<h2 id="xy">Verdampfen von überhitzten Wasser (Siedeverzug)</h2>
+<div class="potential-box">            
+    <div class="formel-display" style="text-align: left; padding-left: 20px;">
+	<ul><li>
+	<b>Schritt 1:</b> Ausgangspunkt: Flüssiges Wasser exakt am regulären Siedepunkt T<sub>Siede</sub> (z. B. 100 °C bei 1 bar).
+	</li>
+	<li>
+	<b>Schritt 2:</b> Die Überhitzung (Metastabiler Zustand):  Die Temperatur des flüssigen Wassers steigt über den Siedepunkt an T > T<sub>Siede</sub><br>
+	&Delta;S<sub>gesamt</sub> = &Delta;S<sub>2</sub> > 0
+	</li>
+	<li>
+	<b>Schritt 3:</b> Der isentrope Phasenübergang &Delta;S<sub>3</sub> = 0. Das überhitzte, flüssige Wasser verdampft schlagartig und kühlt sich dabei selbst wieder auf die reguläre Siedetemperatur T<sub>Siede</sub> ab.
+	</li></ul>
+	&Delta;S<sub>Abkühlung</sub> + &Delta;S<sub>Verdampfung</sub> = 0<br>
+	Q<sub>Abkühlung</sub> = Q<sub>Verdampfung</sub><br>
+	Q<sub>Abkühlung</sub> = m<sub>gesamt</sub> c<sub>p</sub> (T<sub>Siede</sub>-T<sub>Überhitzt</sub>)<br>
+	Q<sub>Verdampfung</sub> = m<sub>Verdampfung</sub> &sdot; &Delta;<sub>v</sub>H<br>
+    	m<sub>Verdampfung</sub> = m<sub>gesamt</sub> &sdot; c<sub>p</sub> &sdot; (T<sub>Überhitzt</sub>-T<sub>Siede</sub>) / &Delta;<sub>v</sub>H<br>
+
+    </div>
+</div>
 
 
+<h2 id="xy">Ein Stein fällt zu Boden</h2>
+<div class="potential-box">            
+    <div class="formel-display" style="text-align: left; padding-left: 20px;">
+	dS = (C/T) dT &rarr; &Delta;S = C &sdot; ln(T<sub>2</sub>/T<sub>1</sub>) = C &sdot; ln(1 + &Delta;T/T<sub>1</sub>)<br>
+	mit ln(1 + &Delta;T/T<sub>1</sub>) &approx; &Delta;T/T<sub>1</sub> für &Delta;T/T<sub>1</sub> << 1<br>
+	folgt &Delta;S = C * &Delta;T/T<sub>1</sub> = Q/T<sub>1</sub>
+
+    </div>
+</div>
+
+
+
+<h2 id="xy"><h2 id="xy">Die irreversible Expansion ins Vakuum</h2>
+<div class="potential-box">            
+    <div class="formel-display" style="text-align: left; padding-left: 20px;">
+	 Kammer 1 enthält ein ideales Gas V<sub>1</sub>, Kammer 2 ist absolut leer (Vakuum). Nun wird das Ventil geöffnet, und das Gas strömt schlagartig in die zweite Kammer, bis es das Gesamtvolumen V<sub>2</sub> ausfüllt.<br><br>
+	Die geordnete kinetische Energie der Ausströmung (die gerichtete Bewegung des Gases in die leere Kammer) zerfällt durch die Stöße der Teilchen an den Wänden und untereinander. Am Ende des Prozesses haben die Teilchen exakt dieselbe mittlere Fluggeschwindigkeit wie am Anfang. Die Energie hat sich nur statistisch im Raum verteilt.<br><br>
+	Genau diese Umwandlung von gerichteter Strömung in ungerichtetes Chaos ist der Grund, warum die Entropie ansteigt!<br><br>
+	Q = 0 ; &Delta;T = 0<br><br>
+	isothermer reversibler Ersatzweg:<br>
+	W<sub>rev</sub> = &minus; &int; p dV = &minus; &int; (nRT)/V dV = &minus; nRT ln(V<sub>2</sub>/V<sub>1</sub>)<br>
+	W<sub>rev</sub> = &minus; Q<sub>rev</sub><br>
+	&Delta;S<sub>gas</sub> = Q<sub>rev</sub> / T =  nR ln(V<sub>2</sub>/V<sub>1</sub>)
+
+    </div>
+</div>
+</h2>
+
+
+
+<h2 id="xy"><h2 id="xy">Die irreversible Expansion gegen einen Druck</h2>
+<div class="potential-box">            
+    <div class="formel-display" style="text-align: left; padding-left: 20px;">
+	 In diesem Fall kühlt sich auch ein ideales Gas definitiv ab! Das Gas leistet nun echte mechanische Arbeit nach außen W<0. Wir nehmen an, der Vorgang läuft sehr schnell ab. Schnelle Prozesse sind thermodynamisch fast immer adiabatisch Q=0.<br><br>
+	&Delta;U = W<sub>irr</sub> < 0<br>
+	&Delta;U = n &sdot; C<sub>v</sub> &sdot; &Delta;T<br>
+	&rarr; ... &rarr; ... &rarr; T<sub>2</sub> = T<sub>1</sub> &sdot; [ 1+(&gamma;-1)&sdot;(p<sub>ex</sub>/p<sub>1</sub>) ] / &gamma;<br><br>
+	Die Gasteilchen prallen gegen den sich wegbewegenden Kolben. Bei jedem Stoß mit der zurückweichenden Wand verlieren die Teilchen an kinetischer Energie (sie werden langsamer)<br><br>
+	&Delta;S<sub>gas</sub> = &Delta;S<sub>rev</sub> + &Delta;S<sub>erzeugt</sub><br>
+	&Delta;S<sub>gas</sub> =  C<sub>v</sub> ln(T<sub>2</sub>/T<sub>1</sub>) + nR ln(V<sub>2</sub>/V<sub>1</sub>)<br>
+	&Delta;S<sub>rev</sub> = 0 (kein reversibler Wärmeaustausch mit der Umgebung, adiabatisch)<br>
+	&rarr; &Delta;S<sub>erzeugt</sub> = &Delta;S<sub>gas</sub><br><br>
+	Thermischer Entropieverlust (Abkühlung):<br>
+ 	&Delta;S<sub>temp</sub> = C<sub>v</sub> ln(T<sub>2</sub>/T<sub>1</sub>) < 0<br>
+	Räumlicher Entropiegewinn (Expansion):<br>
+ 	&Delta;S<sub>vol</sub> = nR ln(V<sub>2</sub>/V<sub>1</sub>) > 0<br><br>
+	Wann sind beide Terme &Delta;S<sub>temp</sub> und &Delta;S<sub>vol</sub> betragsmäßig gleich?<br>
+	nur bei reversibler adiabatischer Expansion möglich:<br>
+	p<sub>ex</sub> = p<sub>1</sub>  &sdot; (V<sub>1</sub>/V<sub>2</sub>)<sup>&gamma;</sub><br><br>
+	Bei jeder echten, irreversiblen adiabatischen Expansion gewinnt das Volumen-Chaos immer das Duell gegen die Temperatur-Abkühlung.<br>
+	&Delta;S<sub>vol</sub> + &Delta;S<sub>temp</sub> > 0 = &Delta;S<sub>erzeugt</sub>
+
+
+    </div>
+    <p><strong>p<sub>ex</sub> : Druck, gegen den Arbeit verrichtet wird<br>&gamma; : C<sub>p</sub>/C<sub>v</sub> mit C<sub>p</sub>=C<sub>v</sub>+R</strong></p>
+</div>
+</h2>
 
 
 

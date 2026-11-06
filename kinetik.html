@@ -113,21 +113,63 @@
     <img src="./diagramme/diagramm15.png"
          alt="Diagramm"
          style="max-width: 100%; height: auto; display: block; margin: 0 auto;">
-  </div>
-  
+  </div>  
   <!-- 2. Die Unterschrift direkt darunter -->
   <iframe src="./diagramme/diagramm15_u.html"
           style="width: 90%; height: 450px; border: none; background: transparent;"></iframe>
 </details>
-            
-            
+                
             </div>
             <p><strong></strong></p>
-
         </div>
 
 
+<h2>Der Ozonabbau</h2>
+<div class="potential-box" style="border-left: 4px solid #007bc0; padding: 15px; background-color: #f8f9fa;">
+  <div class="explanation-text" style="padding-left: 20px; font-size: 0.95em; line-height: 1.5; margin-bottom: 15px;">
+    <p>Für komplexe Mechanismen mit hochreaktiven Zwischenprodukten (wie freien Radikalen oder Atomen) wird die Konzentration des Zwischenprodukts als zeitlich näherungsweise konstant angenommen (<strong>d[Z]/dt &asymp; 0</strong>). Am Beispiel des Ozonabbaus lässt sich so das effektive Geschwindigkeitsgesetz ableiten:</p>
+  </div>
 
+  <div class="formel-display" style="text-align: left; padding-left: 20px; font-family: 'Times New Roman', Times, serif; line-height: 1.8;">
+    <strong>1. Reaktionsmechanismus & Gesamtreaktion</strong><br>
+    <div style="padding-left: 20px; margin-bottom: 10px;">
+      1) O<sub>3</sub> &#8646; O<sub>2</sub> + O ; k<sub>1</sub>, k<sub>-1</sub><br>
+      2) O + O<sub>3</sub> &rarr; 2 O<sub>2</sub> ; k<sub>2</sub> (langsam)<br>
+      <hr style="width: 200px; margin: 5px 0; border: 0; border-top: 1px solid #999;">
+      <strong>Bruttoreaktion:</strong> 2 O<sub>3</sub> &rarr; 3 O<sub>2</sub>
+    </div>
+
+    <strong>2. Geschwindigkeitsbestimmender Schritt</strong><br>
+    Die Gesamtgeschwindigkeit wird durch die langsamste Teilreaktion (Schritt 2) diktiert:<br>
+    <div style="padding-left: 20px; margin-bottom: 10px; font-weight: bold;">
+      v = k<sub>2</sub> &sdot; [O] &sdot; [O<sub>3</sub>]
+    </div>
+
+    <strong>3. [O] ist Zwischenprodukt mit konstanter Konzentration im stationären Fall</strong><br>
+    <div style="padding-left: 20px; margin-bottom: 10px;">
+      d[O]/dt = 0<br>
+      d[O]/dt = k<sub>1</sub> &sdot; [O<sub>3</sub>] &minus; k<sub>-1</sub> &sdot; [O<sub>2</sub>] &sdot; [O] &minus; k<sub>2</sub> &sdot; [O] &sdot; [O<sub>3</sub>] = 0
+    </div>
+
+    <strong>4. Mathematische Näherung & Auflösung nach [O]</strong><br>
+    Da Schritt 2 extrem langsam ist (k<sub>2</sub> &sdot; [O<sub>3</sub>] &laquo; k<sub>-1</sub> &sdot; [O<sub>2</sub>]), kann der letzte Term in der Summe vernachlässigt werden:<br>
+    <div style="padding-left: 20px; margin-bottom: 10px;">
+      k<sub>1</sub> &sdot; [O<sub>3</sub>] &minus; k<sub>-1</sub> &sdot; [O<sub>2</sub>] &sdot; [O] &asymp; 0 <br>
+      k<sub>1</sub> &sdot; [O<sub>3</sub>] = k<sub>-1</sub> &sdot; [O<sub>2</sub>] &sdot; [O] <br>
+      &rarr; <strong>[O] = (k<sub>1</sub> &sdot; [O<sub>3</sub>]) / (k<sub>-1</sub> &sdot; [O<sub>2</sub>])</strong>
+    </div>
+
+    <strong>5. Einsetzen in das effektive Geschwindigkeitsgesetz</strong><br>
+    Setzt man den Ausdruck für [O] in die Gleichung des geschwindigkeitsbestimmenden Schritts ein, erhält man:<br>
+    <div style="padding-left: 20px; margin-top: 10px; padding: 10px; background-color: #eef7fc; border-left: 3px solid #007bc0; display: inline-block;">
+      <span style="font-size: 1.15em; font-weight: bold;">v = (k<sub>1</sub> &sdot; k<sub>2</sub> / k<sub>-1</sub>) &sdot; [O<sub>3</sub>]<sup>2</sup> &sdot; [O<sub>2</sub>]<sup>&minus;1</sup></span>
+    </div>
+  </div>
+
+  <div class="erklärung-text" style="margin-top: 15px; padding-left: 20px; font-size: 0.95em; line-height: 1.5; border-top: 1px solid #eee; padding-top: 10px;">
+    <p><strong>Besonderheit:</strong> Dieses kinetische Ergebnis zeigt eine formale <strong>Gesamtordnung von 1</strong> (2 - 1 = 1). Die Konzentration des Produkts Sauerstoff ([O<sub>2</sub>]) steht im Nenner (negativer Exponent), was bedeutet, dass das entstehende Produkt die Reaktion kinetisch inhibiert (bremst).</p>
+  </div>
+</div>
 
 
 

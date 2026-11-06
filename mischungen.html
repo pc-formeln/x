@@ -374,6 +374,234 @@
 
 
 
+<h2>Gibbssches Phasengesetz (Phasenregel)</h2>
+
+<div class="potential-box">
+  <div class="formel-display" style="text-align: left; padding-left: 20px;">
+<div class="formel-display" style="text-align: left; padding-left: 20px; background-color: #f8f9fa; padding: 15px; border-left: 4px solid #007bc2;">
+	<b>F = C &ndash; P + 2</b> &nbsp;&nbsp;mit&nbsp;&nbsp; <b>C = S &ndash; R</b>
+</div>
+<ul>
+    <li><b>F:</b> Freiheitsgrade (Varianz des Systems)</li>
+    <li><b>P:</b> Phasen (homogene Bereiche)</li>
+    <li><b>C:</b> unabhängige Komponenten (Bestandteile)</li>
+    <li><b>S:</b> Spezies (chemische Individuen)</li>
+    <li><b>R:</b> Restriktionen / Einschränkungen (Reaktionsgleichungen, Elektroneutralität)</li>
+</ul>
+<p><b>Die reduzierte Phasenregel (für kondensierte Systeme):</b></p>
+<div class="formel-display" style="text-align: left; padding-left: 20px; background-color: #f8f9fa; padding: 15px; border-left: 4px solid #007bc2;">
+	<b>F = C &ndash; P + 1</b>
+</div>
+<p><i>Merksatz:</i> Gilt für Systeme, die nur aus Feststoffen und Flüssigkeiten bestehen, da diese kaum vom Druck beeinflusst werden (der Druck wird als konstant auf 1 bar angenommen).</p>
+<p><b>Beispiel 1: Thermische Zersetzung von Kalk</b><br>
+CaCO<sub>3</sub>(s) &rarr; CaO(s) + CO<sub>2</sub>(g) &nbsp;&rArr;&nbsp; P = 3, S = 3, R = 1 &nbsp;&rArr;&nbsp; <b>C = 2</b><br>
+<i>Ergebnis:</i> F = 2 &ndash; 3 + 2 = 1</p>
+	Der Zersetzungsdruck des CO₂ hängt im Gleichgewicht nur von der Temperatur ab. Wäre dies ein System, bei dem man zusätzlich eine Stöchiometrie-Bedingung im Gasraum beachten müsste (z. B. wenn man reine Stoffe einwiegt und eine Ionenbilanz/Elektroneutralität gilt), würde R um diese zusätzliche Restriktion steigen.<br>
+<p><b>Beispiel 2: Thermische Zersetzung von Ammoniumchlorid<br>
+(absolute Klassiker für Prüfungsfragen)</b><br>
+NH<sub>4</sub>Cl(s) &rarr; NH<sub>3</sub>(g) + HCl(g) &nbsp;&nbsp; | &nbsp;&nbsp; P = 2, S = 3</p>
+<ul>
+    <li><b>Szenario 1: Reines NH<sub>4</sub>Cl im Vakuum (Spezialfall)</b><br>
+        <i>Restriktionen:</i> R = 2 (1x Reaktion, 1x Stöchiometrie c(NH<sub>3</sub>) = c(HCl))<br>
+        <i>Komponenten:</i> C = 3 &ndash; 2 = <b>1</b><br>
+        <i>Freiheitsgrade:</i> F = 1 &ndash; 2 + 2 = <b>1</b> (univariant)<br><br>
+ 	Wenn Sie die Temperatur festlegen, stellt sich automatisch ein ganz bestimmter, fester Zersetzungsdruck ein.<br>
+    </li>
+    <br>
+    <li><b>Szenario 2: Beliebige Gasmischung (Allgemeiner Fall)</b><br>
+        <i>Restriktionen:</i> R = 1 (nur die chemische Reaktion)<br>
+        <i>Komponenten:</i> C = 3 &ndash; 1 = <b>2</b><br>
+        <i>Freiheitsgrade:</i> F = 2 &ndash; 2 + 2 = <b>2</b> (bivariant)<br><br>
+	Das System kann nun das Verhältnis der Gase NH<sub>3</sub> zu HCl im Gasraum verschieben. Erst wenn Temperatur und Gesamtdruck von außen fest vorgegeben werden, stellt sich ein eindeutiges Gasverhältnis ein.<br>
+    </li>
+</ul>
+<p><b>Beispiel 3: Wässrige NaCl-Lösung mit Bodensatz</b><br>
+NaCl(s) &rightleftharpoons; Na<sup>+</sup>(aq) + Cl<sup>&minus;</sup>(aq) &nbsp;&nbsp; in H<sub>2</sub>O</p>
+<ul>
+    <li><b>Phasen (P = 2):</b> 1x fest (NaCl-Bodensatz), 1x flüssig (wässrige Lösung)</li>
+    <li><b>Spezies (S = 4):</b> H<sub>2</sub>O, NaCl(s), Na<sup>+</sup>(aq), Cl<sup>&minus;</sup>(aq)</li>
+    <li><b>Restriktionen (R = 2):</b> 
+        <br>&bull; R<sub>1</sub>: Chemisches Gleichgewicht (Löslichkeitsprodukt)
+        <br>&bull; R<sub>2</sub>: Elektroneutralität der Lösung (c(Na<sup>+</sup>) = c(Cl<sup>&minus;</sup>))
+    </li>
+    <li><b>Komponenten:</b> C = 4 &ndash; 2 = <b>2</b> (Zweikomponentensystem)</li>
+    <li><b>Freiheitsgrade:</b> F = 2 &ndash; 2 + 2 = <b>2</b> (bivariant)
+        <br><i>Ergebnis:</i> Temperatur und Druck können frei gewählt werden; die Sättigungskonzentration stellt sich dann automatisch ein.
+    </li>
+<li><b>Freiheitsgrade (unter Normaldruck, p=konst.):</b> F<sub>red</sub> = 2 &ndash; 2 + 1 = <b>1</b> (univariant)
+        <br><i>Praxisnahe Erklärung:</i> Da der Druck im Labor konstant ist, gibt es nur einen echten Freiheitsgrad: die <b>Temperatur</b>. 
+        Wählen Sie eine Temperatur (z. B. 25 °C), steht die maximale Löslichkeit (Sättigungskonzentration) des Kochsalzes automatisch naturgesetzlich fest.
+    </li>
+</ul>
+<p><b>Beispiel 4: NaCl + BaCl<sub>2</sub> gelöst in Wasser mit beiden Bodenkörpern</b></p>
+<ul>
+    <li><b>Phasen (P = 3):</b> 1x flüssig (Lösung), 2x fest (NaCl-Bodensatz & BaCl<sub>2</sub>-Bodensatz)</li>
+    <li><b>Spezies (S = 6):</b> H<sub>2</sub>O, NaCl(s), BaCl<sub>2</sub>(s), Na<sup>+</sup>(aq), Ba<sup>2+</sup>(aq), Cl<sup>&minus;</sup>(aq)</li>
+    <li><b>Restriktionen (R = 3):</b> 2 unabhängigen Löslichkeitsgleichgewichte und die Ladungsbilanz c(Na<sup>+</sup>) + 2&middot;c(Ba<sup>2+</sup>) = c(Cl<sup>&minus;</sup>).</li>
+    <li><b>Komponenten:</b> C = 6 &ndash; 3 = <b>3</b></li>
+    <li><b>Freiheitsgrade (unter Normaldruck):</b> F = 3 &ndash; 3 + 1 = <b>1</b> (bivariant)
+        <br><i>Praxisnahe Erklärung:</i>Es gibt nur genau einen einzigen Freiheitsgrad F<sub>red</sub> = 1, und das ist die Temperatur.</li>
+</ul>
+<p><b>Beispiel 5: Tripelpunkt eines reinen Metalls (Fest + Flüssig + Gasförmig)</b></p>
+<ul>
+    <li><b>Spezies (S = 1):</b> Reines Metall (z. B. Fe oder Cu)</li>
+    <li><b>Restriktionen (R = 0):</b> Keine chemischen Reaktionen</li>
+    <li><b>Komponenten:</b> C = 1 &ndash; 0 = <b>1</b> (Einkomponentensystem)</li>
+    <li><b>Phasen (P = 3):</b> 3x (fest, flüssig, gasförmig)</li>
+    <li><b>Freiheitsgrade:</b> F = 1 &ndash; 3 + 2 = <b>0</b> (invariant)
+        <br><i>Praxisnahe Erklärung:</i> Es gibt keinen Freiheitsgrad. Alle drei Phasen können nur bei einer ganz exakten, naturgesetzlich fest vorgegebenen Temperatur und einem exakten Druck gleichzeitig koexistieren.
+    </li>
+</ul>
+
+<h3>Binäres Phasendiagramm mit Eutektikum</h3>
+<p><b>Wichtige Merksätze für die Gibbs'sche Phasenregel:</b></p>
+<ul>
+    <li><b>Die Schmelze</b> ist eine einzige, homogene flüssige Phase (fl. A + fl. B bilden zusammen <i>P = 1</i>).</li>
+    <li><b>Das Eutektikum</b> ist <u>keine eigene Phase</u> und keine eigene chemische Spezies. Es handelt sich mikroskopisch um ein Gefüge, also eine feine mechanische Mischung aus kristallinem, festem A und festem B.</li>
+    <li><b>Unabhängige Komponenten:</b> Da keine chemischen Reaktionen oder Ladungsbilanzen vorliegen, gilt im gesamten Diagramm starr <b>C = 2</b> (Komponente A und B).</li>
+    <li><b>Reduzierte Phasenregel (da p = konst.):</b> <code>F = C &minus; P + 1 = 3 &minus; P</code></li>
+</ul>
+
+<!-- Aufklappbarer Bereich wegen Überbreite -->
+<details>
+    <summary style="font-weight: bold; padding: 10px; background-color: #f2f2f2; border: 1px solid #ccc; cursor: pointer; border-radius: 4px; margin-bottom: 10px;">
+        📊 Phasendiagramm-Tabelle: Freiheitsgrade im Eutektikum anzeigen (Hier klicken zum Ausklappen)
+    </summary>
+    
+    <div style="overflow-x: auto; border: 1px solid #ccc; border-top: none; padding: 10px;">
+        <table border="1" cellpadding="6" cellspacing="0" style="border-collapse: collapse; width: 100%; min-width: 600px;">
+            <thead>
+                <tr style="background-color: #eaeaea;">
+                    <th>Bereich / Ort im Diagramm</th>
+                    <th>Existierende Phasen (P)</th>
+                    <th>Komponenten (C)</th>
+                    <th>Freiheitsgrade (F)</th>
+                    <th>Physikalische Bedeutung / Erklärung</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><b>In der Schmelze</b><br><small>(oberhalb Liquiduslinie)</small></td>
+                    <td>1<br><small>(homogene flüssige Mischung)</small></td>
+                    <td>2</td>
+                    <td><b>2</b><br><small>(bivariant)</small></td>
+                    <td>Temperatur und Zusammensetzung (Molenbruch) der Schmelze können unabhängig voneinander frei gewählt werden.</td>
+                </tr>
+                <tr>
+                    <td><b>Auf der Liquiduslinie / Zweiphasengebiet</b><br><small>(auch fälschlich "übersättigt")</small></td>
+                    <td>2<br><small>(Schmelze + festes A)</small></td>
+                    <td>2</td>
+                    <td><b>1</b><br><small>(univariant)</small></td>
+                    <td>Wählt man eine Temperatur, steht die Zusammensetzung der verbleibenden Schmelze über die Kurve automatisch fest.</td>
+                </tr>
+                <tr>
+                    <td><b>Eutektischer Punkt</b></td>
+                    <td>3<br><small>(Schmelze + festes A + festes B)</small></td>
+                    <td>2</td>
+                    <td><b>0</b><br><small>(invariant)</small></td>
+                    <td>Das System ist fixiert. Das Eutektikum erstarrt bzw. schmilzt bei einer ganz exakten, unveränderlichen Temperatur und Zusammensetzung.</td>
+                </tr>
+                <tr>
+                    <td><b>Unterhalb der Soliduslinie / Eutektikalen</b></td>
+                    <td>2<br><small>(festes A + festes B)</small></td>
+                    <td>2</td>
+                    <td><b>1</b><br><small>(univariant)</small></td>
+                    <td>Die Schmelze ist komplett erstarrt. Es gibt nur noch einen Freiheitsgrad: die Temperatur (Erwärmen/Abkühlen des Feststoffs).</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</details>
+
+  <br>
+
+  </div>
+</div>
+
+
+<h2>Siedediagramm T-x-Diagramm</h2>
+<div class="potential-box">
+  <div class="formel-display" style="text-align: left; padding-left: 20px;">
+	<ul>
+	<li><sup>fl</sup>µ<sub>A</sub> = <sup>g</sup>µ<sub>A</sub> (Gleichgewichtsbedingung)</li>
+	<li>µ = µ<sup>0</sup> + RT ln x (Chemisches Potential idealer Mischungen)</li>
+	<li>µ<sup>0</sup> = H<sup>0</sup> – T S<sup>0</sup> (Zusammenhang Enthalpie & Entropie)</li>
+	<li>x<sub>B</sub> = 1 – x<sub>A</sub> (Molenbruch-Bedingung)</li>
+	<li>ΔS<sup>0</sup> = Δ<sub>V</sub>H<sup>0</sup> / T<sub>v</sub> (Trouton'sche Regel)</li>
+	</ul>
+	--------------------------------------------<br>
+	<sup>fl</sup>µ<sup>0</sup> + RT ln <sup>fl</sup>x = <sup>g</sup>µ<sup>0</sup> + RT ln <sup>g</sup>x &rarr; <sup>g</sup>µ<sup>0</sup> – <sup>fl</sup>µ<sup>0</sup> = RT ln (<sup>fl</sup>x / <sup>g</sup>x)<br>
+	<sup>g</sup>µ<sup>0</sup> – <sup>fl</sup>µ<sup>0</sup> = <sup>g</sup>H<sup>0</sup> – T <sup>g</sup>S<sup>0</sup> – (<sup>fl</sup>H<sup>0</sup> – T <sup>fl</sup>S<sup>0</sup>) = RT ln (<sup>fl</sup>x / <sup>g</sup>x)<br>
+	<sup>g</sup>H<sup>0</sup> – <sup>fl</sup>H<sup>0</sup> = &Delta;<sub>V</sub>H<sup>0</sup>; <sup>g</sup>S<sup>0</sup> – <sup>fl</sup>S<sup>0</sup> = &Delta;<sub>V</sub>H<sup>0</sup> / T<sub>v</sub><br>
+	--------------------------------------------<br>
+	(Gl.1) ln (<sup>fl</sup>x<sub>A</sub> / <sup>g</sup>x<sub>A</sub>) = (&Delta;<sup>0</sup>H<sub>v,A</sub> / R) &sdot; [(T<sub>v,A</sub> – T) / (T<sub>v,A</sub> &sdot; T)]<br>
+	(Gl.2) ln [(1 - <sup>fl</sup>x<sub>A</sub>) / (1 - <sup>g</sup>x<sub>A</sub>)] = (&Delta;<sub>V</sub>H<sup>0</sup><sub>B</sub> / R) &sdot; ((T<sub>v,B</sub> – T) / (T<sub>v,B</sub> &sdot; T))<br>
+<p><strong>Bedeutung von Gl.1 und Gl.2:</strong><br>
+Diese beiden Gleichungen repräsentieren die <strong>Phasengleichgewichtsbedingungen</strong> für ein ideales binäres System. Sie verknüpfen die reinen Stoffdaten der Komponenten (Siedetemperaturen T<sub>v</sub> und Verdampfungsenthalpien &Delta;H<sub>v</sub>) mit der Temperatur T des Systems. Durch simultanes Auflösen dieses Gleichungssystems nach <sup>fl</sup>x<sub>A</sub> und <sup>g</sup>x<sub>A</sub> lässt sich der exakte mathematische Verlauf der <strong>Siedelinie</strong> und der <strong>Taupunktlinie</strong> im T-x-Diagramm berechnen.</p>
+<details>
+  <summary>T-x-Diagramm</summary>
+ <!-- 1. Das Diagramm -->
+  <div style="text-align: center; margin-bottom: 15px;">
+    <img src="./diagramme/diagramm19.png"
+         alt="Diagramm"
+         style="max-width: 100%; height: auto; display: block; margin: 0 auto;">
+  </div>
+</details>
+
+  </div>
+</div>
+
+
+<h2>Mathematische Herleitung der Siedelinie</h2>
+<div class="potential-box" style="border-left: 4px solid #007bc0; padding: 15px; background-color: #f8f9fa;">
+  <div class="explanation-text" style="padding-left: 20px; font-size: 0.95em; line-height: 1.5; margin-bottom: 15px;">
+    <p>Um die Zusammensetzung der flüssigen Phase (<sup>fl</sup>x<sub>A</sub>) in Abhängigkeit von der Temperatur T zu berechnen, lösen wir das gekoppelte Gleichungssystem aus (Gl.1) und (Gl.2) analytisch auf. Zur Vereinfachung definieren wir die temperaturabhängigen Terme als Konstanten K<sub>A</sub> und K<sub>B</sub>:</p>
+  </div>
+
+  <div class="formel-display" style="text-align: left; padding-left: 20px; font-family: 'Times New Roman', Times, serif; line-height: 1.8;">
+    <!-- Schritt 1 -->
+    <strong>Schritt 1: Definition der Terme K<sub>A</sub> und K<sub>B</sub></strong><br>
+    Wir entlogarithmieren beide Basisgleichungen durch Anwendung der Exponentialfunktion (e<sup>x</sup>):<br>
+    <div style="padding-left: 20px; margin-top: 5px; margin-bottom: 10px;">
+      <sup>fl</sup>x<sub>A</sub> / <sup>g</sup>x<sub>A</sub> = exp [ (&Delta;<sup>0</sup>H<sub>v,A</sub> / R) &sdot; ((T<sub>v,A</sub> – T) / (T<sub>v,A</sub> &sdot; T)) ] &equiv; <strong>K<sub>A</sub>(T)</strong> &nbsp;&rarr;&nbsp; <sup>g</sup>x<sub>A</sub> = <sup>fl</sup>x<sub>A</sub> / K<sub>A</sub><br>
+      <sup>fl</sup>x<sub>B</sub> / <sup>g</sup>x<sub>B</sub> = exp [ (&Delta;<sub>V</sub>H<sup>0</sup><sub>B</sub> / R) &sdot; ((T<sub>v,B</sub> – T) / (T<sub>v,B</sub> &sdot; T)) ] &equiv; <strong>K<sub>B</sub>(T)</strong> &nbsp;&rarr;&nbsp; <sup>g</sup>x<sub>B</sub> = <sup>fl</sup>x<sub>B</sub> / K<sub>B</sub>
+    </div>
+
+    <!-- Schritt 2 -->
+    <strong>Schritt 2: Nutzung der Molenbruchbedingung für die Gasphase</strong><br>
+    Da die Summe der Molenbrüche in der Dampfphase eins ergeben muss (<sup>g</sup>x<sub>A</sub> + <sup>g</sup>x<sub>B</sub> = 1), setzen wir die Ausdrücke ein:<br>
+    <div style="padding-left: 20px; margin-top: 5px; margin-bottom: 10px;">
+      (<sup>fl</sup>x<sub>A</sub> / K<sub>A</sub>) + (<sup>fl</sup>x<sub>B</sub> / K<sub>B</sub>) = 1
+    </div>
+
+    <!-- Schritt 3 -->
+    <strong>Schritt 3: Ersetzen von <sup>fl</sup>x<sub>B</sub> durch (1 - <sup>fl</sup>x<sub>A</sub>)</strong><br>
+    <div style="padding-left: 20px; margin-top: 5px; margin-bottom: 10px;">
+      (<sup>fl</sup>x<sub>A</sub> / K<sub>A</sub>) + ((1 - <sup>fl</sup>x<sub>A</sub>) / K<sub>B</sub>) = 1
+    </div>
+
+    <!-- Schritt 4 -->
+    <strong>Schritt 4: Auflösen nach <sup>fl</sup>x<sub>A</sub></strong><br>
+    Wir multiplizieren die gesamte Gleichung mit dem Hauptnenner (K<sub>A</sub> &sdot; K<sub>B</sub>):<br>
+    <div style="padding-left: 20px; margin-top: 5px; margin-bottom: 5px;">
+      <sup>fl</sup>x<sub>A</sub> &sdot; K<sub>B</sub> + (1 - <sup>fl</sup>x<sub>A</sub>) &sdot; K<sub>A</sub> = K<sub>A</sub> &sdot; K<sub>B</sub><br>
+      <sup>fl</sup>x<sub>A</sub> &sdot; K<sub>B</sub> + K<sub>A</sub> - <sup>fl</sup>x<sub>A</sub> &sdot; K<sub>A</sub> = K<sub>A</sub> &sdot; K<sub>B</sub><br>
+      <sup>fl</sup>x<sub>A</sub> &sdot; (K<sub>B</sub> - K<sub>A</sub>) = K<sub>A</sub> &sdot; K<sub>B</sub> - K<sub>A</sub><br>
+      <sup>fl</sup>x<sub>A</sub> &sdot; (K<sub>B</sub> - K<sub>A</sub>) = K<sub>A</sub> &sdot; (K<sub>B</sub> - 1)
+    </div>
+    
+    <div style="margin-top: 15px; padding: 10px; background-color: #eef7fc; border-left: 3px solid #007bc0; display: inline-block;">
+      <strong>Endformel für die Siedelinie:</strong><br>
+      <span style="font-size: 1.2em; font-weight: bold;"><sup>fl</sup>x<sub>A</sub>(T) = [ K<sub>A</sub> &sdot; (K<sub>B</sub> - 1) ] / [ K<sub>B</sub> - K<sub>A</sub> ]</span>
+    </div>
+  </div>
+  
+  <div class="erklärung-text" style="margin-top: 15px; padding-left: 20px; font-size: 0.95em; line-height: 1.5; border-top: 1px solid #eee; padding-top: 10px;">
+    <p><strong>Anwendung:</strong> Setzt man nun eine beliebige Temperatur T zwischen den Siedepunkten T<sub>v,B</sub> und T<sub>v,A</sub> in die Funktionen K<sub>A</sub>(T) und K<sub>B</sub>(T) ein, liefert diese Gleichung direkt den zugehörigen flüssigen Molenbruch <sup>fl</sup>x<sub>A</sub>. Der zugehörige Dampfmolenbruch ergibt sich anschließend einfach aus: <code><sup>g</sup>x<sub>A</sub> = <sup>fl</sup>x<sub>A</sub> / K<sub>A</sub></code>.</p>
+  </div>
+</div>
+
+
 
         <footer>
             <p>Formeln die Physikalische Chemie betreffend &copy; 2026 | <a href="impressum.html">Impressum & Datenschutz</a></p>

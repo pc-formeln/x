@@ -60,6 +60,11 @@
     <a href="#5.12" style="font-size: 22px;">Langmuir Isotherme</a><br>
     <a href="#5.13" style="font-size: 22px;">Temperatur einer chem. Reaktion</a><br>
     <a href="#5.14" style="font-size: 22px;">Dissoziationsgrad und Gleichgewicht</a><br>
+    <a href="#5.15" style="font-size: 22px;">Reversibler Kreisprozeß</a><br>
+    <a href="#5.16" style="font-size: 22px;">Kirchhoffscher Satz</a><br>
+    <a href="#5.17" style="font-size: 22px;">Bindungsenergie einer C-H-Bindung</a><br>
+
+
        
        <h2 id="5.3">&Delta;G am Beispiel für Gase (über isotherme Raumänderung)<sub>i</sub></h2>
 
@@ -388,10 +393,15 @@
 
         <div class="potential-box">
             <div class="formel-display" style="text-align: left; padding-left: 20px;">
-	(&part; ln K / &part;p)<sub>T</sub> = 0; für Gase; K bezieht sich auf p<sup>0</sup><br>
-	für Gasreaktionen sind K<sub>c</sub> und K<sub>p</sub> druckunabhängig<br><br>
-	(&part; ln K / &part;p)<sub>T</sub> = -&Delta;<sub>R</sub>V<sub>m</sub> / (RT); für Flüssigkeiten<br><br>
-	(&part;G / &part;p)<sub>T</sub>	= V; wenn &Delta;<sub>R</sub>G<sup>0</sup> nicht auf p<sub>0</sub> bezogen<br>
+	<ul>
+	<li>(&part; ln K / &part;p)<sub>T</sub> = 0; für Gase; K bezieht sich auf p<sup>0</sup></li><br>
+	<li>für Gasreaktionen sind K<sub>c</sub> und K<sub>p</sub> druckunabhängig</li>
+	<ul>
+	<li>K<sub>p</sub> = K<sub>x</sub> &sdot; (p<sub>gesamt</sub>/p<sub>0</sub>)<sup>&Delta;&nu;</sup> ; beide Faktoren verhalten sich gegensätzlich bei Druckänderung. --> K<sub>p</sub>=konst.</li>
+	<li>ln K<sub>p/p<sub>0</sub></sub> = &minus; &Delta;<sub>R</sub>G<sup>0</sup>(T) / (RT) ; &Delta;<sub>R</sub>G<sup>0</sup> gilt für  p<sub>0</sub>, unabhängig von p</li></ul>
+	<li>(&part; ln K / &part;p)<sub>T</sub> = -&Delta;<sub>R</sub>V<sub>m</sub> / (RT); für Flüssigkeiten</li><br>
+	<li>(&part;G / &part;p)<sub>T</sub>	= V; wenn &Delta;<sub>R</sub>G<sup>0</sup> nicht auf p<sub>0</sub> bezogen</li>
+	</ul>
             </div>
             <p><strong>
             Hinweis zur Gaskonstante bei Flüssigkeiten:<br>
@@ -523,6 +533,94 @@
                 ▲ Zurück zum Anfang
             </a>
         </div>
+
+
+
+<h2 id="5.15">Reversibler Kreisprozeß</h2>
+
+<div class="potential-box">
+  <div class="formel-display" style="text-align: left; padding-left: 20px; padding-bottom: 20px;">
+	(reversibler Kreisprozess, der mit drei verschiedenen Wärmereservoirs gekoppelt ist)<br><br>
+	gesamte Entropieänderung des Systems:<br>
+	&oint;dS = 0 &nbsp;&nbsp;&nbsp;&nbsp;(&Sigma;&Delta;S = 0)<br><br>
+	Clausius-Formel:<br>
+	&Sigma; (Q<sub>i</sub>/T<sub>i</sub>) = 0 &nbsp;&nbsp;&nbsp;&nbsp; (Q<sub>1</sub>/T<sub>1</sub> + Q<sub>2</sub>/T<sub>2</sub> + Q<sub>3</sub>/T<sub>3</sub> = 0)<br><br>
+	Der Erste Hauptsatz der Thermodynamik:<br>
+	&minus; W = &Sigma; Q<sub>i</sub> &nbsp;&nbsp;&nbsp;&nbsp; (&minus; W = Q<sub>1</sub> + Q<sub>2</sub> + Q<sub>3</sub>)<br>
+    </div>
+
+  </div>        
+</div>
+
+       <!-- Dieser Link springt jetzt bombensicher auf JEDER Plattform nach oben -->
+        <div style="text-align: right; margin-top: 30px; border-top: 1px solid #eee; padding-top: 15px;">
+            <a href="#5.0" style="display: inline-block; background-color: #f1f2f6; border: 1px solid #dcdde1; border-radius: 4px; padding: 6px 12px; color: #2f3640; text-decoration: none; font-family: sans-serif; font-weight: 500; font-size: 0.9em; user-select: none;">
+                ▲ Zurück zum Anfang
+            </a>
+        </div>
+
+
+
+<h2 id="5.16">Kirchhoffscher Satz:<br>
+Enthalpieumrechnung bei Phasenübergängen</h2>
+<div class="potential-box">
+  <div class="formel-display" style="text-align: left; padding-left: 20px; padding-bottom: 20px;">
+	Satz von Hess:<br>
+	&Delta;<sub>sub</sub>H<sub>T</sub> = &Delta;<sub>schmelz</sub>H<sub>T</sub> + &Delta;<sub>vap</sub>H<sub>T</sub> bei p=konst.<br><br>
+	für alle Enthalpien gilt dieselbe Bezugstemperatur! Deshalb Umrechnung mittels Kirchhoffscher Gleichung:<br><br>
+	&Delta;H(T<sub>2</sub>) = &Delta;H(T<sub>1</sub>) + &int; &Delta;C<sub>p</sub> dT &approx; &Delta;H(T<sub>1</sub>) + &Delta;C<sub>p</sub> &sdot; (T<sub>2</sub>-T<sub>1</sub>)<br><br>
+	mit &Delta;C<sub>p</sub> = C<sub>p</sub>(flüssig) &minus; C<sub>p</sub>(fest) bzw. = C<sub>p</sub>(gasf.) &minus; C<sub>p</sub>(flüssig)<br>
+    </div>
+
+  </div>        
+</div>
+       <!-- Dieser Link springt jetzt bombensicher auf JEDER Plattform nach oben -->
+        <div style="text-align: right; margin-top: 30px; border-top: 1px solid #eee; padding-top: 15px;">
+            <a href="#5.0" style="display: inline-block; background-color: #f1f2f6; border: 1px solid #dcdde1; border-radius: 4px; padding: 6px 12px; color: #2f3640; text-decoration: none; font-family: sans-serif; font-weight: 500; font-size: 0.9em; user-select: none;">
+                ▲ Zurück zum Anfang
+            </a>
+        </div>
+
+
+<h2 id="5.17">Bindungsenergie einer C-H-Bindung</h2>
+<div class="potential-box" style="border-left: 4px solid #007bc0; padding: 15px; background-color: #f8f9fa;">
+  <div class="explanation-text" style="padding-left: 20px; font-size: 1.3em; line-height: 1.5; margin-bottom: 15px;">
+    <p>Die <strong>Bindungsenergie</strong> entspricht der Energie, die zur homolytischen Spaltung einer chemischen Bindung aufgewendet werden muss. Am Beispiel von Methan (CH<sub>4</sub>) lässt sich die mittlere C-H-Bindungsenergie über einen thermodynamischen Kreisprozess (Hess'scher Satz) aus der experimentell messbaren Standard-Bildungsenthalpie bestimmen:</p>
+  </div>
+  <div class="formel-display" style="text-align: left; padding-left: 20px; font-family: 'Times New Roman', Times, serif; line-height: 1.6;">
+    <table style="border-collapse: collapse; width: auto; font-size: 1em;">
+      <tr>
+        <td style="padding-right: 15px;">C<sub>(Graphit)</sub> &rarr; C*<sub>(Gas)</sub></td>
+        <td style="color: #666; font-size: 0.95em;">&Delta;H = +717 kJ/mol</td>
+        <td style="padding-left: 15px; color: #777; font-size: 0.9em;">(Sublimationsenthalpie des Kohlenstoffs)</td>
+      </tr>
+      <tr>
+        <td style="padding-right: 15px;">2 H<sub>2 (g)</sub> &rarr; 4 H<sub>(g)</sub></td>
+        <td style="color: #666; font-size: 0.95em;">&Delta;H = +872 kJ/mol</td>
+        <td style="padding-left: 15px; color: #777; font-size: 0.9em;">(Bindungsdissoziationsenthalpie für 2 mol H<sub>2</sub>)</td>
+      </tr>
+      <tr style="border-bottom: 1px solid #ccc;">
+        <td style="padding-right: 15px; padding-bottom: 5px;">C*<sub>(Gas)</sub> + 4 H<sub>(g)</sub> &rarr; CH<sub>4 (g)</sub></td>
+        <td style="color: #666; font-size: 0.95em; padding-bottom: 5px;">&Delta;H = x</td>
+        <td style="padding-left: 15px; color: #777; font-size: 0.9em; padding-bottom: 5px;">(Bildung von 4 C-H-Bindungen aus den Atomen)</td>
+      </tr>
+      <tr>
+        <td style="padding-top: 5px; font-weight: bold;">C<sub>(Graphit)</sub> + 2 H<sub>2 (g)</sub> &rarr; CH<sub>4 (g)</sub></td>
+        <td style="font-weight: bold; padding-top: 5px;">&Delta;<sub>f</sub>H<sup>0</sup> = -75 kJ/mol</td>
+        <td style="padding-left: 15px; color: #777; font-size: 0.9em; padding-top: 5px;">(Standard-Bildungsenthalpie von Methan)</td>
+      </tr>
+      <br>
+    </table>
+    <br>
+    (717 + 872 + x = -75 &rarr; x = -1664 &rarr; für eine Bindung: -1664 / 4)<br>
+    </div>
+       <!-- Dieser Link springt jetzt bombensicher auf JEDER Plattform nach oben -->
+        <div style="text-align: right; margin-top: 30px; border-top: 1px solid #eee; padding-top: 15px;">
+            <a href="#5.0" style="display: inline-block; background-color: #f1f2f6; border: 1px solid #dcdde1; border-radius: 4px; padding: 6px 12px; color: #2f3640; text-decoration: none; font-family: sans-serif; font-weight: 500; font-size: 0.9em; user-select: none;">
+                ▲ Zurück zum Anfang
+            </a>
+        </div>
+
 
 
 
